@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "park": "philadelphia",
+  "mood": "Philadelphia in the evening: a giant Liberty Bell-style neon bell over right field, the Center City skyline with slender glass towers, warm brick.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "twilight",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the giant neon Liberty Bell swings gently side to side and pulses on a home run", "the bell's neon outline buzzes with an occasional soft flicker", "City Hall's clock face glows warm and the tower catches a slow glint", "the twin glass spires' blue edge lights shimmer slowly up and down", "stars twinkle in the deep blue sky while thin violet clouds drift by (sky layer drift)", "a red aircraft warning light blinks atop the tallest tower", "the HOME RUN DERBY board's bulb border chases around its frame", "row-house and office windows flicker on and off", "light-tower lamp banks glow and softly breathe, moths drifting through their cones", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/philadelphia.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 663],
+      "clean": [0, 0, 1088, 663],
+      "layers": [
+        {
+          "atlas": [0, 669, 1280, 259],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 934, 1280, 267],
+          "y": 301,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1207, 1280, 243],
+          "y": 516,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1
+    }
+  ]
+}

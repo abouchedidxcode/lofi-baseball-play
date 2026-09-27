@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "park": "cyber_district",
+  "artPx": 4,
+  "gridOffset": [0, 0],
+  "measure": {
+    "fwhmMeanPx": 3.33,
+    "samples": 4287,
+    "histogram": [0, 929, 2941, 1950, 1111, 544, 295, 214, 197, 157, 128, 108, 0],
+    "method": "mean half-max width of isolated details in the sky + skyline of the 9:16 frame (tools/living/style_kit.py)",
+    "override": {
+      "artPx": 4,
+      "why": "the sky is full of thin painted rain streaks (~3 px) that pull the mean down; the skyline and signs read at 4 px like every other park"
+    }
+  },
+  "palette": {
+    "skyTop": "#030a13",
+    "skyMid": "#030911",
+    "skyLow": "#020b15",
+    "cloudShadow": "#020d17",
+    "cloudMid": "#03101c",
+    "cloudLight": "#051320",
+    "rim": "#242b3b",
+    "deep": "#02101d",
+    "silhouette": "#02121f",
+    "warm": "#e4b3b2",
+    "cool": "#b6c7f1",
+    "lamp": "#efeeef",
+    "birdNear": "#02111e",
+    "birdMid": "#02111d",
+    "birdFar": "#020e19",
+    "birdLight": "#091724",
+    "birdNearLight": "#091624",
+    "birdShade": "#02111d",
+    "birdLit": "#685a60",
+    "birdLitLight": "#b79394",
+    "pale": "#3f4853",
+    "accent": "#02101d"
+  },
+  "roles": {
+    "bird": {
+      "body": "$birdMid",
+      "light": "$birdLight",
+      "shade": "$birdShade",
+      "accent": "$birdShade"
+    },
+    "birdFar": {
+      "body": "$birdFar",
+      "light": "$birdFar",
+      "shade": "$birdFar",
+      "accent": "$birdFar"
+    },
+    "birdNear": {
+      "body": "$birdNear",
+      "light": "$birdNearLight",
+      "shade": "$deep",
+      "accent": "$deep"
+    },
+    "birdLit": {
+      "body": "$birdLit",
+      "light": "$birdLitLight",
+      "shade": "$birdMid",
+      "accent": "$birdShade"
+    },
+    "gull": {
+      "body": "$pale",
+      "light": "$cloudLight",
+      "shade": "$cloudShadow",
+      "accent": "$deep"
+    },
+    "leaf": {
+      "body": "$warm",
+      "light": "$rim",
+      "shade": "$deep",
+      "accent": "$deep"
+    }
+  },
+  "depthPxPerMeter": {
+    "15m": 77.24,
+    "30m": 38.62,
+    "60m": 19.31,
+    "120m": 9.66,
+    "250m": 4.63
+  },
+  "note": "Written by tools/living/style_kit.py. artPx = one art pixel in plate 1x px: pixel sprites use it as their texel size and snap to it; palette names work as \"$name\" in living.json colours (living.json palette wins)."
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "park": "seattle",
+  "artPx": 4,
+  "gridOffset": [0, 0],
+  "measure": {
+    "fwhmMeanPx": 3.68,
+    "samples": 3026,
+    "histogram": [0, 242, 1792, 1667, 869, 505, 304, 216, 190, 123, 88, 56, 0],
+    "method": "mean half-max width of isolated details in the sky + skyline of the 9:16 frame (tools/living/style_kit.py)",
+    "override": null
+  },
+  "palette": {
+    "skyTop": "#1b2b3f",
+    "skyMid": "#203147",
+    "skyLow": "#56668a",
+    "cloudShadow": "#2f435e",
+    "cloudMid": "#596991",
+    "cloudLight": "#7680a6",
+    "rim": "#898eb3",
+    "deep": "#0a1013",
+    "silhouette": "#161c21",
+    "warm": "#e8c9b0",
+    "cool": "#c9cdf1",
+    "lamp": "#fbfaf8",
+    "birdNear": "#10161a",
+    "birdMid": "#181f27",
+    "birdFar": "#1a2430",
+    "birdLight": "#313746",
+    "birdNearLight": "#282e39",
+    "birdShade": "#12181e",
+    "birdLit": "#766c65",
+    "birdLitLight": "#bea795",
+    "pale": "#949ab8",
+    "accent": "#0a1013"
+  },
+  "roles": {
+    "bird": {
+      "body": "$birdMid",
+      "light": "$birdLight",
+      "shade": "$birdShade",
+      "accent": "$birdShade"
+    },
+    "birdFar": {
+      "body": "$birdFar",
+      "light": "$birdFar",
+      "shade": "$birdFar",
+      "accent": "$birdFar"
+    },
+    "birdNear": {
+      "body": "$birdNear",
+      "light": "$birdNearLight",
+      "shade": "$deep",
+      "accent": "$deep"
+    },
+    "birdLit": {
+      "body": "$birdLit",
+      "light": "$birdLitLight",
+      "shade": "$birdMid",
+      "accent": "$birdShade"
+    },
+    "gull": {
+      "body": "$pale",
+      "light": "$cloudLight",
+      "shade": "$cloudShadow",
+      "accent": "$deep"
+    },
+    "leaf": {
+      "body": "$warm",
+      "light": "$rim",
+      "shade": "$deep",
+      "accent": "$deep"
+    }
+  },
+  "depthPxPerMeter": {
+    "15m": 82.24,
+    "30m": 41.12,
+    "60m": 20.56,
+    "120m": 10.28,
+    "250m": 4.93
+  },
+  "note": "Written by tools/living/style_kit.py. artPx = one art pixel in plate 1x px: pixel sprites use it as their texel size and snap to it; palette names work as \"$name\" in living.json colours (living.json palette wins)."
+}

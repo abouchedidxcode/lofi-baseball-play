@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "park": "cyber_district",
+  "mood": "A ballpark in a futuristic cyberpunk megacity at night: holographic billboards, flying cars streaming between towers, heavy rain and neon reflections everywhere.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "night_neon",
+  "_weather": {
+    "type": "rain",
+    "intensity": 0.7
+  },
+  "_lifeIdeas": ["holographic billboards flicker and glitch now and then (glow mask)", "the giant hologram face on the tower pulses and scanlines roll over it", "flying cars stream slowly between the towers, their tail lights blinking", "the vertical kanji neon sign buzzes with a rare soft flicker", "the jumbotron's glowing baseball slowly spins and pulses", "pink and violet neon reflections ripple across the rain-soaked field and puddles", "rain falls in front of everything, with small splashes on the wet dirt", "red beacons blink on the spire tips", "the neon trim around the stands breathes softly", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "no drifting-cloud sheet: no clouds, only rain streaks and flying cars: use rain / sprites",
+  "effects": []
+}

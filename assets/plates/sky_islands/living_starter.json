@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "park": "sky_islands",
+  "mood": "A ballpark on a floating island high in the clouds: waterfalls pouring off the edges, other little floating islands with cottages, hot air balloons, a pastel sunrise.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "sunset",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the waterfalls pour off the island's edges (a slow scrolling shimmer on the painted water)", "the hot-air balloons drift slowly upward and sideways", "the little floating islands bob gently up and down", "the clouds below the island drift slowly past", "the low sun glows with a soft lens flare", "pastel clouds drift across the sky (sky layer drift)", "cottage windows on the floating islands light up warmly", "the HOME RUN DERBY marquee bulbs chase around the board", "a few birds glide between the islands now and then", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/sky_islands.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 729],
+      "clean": [0, 0, 1088, 729],
+      "layers": [
+        {
+          "atlas": [0, 735, 1280, 332],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 1073, 1280, 319],
+          "y": 269,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1398, 1280, 212],
+          "y": 599,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "rect": [205, 0, 240, 335]
+        },
+        {
+          "rect": [0, 175, 145, 530]
+        },
+        {
+          "rect": [315, 425, 160, 285]
+        },
+        {
+          "rect": [155, 605, 190, 240]
+        }
+      ]
+    }
+  ]
+}

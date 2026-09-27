@@ -1,0 +1,658 @@
+{
+  "version": 1,
+  "park": "seoul",
+  "mood": "Seoul spring evening: Namsan Tower glowing on its hill, cars crawling over the rainbow Han bridge, the river rippling with colour, cherry petals drifting past the stands",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 11,
+  "palette": {
+    "lamp": "#f2f0ff",
+    "beacon": "#ff3030",
+    "green": "#7dff9e",
+    "petal": "#c3888a",
+    "petal2": "#daa19f",
+    "head": "#fff4dc",
+    "tail": "#ff5a4a",
+    "petal3": "#ad7478"
+  },
+  "masks": {
+    "windows": "living_masks_1x.png:r",
+    "ring": "living_masks_1x.png:r",
+    "river": "living_masks_1x.png:g",
+    "gate": "living_masks_1x.png:b",
+    "stands": "living_masks_1x.png:a"
+  },
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [
+        96,
+        96,
+        1088,
+        738
+      ],
+      "clean": [
+        0,
+        0,
+        1088,
+        738
+      ],
+      "layers": [
+        {
+          "atlas": [
+            0,
+            744,
+            1280,
+            262
+          ],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 11
+        },
+        {
+          "atlas": [
+            0,
+            1012,
+            1280,
+            256
+          ],
+          "y": 350,
+          "x": 0,
+          "band": 1,
+          "speed": 7
+        },
+        {
+          "atlas": [
+            0,
+            1274,
+            1280,
+            268
+          ],
+          "y": 533,
+          "x": 0,
+          "band": 2,
+          "speed": 4.5
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1
+    },
+    {
+      "id": "stars",
+      "type": "particles",
+      "region": {
+        "rect": [
+          140,
+          140,
+          1000,
+          420
+        ]
+      },
+      "mask": "sky",
+      "count": {
+        "low": 10,
+        "mid": 16,
+        "high": 22
+      },
+      "shape": "dot",
+      "size": 4,
+      "color": [
+        "#fff8f0",
+        "#e6ecff"
+      ],
+      "vel": [
+        0,
+        0
+      ],
+      "wander": [
+        0,
+        0
+      ],
+      "life": [
+        8,
+        15
+      ],
+      "twinkle": 0.8,
+      "twinkleFreq": 0.7,
+      "intensity": 0.5
+    },
+    {
+      "id": "windows",
+      "type": "flicker",
+      "mode": "windows",
+      "mask": "windows",
+      "cells": "mask",
+      "rect": [
+        0,
+        780,
+        1280,
+        290
+      ],
+      "rate": 0.08,
+      "breathe": 0.012,
+      "depth": 0.5,
+      "dusk": {
+        "fraction": 0.2,
+        "start": 0.6,
+        "duration": 60
+      },
+      "off": [
+        0.86,
+        0.86,
+        0.98
+      ]
+    },
+    {
+      "id": "namsan_ring",
+      "type": "flicker",
+      "mode": "twinkle",
+      "mask": "ring",
+      "cells": "mask",
+      "rect": [
+        804,
+        656,
+        46,
+        36
+      ],
+      "depth": 0.55,
+      "breathe": 0.03
+    },
+    {
+      "id": "namsan_glow",
+      "type": "halo",
+      "center": [
+        826,
+        735
+      ],
+      "radius": [
+        26,
+        70
+      ],
+      "color": "$green",
+      "intensity": 0.16,
+      "pulse": [
+        0.35,
+        0.12
+      ],
+      "hole": 0.0,
+      "levels": 5,
+      "on": "homerun",
+      "boost": 0.8
+    },
+    {
+      "id": "beacons",
+      "type": "blink",
+      "defaults": {
+        "color": "$beacon",
+        "period": 2.6,
+        "duty": 0.42,
+        "pattern": "blink",
+        "size": 3,
+        "glow": 6,
+        "intensity": 0.95
+      },
+      "lights": [
+        {
+          "p": [
+            827,
+            518
+          ],
+          "phase": 0.0
+        },
+        {
+          "p": [
+            755,
+            688
+          ],
+          "phase": 0.5,
+          "period": 2.3
+        },
+        {
+          "p": [
+            928,
+            852
+          ],
+          "phase": 0.3,
+          "period": 3.0
+        }
+      ]
+    },
+    {
+      "id": "bridge_glint",
+      "type": "chase",
+      "mode": "glint",
+      "path": [
+        [
+          205,
+          1060
+        ],
+        [
+          300,
+          1062
+        ],
+        [
+          450,
+          1068
+        ],
+        [
+          600,
+          1074
+        ],
+        [
+          720,
+          1080
+        ]
+      ],
+      "length": 60,
+      "width": 24,
+      "period": 9,
+      "travel": 4.5,
+      "delay": 0.8,
+      "pingpong": true,
+      "color": "#ffffff",
+      "intensity": 0.32,
+      "core": 0.5,
+      "levels": 4
+    },
+    {
+      "id": "headlights",
+      "type": "chase",
+      "mode": "comet",
+      "paths": [
+        [
+          [
+            150,
+            1044
+          ],
+          [
+            200,
+            1046
+          ],
+          [
+            300,
+            1049
+          ],
+          [
+            400,
+            1052
+          ],
+          [
+            500,
+            1056
+          ],
+          [
+            600,
+            1060
+          ],
+          [
+            700,
+            1067
+          ],
+          [
+            760,
+            1070
+          ]
+        ],
+        [
+          [
+            150,
+            1044
+          ],
+          [
+            200,
+            1046
+          ],
+          [
+            300,
+            1049
+          ],
+          [
+            400,
+            1052
+          ],
+          [
+            500,
+            1056
+          ],
+          [
+            600,
+            1060
+          ],
+          [
+            700,
+            1067
+          ],
+          [
+            760,
+            1070
+          ]
+        ]
+      ],
+      "length": 10,
+      "width": 4,
+      "interval": [
+        1.2,
+        3.5
+      ],
+      "travel": 7,
+      "color": "$head",
+      "intensity": 1.0
+    },
+    {
+      "id": "taillights",
+      "type": "chase",
+      "mode": "comet",
+      "paths": [
+        [
+          [
+            760,
+            1070
+          ],
+          [
+            700,
+            1067
+          ],
+          [
+            600,
+            1060
+          ],
+          [
+            500,
+            1056
+          ],
+          [
+            400,
+            1052
+          ],
+          [
+            300,
+            1049
+          ],
+          [
+            200,
+            1046
+          ],
+          [
+            150,
+            1044
+          ]
+        ],
+        [
+          [
+            760,
+            1070
+          ],
+          [
+            700,
+            1067
+          ],
+          [
+            600,
+            1060
+          ],
+          [
+            500,
+            1056
+          ],
+          [
+            400,
+            1052
+          ],
+          [
+            300,
+            1049
+          ],
+          [
+            200,
+            1046
+          ],
+          [
+            150,
+            1044
+          ]
+        ]
+      ],
+      "length": 8,
+      "width": 4,
+      "interval": [
+        1.5,
+        4
+      ],
+      "travel": 8,
+      "color": "$tail",
+      "intensity": 1.0
+    },
+    {
+      "id": "river",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "river",
+      "rect": [
+        185,
+        1084,
+        470,
+        72
+      ],
+      "amp": [
+        3,
+        0
+      ],
+      "wavelength": 6,
+      "speed": 0.45,
+      "sparkle": 0.008,
+      "color": "#f0e6ff",
+      "intensity": 0.6
+    },
+    {
+      "id": "gate_lanterns",
+      "type": "flicker",
+      "mode": "fire",
+      "mask": "gate",
+      "rect": [
+        748,
+        1005,
+        262,
+        190
+      ],
+      "cell": [
+        8,
+        8
+      ],
+      "depth": 0.3,
+      "breathe": 0.03
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        190,
+        845
+      ],
+      "radius": [
+        110,
+        90
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.05,
+        0.1
+      ],
+      "streak": {
+        "length": 170,
+        "thickness": 5,
+        "intensity": 0.12
+      },
+      "on": "homerun",
+      "boost": 0.55
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1105,
+        845
+      ],
+      "radius": [
+        110,
+        90
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.05,
+        0.085
+      ],
+      "streak": {
+        "length": 170,
+        "thickness": 5,
+        "intensity": 0.12
+      },
+      "on": "homerun",
+      "boost": 0.55
+    },
+    {
+      "id": "petals_left",
+      "type": "particles",
+      "region": {
+        "rect": [
+          0,
+          1040,
+          420,
+          240
+        ]
+      },
+      "count": {
+        "low": 8,
+        "mid": 12,
+        "high": 16
+      },
+      "shape": "sakura",
+      "color": [
+        "$petal",
+        "$petal2",
+        "$petal3"
+      ],
+      "vel": [
+        12,
+        14
+      ],
+      "wander": [
+        12,
+        4
+      ],
+      "wanderFreq": 0.3,
+      "life": [
+        5,
+        9
+      ],
+      "intensity": 0.9,
+      "size": 12,
+      "twinkle": 0.1
+    },
+    {
+      "id": "petals_right",
+      "type": "particles",
+      "region": {
+        "rect": [
+          960,
+          1020,
+          320,
+          260
+        ]
+      },
+      "count": {
+        "low": 8,
+        "mid": 12,
+        "high": 16
+      },
+      "shape": "sakura",
+      "color": [
+        "$petal",
+        "$petal2",
+        "$petal3"
+      ],
+      "vel": [
+        12,
+        14
+      ],
+      "wander": [
+        12,
+        4
+      ],
+      "wanderFreq": 0.3,
+      "life": [
+        5,
+        9
+      ],
+      "intensity": 0.9,
+      "size": 12,
+      "twinkle": 0.1
+    },
+    {
+      "id": "crowd",
+      "type": "crowd",
+      "rect": [
+        0,
+        1178,
+        1280,
+        94
+      ],
+      "mask": "stands",
+      "cell": [
+        4,
+        4
+      ],
+      "shimmer": 0.06,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            0,
+            1180,
+            360,
+            90
+          ],
+          [
+            930,
+            1180,
+            350,
+            90
+          ]
+        ],
+        "count": {
+          "low": 20,
+          "mid": 30,
+          "high": 40
+        },
+        "idle": 0.012,
+        "burst": 0.7,
+        "size": 4,
+        "glow": 7,
+        "intensity": 1.0
+      }
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.006,
+      "period": 16,
+      "tint": [
+        0.002,
+        0.0,
+        0.003
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

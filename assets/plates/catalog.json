@@ -1,0 +1,1950 @@
+{
+ "version": 1,
+ "generator": "tools/plates/catalog46.py",
+ "note": "All 46 parks with their stadium data inline (id, name, weather, time, gravity, fences in m, wallHeight, living ideas) plus a QA status. 'order' is a SUGGESTED rotation: the 6 hand-built parks first, then a greedy mix so neighbours differ in time of day, weather and region, dark night parks alternate with bright ones, and fantasy parks are spaced out. The lead's live rotation is assets/plates/rotation.json (-> src/config/stadiums_factory.js); this file does not change it. qa.status: done = verified, rough = usable but with a known flaw (see qa.note).",
+ "counts": {
+  "parks": 46,
+  "done": 43,
+  "rough": 3,
+  "failed": 0
+ },
+ "order": [
+  "st_louis",
+  "seattle",
+  "new_york_queens",
+  "tokyo",
+  "alpine_village",
+  "moon_base",
+  "san_diego",
+  "london",
+  "chicago_south",
+  "cherry_temple",
+  "anaheim",
+  "houston",
+  "miami",
+  "venice_canals",
+  "minnesota",
+  "san_juan",
+  "colorado",
+  "seoul",
+  "boston",
+  "cyber_district",
+  "san_francisco",
+  "mexico_city",
+  "philadelphia",
+  "underwater_dome",
+  "chicago_north",
+  "washington",
+  "los_angeles",
+  "sydney",
+  "tampa_bay",
+  "desert_oasis",
+  "las_vegas",
+  "santo_domingo",
+  "detroit",
+  "toronto",
+  "arizona",
+  "new_york_bronx",
+  "cleveland",
+  "sky_islands",
+  "baltimore",
+  "kansas_city",
+  "atlanta",
+  "monterrey",
+  "milwaukee",
+  "pittsburgh",
+  "texas",
+  "cincinnati"
+ ],
+ "parks": {
+  "st_louis": {
+   "id": "st_louis",
+   "name": "St. Louis",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 102,
+    "lcf": 119,
+    "cf": 122,
+    "rcf": 119,
+    "rf": 102
+   },
+   "wallHeight": 2.6,
+   "concept": "concepts/round2/st_louis.png",
+   "living": [
+    "the Arch catches a slow moving glint as the sun sets inside it",
+    "golden-hour clouds sail slowly east (sky layer drift)",
+    "downtown windows and street lamps switch on one by one",
+    "red aircraft-warning beacons blink on the tallest towers",
+    "lamp-bank halos breathe, with dust motes and moths drifting through the beams",
+    "flocks of birds and gulls head home across the sunset",
+    "the red-white-blue bunting on the wall ripples in the breeze",
+    "crowd shimmer, camera flashes and a cheer pulse on a home run",
+    "the HR scoreboard ticks up after each home run"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "us",
+   "source": "mvp",
+   "dir": "assets/plates/st_louis/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 45.98,
+    "nearRmsPx1x": 6.98,
+    "chalkRmsPx1x": 4.34,
+    "wallPx1x": 3.37,
+    "note": "Hand-built MVP plate and hand-seeded solve (the automatic re-check flags the stylised FR plate corner and foul line; the hand solve is authoritative)."
+   }
+  },
+  "seattle": {
+   "id": "seattle",
+   "name": "Seattle",
+   "weather": {
+    "type": "rain",
+    "intensity": 0.55
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 100.9,
+    "lcf": 115,
+    "cf": 122.2,
+    "rcf": 116,
+    "rf": 99.4
+   },
+   "wallHeight": 2.4,
+   "concept": "concepts/round2/seattle.png",
+   "living": [
+    "storm clouds roll slowly in over the Space Needle (sky layer drift)",
+    "the Needle's saucer halo glows and breathes",
+    "the Ferris wheel's rim lights turn slowly on the waterfront",
+    "rain glitters in the floodlight beams",
+    "orange maple leaves let go and drift down onto the field",
+    "gulls ride the wind and crows head home over the skyline",
+    "skyline windows twinkle and tower beacons blink",
+    "the painted puddles shimmer with the rain",
+    "crowd shimmer, flashes and a cheer pulse; the HR board's stars sparkle on a home run"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "us",
+   "source": "mvp",
+   "dir": "assets/plates/seattle/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 45.08,
+    "nearRmsPx1x": 9.17,
+    "chalkRmsPx1x": 10.9,
+    "wallPx1x": 2.98,
+    "note": "Hand-built MVP plate; no painted back lines on the boxes, so depth vs zoom is weakly pinned (as in the hand solve)."
+   }
+  },
+  "new_york_queens": {
+   "id": "new_york_queens",
+   "name": "New York",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 102.1,
+    "lcf": 115.5,
+    "cf": 124.4,
+    "rcf": 115.8,
+    "rf": 100.6
+   },
+   "wallHeight": 2.5,
+   "concept": "concepts/round2/new_york_queens.png",
+   "living": [
+    "the Empire State spire sweeps its light and its crown glows",
+    "Manhattan windows twinkle and tower beacons blink",
+    "the bridge necklace lights shimmer as traffic streams across",
+    "the Unisphere catches a slow sheen and its fountain sparkles",
+    "the big red apple glows, and rises with sparkles on a home run",
+    "stars twinkle over the skyline and thin clouds drift",
+    "gulls wheel through the floodlight halos, moths in the beams",
+    "crowd shimmer, flashes and a cheer pulse on a home run"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "us",
+   "source": "mvp",
+   "dir": "assets/plates/new_york_queens/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 44.12,
+    "nearRmsPx1x": 4.91,
+    "chalkRmsPx1x": 5.52,
+    "wallPx1x": 1.25,
+    "note": "Hand-built MVP plate; chalk 5.5 px, wall 1.3 px."
+   }
+  },
+  "tokyo": {
+   "id": "tokyo",
+   "name": "Tokyo",
+   "weather": {
+    "type": "rain",
+    "intensity": 0.6
+   },
+   "time": "night_neon",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 100,
+    "lcf": 110,
+    "cf": 122,
+    "rcf": 110,
+    "rf": 100
+   },
+   "wallHeight": 4.0,
+   "concept": "concepts/international/tokyo.png",
+   "living": [
+    "neon signs hum with an occasional soft flicker",
+    "Tokyo Tower shimmers and its beacons blink",
+    "the neon is reflected and ripples in the wet field; puddles splash",
+    "rain glitters in the floodlights and in front of the neon",
+    "low clouds slide slowly over the city",
+    "office windows flicker on and off",
+    "the katakana banners sway gently",
+    "the HOME RUN sign lights up on a home run, with crowd flashes and a cheer pulse",
+    "a distant flash of lightning now and then"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "asia",
+   "source": "mvp",
+   "dir": "assets/plates/tokyo/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 41.18,
+    "nearRmsPx1x": 8.78,
+    "chalkRmsPx1x": 8.47,
+    "wallPx1x": 1.06,
+    "note": "Hand-built MVP plate; wet neon field, boxR.inner stylised."
+   }
+  },
+  "alpine_village": {
+   "id": "alpine_village",
+   "name": "Alpine Village",
+   "weather": {
+    "type": "snow",
+    "intensity": 0.5
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 103,
+    "lcf": 118,
+    "cf": 128,
+    "rcf": 118,
+    "rf": 103
+   },
+   "wallHeight": 3.0,
+   "concept": "concepts/international/alpine_village.png",
+   "living": [
+    "the red gondolas slide along their cable over the valley",
+    "chimney smoke rises slowly from the chalets",
+    "alpenglow warms and fades on the peaks, with a glint on the summit",
+    "spindrift blows off the ridges",
+    "chalet windows and hearths flicker with warm firelight",
+    "snow sifts through the floodlight beams",
+    "choughs head for the cliffs",
+    "fairy lights twinkle and the village flashes and cheers on a home run",
+    "the HOME RUN DERBY board's letters glow"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "fantasy",
+   "source": "mvp",
+   "dir": "assets/plates/alpine_village/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 41.23,
+    "nearRmsPx1x": 7.31,
+    "chalkRmsPx1x": 6.42,
+    "wallPx1x": 1.67,
+    "note": "Hand-built MVP plate; no stands (empty crowd mask by design, use chalet life instead)."
+   }
+  },
+  "moon_base": {
+   "id": "moon_base",
+   "name": "Moon Base",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "space",
+   "gravity": 1.62,
+   "fences": {
+    "lf": 122,
+    "lcf": 140,
+    "cf": 152.4,
+    "rcf": 140,
+    "rf": 122
+   },
+   "wallHeight": 3.0,
+   "concept": "concepts/international/moon_base.png",
+   "living": [
+    "the Earth turns slowly, with a sunrise creeping over its rim",
+    "stars twinkle; a shooting star streaks over the base now and then",
+    "satellites cross the black sky",
+    "a shuttle lifts off from the base now and then",
+    "a rover potters over the regolith, its dish light blinking",
+    "dome lights and base beacons blink softly",
+    "the HR DERBY screen scans and sparkles",
+    "astronaut fans hop in the stands on a home run",
+    "low-gravity dust drifts up and settles slowly"
+   ],
+   "plate": "plate.json",
+   "note": "hand-built MVP park (frozen folder, no stadium.json): data mirrors src/config/stadiums.js",
+   "region": "fantasy",
+   "source": "mvp",
+   "dir": "assets/plates/moon_base/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 41.96,
+    "nearRmsPx1x": 12.2,
+    "chalkRmsPx1x": 9.68,
+    "wallPx1x": 2.65,
+    "note": "Hand-built MVP plate; no painted back lines on the boxes; regolith is all dirt."
+   }
+  },
+  "san_diego": {
+   "id": "san_diego",
+   "name": "San Diego",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "lcf": 102.4,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "sunset light glitters and ripples across the bay (a slow scrolling sparkle on the painted water)",
+    "little sailboats drift slowly across the bay",
+    "palm fronds sway gently in the sea breeze",
+    "orange and pink pixel clouds drift slowly across the sunset (sky layer drift)",
+    "warm windows light up one by one in the brick warehouse and the downtown towers",
+    "a few seagulls glide across the sky now and then",
+    "fans on the warehouse balconies shimmer and wave",
+    "the scoreboard's baseball lights twinkle",
+    "light-tower lamp banks glow and breathe softly",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/san_diego.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/san_diego/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 44.98,
+    "nearRmsPx1x": 3.17,
+    "chalkRmsPx1x": 2.07,
+    "wallPx1x": 2.87,
+    "note": "0 warnings; warehouse balconies and both stands in the crowd mask."
+   }
+  },
+  "london": {
+   "id": "london",
+   "name": "London",
+   "weather": {
+    "type": "fog",
+    "intensity": 0.15
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 4.3,
+   "living": [
+    "Big Ben's clock face glows warm and its lantern catches a slow golden glint",
+    "the London Eye turns imperceptibly, its rim lights chasing around the wheel",
+    "a red double-decker bus glides along the road behind the stands now and then (cut the painted bus into a sprite)",
+    "heavy grey clouds drift slowly, golden light breathing through the gaps (sky layer drift)",
+    "floodlight banks glow and softly pulse, fine misty motes hanging in their cones",
+    "the flags and banners on the poles above the stands flutter",
+    "office windows in the City towers flicker on as evening falls",
+    "the scoreboard's pixel diamond lights up its bases on a home run",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/london.png",
+   "plate": "plate.json",
+   "region": "europe",
+   "source": "factory",
+   "dir": "assets/plates/london/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 49.02,
+    "nearRmsPx1x": 13.07,
+    "chalkRmsPx1x": 2.65,
+    "wallPx1x": 2.11,
+    "note": "Pilot park; solve and masks re-run against the current shared code: bit-identical. Painted plate ~19 cm deeper than regulation (anchors.paintedPlate)."
+   }
+  },
+  "chicago_south": {
+   "id": "chicago_south",
+   "name": "Chicago South Side",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the elevated train's lit windows glow and flicker softly as it hums along the tracks",
+    "the twin antenna lights on the tallest tower blink slowly, white-blue",
+    "skyscraper windows flicker on and off across the downtown skyline",
+    "the HOME RUN DERBY board's dot lights chase slowly",
+    "the light-tower lamp banks breathe gently, moths drifting through their cones",
+    "dark night clouds drift slowly past the skyline (sky layer drift)",
+    "stars twinkle faintly above the towers",
+    "red aircraft-warning lights blink on the spires",
+    "a window in the right-field brick apartments switches on, later off",
+    "the passing el train's window light sweeps across the empty green bleachers"
+   ],
+   "concept": "concepts/round2/chicago_south.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/chicago_south/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 47.24,
+    "nearRmsPx1x": 11.53,
+    "chalkRmsPx1x": 8.75,
+    "wallPx1x": 2.07,
+    "note": "Stylised boxes, foul lines and wall fit; empty bleachers (no_crowd). The HR board dot lights need their own sprite for 'board lights chase'."
+   }
+  },
+  "cherry_temple": {
+   "id": "cherry_temple",
+   "name": "Cherry Temple",
+   "weather": {
+    "type": "petals",
+    "intensity": 0.45
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "cherry blossom petals drift down across the whole frame (petals weather) and settle on the dirt",
+    "the pink cherry trees sway gently in the breeze (crown mask, slow vertex wobble)",
+    "the stone lanterns flicker like candles, warm and soft (glow mask)",
+    "the pagoda's lit windows glow and breathe warmly, one tier dimming now and then",
+    "the setting sun's halo pulses softly and a slow glint slides down the pagoda spire",
+    "low mist drifts through the valleys of the purple mountains behind the pagoda",
+    "the lilac pixel clouds drift slowly across the dusk sky",
+    "light-tower lamp banks glow and breathe, moths drifting through their cones",
+    "a few fireflies blink over the garden rocks beyond the wall",
+    "the scoreboard's little diamond icon pulses, and its lamps tick over after each home run"
+   ],
+   "concept": "concepts/international/cherry_temple.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/cherry_temple/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 50.92,
+    "nearRmsPx1x": 5.91,
+    "chalkRmsPx1x": 3.79,
+    "wallPx1x": 2.14,
+    "note": "Chalk 3.8 px, no warnings; lanterns, pagoda windows and sun disc glow; no stands."
+   }
+  },
+  "anaheim": {
+   "id": "anaheim",
+   "name": "Anaheim",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "day",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the twin waterfalls tumble down the rock formation (a slow scrolling shimmer on the painted water)",
+    "mist sparkles softly at the base of the falls where the water meets the rocks",
+    "palm fronds on the rockpile sway gently in a warm breeze",
+    "the red pennant flags on the giant cap gates flutter lazily",
+    "small white pixel clouds drift slowly across the blue sky (sky layer drift)",
+    "a sun glint slides across the glass skyscraper windows",
+    "light-tower lamp banks glow with a soft daytime shimmer",
+    "a seagull or two glides across the sky now and then",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run",
+    "a home run sends a burst of water spray up the waterfall"
+   ],
+   "concept": "concepts/round2/anaheim.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/anaheim/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 39.15,
+    "nearRmsPx1x": 6.58,
+    "chalkRmsPx1x": 6.09,
+    "wallPx1x": 2.21,
+    "note": "Master rebuilt, bottom re-bought so the catcher's-box lines run straight off the bottom; crowd covers both tiered stands. Fences 101/124.4 m."
+   }
+  },
+  "houston": {
+   "id": "houston",
+   "name": "Houston",
+   "weather": {
+    "type": "storm",
+    "intensity": 0.5
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 132.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "distant lightning flickers inside the thunderclouds every so often, briefly lighting the glass towers (storm flash)",
+    "the vintage steam locomotive puffs soft white smoke that curls and drifts left along the trestle",
+    "the train's carriage windows glow warm and its headlamp flickers",
+    "the little signal light on the trestle blinks slowly from red to amber",
+    "heavy storm clouds roll slowly across the sky (sky layer drift)",
+    "glass-tower windows flicker and a red aircraft light blinks atop the tallest tower",
+    "the video board's pixel baseball streaks across the screen after a home run",
+    "floodlight banks glow and softly pulse, fine mist drifting through the cones",
+    "crowd shimmer in the right-field stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/houston.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/houston/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 47.0,
+    "nearRmsPx1x": 7.8,
+    "chalkRmsPx1x": 8.63,
+    "wallPx1x": 2.46,
+    "note": "Ghost bat over the trees removed; bottom re-rolled without chalk stubs; storm 0.5 at night."
+   }
+  },
+  "miami": {
+   "id": "miami",
+   "name": "Miami",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 123.1,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the home run sculpture's neon rainbow arcs chase with light, and it lights up fully on a home run",
+    "the pixel dolphins and flamingos on the sculpture bob gently, as if animatronic",
+    "palm fronds sway slowly in the warm sea breeze",
+    "the video board's pixel sunset shimmers over the water, its palm silhouettes swaying",
+    "pastel art-deco neon signs buzz on as the sun goes down, with a rare soft flicker",
+    "coral clouds drift slowly across the synthwave sky (sky layer drift)",
+    "a pelican or a small flock of birds glides across the pink sky now and then",
+    "tower windows twinkle on as dusk falls; light-tower lamps glow and breathe",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/miami.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/miami/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 42.88,
+    "nearRmsPx1x": 9.96,
+    "chalkRmsPx1x": 2.2,
+    "wallPx1x": 1.64,
+    "note": "Bottom re-rolled; glow limited to lamps, neon, board and windows; the painted plate is a thick oversized slab (stylised)."
+   }
+  },
+  "venice_canals": {
+   "id": "venice_canals",
+   "name": "Venice",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 128.0,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "gondolas drift slowly across the lagoon behind the outfield wall",
+    "lantern and window reflections ripple and shimmer in the lagoon",
+    "the quay lamp posts flicker warmly",
+    "palazzo and church windows glow and flicker",
+    "the pink dusk clouds drift slowly (sky layer drift)",
+    "a few gulls glide across the dusk sky now and then",
+    "stars begin to twinkle in the blue-violet sky",
+    "the scoreboard's diamond outline pulses softly",
+    "the light-tower lamp banks breathe gently, moths drifting through their cones"
+   ],
+   "concept": "concepts/international/venice_canals.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/venice_canals/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 43.38,
+    "nearRmsPx1x": 13.85,
+    "chalkRmsPx1x": 6.95,
+    "wallPx1x": 1.7,
+    "note": "Only windows and lamps glow on the Salute and palazzi; painted plate ~23 cm deeper (anchors.paintedPlate); no stands."
+   }
+  },
+  "minnesota": {
+   "id": "minnesota",
+   "name": "Minneapolis",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the gold crown of the tallest tower glows and a slow glint rises up its spire",
+    "office windows in the glass towers flicker on and off one by one",
+    "the blue-lit tower's halo ring pulses softly",
+    "a red aircraft-warning light blinks slowly on top of the skyline",
+    "stars twinkle in the deepening indigo sky",
+    "thin violet clouds drift slowly past the skyline (sky layer drift)",
+    "the big video board's crescent moon and pixel cloud drift gently across its screen",
+    "light-tower lamp banks glow and breathe, moths and dust motes drifting in their cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/minnesota.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/minnesota/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 46.27,
+    "nearRmsPx1x": 9.16,
+    "chalkRmsPx1x": 3.39,
+    "wallPx1x": 0.79,
+    "note": "Painted plate ~15 px oversized (stylised); crowd polygons over both grandstands."
+   }
+  },
+  "san_juan": {
+   "id": "san_juan",
+   "name": "San Juan",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the moonlight path on the Atlantic glitters and ripples slowly",
+    "the full moon glows softly with a faint halo while thin night clouds drift past it",
+    "stars twinkle across the navy sky",
+    "the warm lamps along the El Morro fortress walls flicker gently like lanterns",
+    "pastel colonial house windows and street lamps flicker on and off",
+    "palm trees sway slowly in the warm sea breeze",
+    "the red-white-blue bunting on the outfield wall ripples softly",
+    "light-tower lamp banks breathe softly with moths circling the cones"
+   ],
+   "concept": "concepts/international/san_juan.png",
+   "plate": "plate.json",
+   "region": "latam",
+   "source": "factory",
+   "dir": "assets/plates/san_juan/",
+   "qa": {
+    "status": "rough",
+    "hfovDeg": 38.36,
+    "nearRmsPx1x": 11.95,
+    "chalkRmsPx1x": 12.21,
+    "wallPx1x": 2.61,
+    "note": "ROUGH: camera approximate. No painted back lines and an oversized, off-perspective plate: near rms 12 px, plate corners 15-28 px off. Foul lines and wall fit (2.6 px); aim pitches at anchors.paintedPlate. Plate, extension and anchors are clean."
+   }
+  },
+  "colorado": {
+   "id": "colorado",
+   "name": "Denver",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 106.7,
+    "cf": 126.5,
+    "rf": 106.1
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the alpenglow on the snow-capped peaks slowly fades from pink to lavender over the session",
+    "a thin wisp of snow blows off the highest summit (slow sprite drift)",
+    "downtown tower windows flicker on one by one as dusk deepens",
+    "the video boards' pixel graphics pulse softly and flash after a home run",
+    "the peach pixel clouds drift slowly across the sky",
+    "light-tower lamp banks glow and breathe, moths drifting through their cones",
+    "a red aircraft-warning light blinks slowly on the tallest tower",
+    "the purple pennant on the left tower flutters in the thin mountain air",
+    "the evergreen trees in the batter's eye sway very slightly",
+    "a thin crowd shimmer in the purple seats, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/colorado.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/colorado/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 39.46,
+    "nearRmsPx1x": 6.73,
+    "chalkRmsPx1x": 7.96,
+    "wallPx1x": 3.31,
+    "note": "Two-box machine removal; boxes painted wider than regulation (boxL.outer 19 px)."
+   }
+  },
+  "seoul": {
+   "id": "seoul",
+   "name": "Seoul",
+   "weather": {
+    "type": "petals",
+    "intensity": 0.15
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 98.0,
+    "cf": 118.0,
+    "rf": 98.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the Han River bridge's rainbow lights slowly cycle along its arches",
+    "the rainbow reflections shimmer and ripple on the river",
+    "Namsan Tower's green shaft glows and its observation ring lights twinkle, a red light blinking on its mast",
+    "the palace gate's lanterns and arches glow warmly, breathing softly",
+    "apartment tower windows flicker on and off across the hillside",
+    "a few cherry petals drift down from the pink trees beside the stands",
+    "stars twinkle in the indigo sky and the purple clouds drift slowly",
+    "light-tower lamp banks glow and breathe with a gentle lens flare",
+    "cars' headlights crawl across the bridge deck now and then (sprite)",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/seoul.png",
+   "plate": "plate.json",
+   "region": "asia",
+   "source": "factory",
+   "dir": "assets/plates/seoul/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 39.95,
+    "nearRmsPx1x": 7.86,
+    "chalkRmsPx1x": 7.51,
+    "wallPx1x": 1.94,
+    "note": "boxR.back added by hand; boxL.inner 16 px (stylised); rainbow bridge glows."
+   }
+  },
+  "boston": {
+   "id": "boston",
+   "name": "Boston",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 96.0,
+    "lcf": 115.5,
+    "cf": 121.9,
+    "rf": 99.0
+   },
+   "wallHeight": 6.0,
+   "living": [
+    "the PIXEL triangle sign's neon hums with a rare soft flicker (glow mask)",
+    "light-tower lamp banks glow and breathe gently, moths and dust motes drifting through their cones",
+    "the golden-hour pixel clouds drift slowly across the sunset (sky layer drift)",
+    "brownstone and Back Bay tower windows flicker on one by one as the sunset deepens",
+    "the LONG LIVE LOFI board's little heart pulses softly",
+    "the manual scoreboard on the green wall flips a number tile after each home run",
+    "a small flock of birds crosses the orange sky now and then",
+    "a red aircraft-warning light blinks slowly on top of the tallest tower",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "wallProfile": [
+    {
+     "sprayFrom": -45,
+     "sprayTo": -6,
+     "heightM": 18.0,
+     "note": "the painted Green Monster in left field"
+    }
+   ],
+   "concept": "concepts/round2/boston.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/boston/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 38.87,
+    "nearRmsPx1x": 3.63,
+    "chalkRmsPx1x": 3.33,
+    "wallPx1x": 2.34,
+    "note": "Pilot park; solve and masks re-run against the current shared code in this pass: bit-identical output. Green Monster wallProfile 18 m."
+   }
+  },
+  "cyber_district": {
+   "id": "cyber_district",
+   "name": "Cyber District",
+   "weather": {
+    "type": "rain",
+    "intensity": 0.7
+   },
+   "time": "night_neon",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 122.0,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "holographic billboards flicker and glitch now and then (glow mask)",
+    "the giant hologram face on the tower pulses and scanlines roll over it",
+    "flying cars stream slowly between the towers, their tail lights blinking",
+    "the vertical kanji neon sign buzzes with a rare soft flicker",
+    "the jumbotron's glowing baseball slowly spins and pulses",
+    "pink and violet neon reflections ripple across the rain-soaked field and puddles",
+    "rain falls in front of everything, with small splashes on the wet dirt",
+    "red beacons blink on the spire tips",
+    "the neon trim around the stands breathes softly",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/cyber_district.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/cyber_district/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 48.01,
+    "nearRmsPx1x": 6.26,
+    "chalkRmsPx1x": 6.87,
+    "wallPx1x": 2.62,
+    "note": "Rain streaks re-cleaned out of the sky (particles only). Known: fix_edges' mirrored V shapes in the outer 41-50 px side strips, outside the 9:16 frame (no phone shows them; only windows wider than 9:16)."
+   }
+  },
+  "san_francisco": {
+   "id": "san_francisco",
+   "name": "San Francisco",
+   "weather": {
+    "type": "fog",
+    "intensity": 0.4
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 126.5,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the string of lights along the bridge cables twinkles and chases slowly",
+    "the fog banks roll slowly between the towers and over the hills (fog layer drift)",
+    "the kayaks bob gently on the bay beyond the right-field wall",
+    "the bay water glitters with the reflected bridge lights",
+    "the orange pennants on top of the scoreboard flutter",
+    "the scoreboard clock's hands creep forward; the ball on the board pulses",
+    "tower windows flicker; the pointed tower's tip light blinks",
+    "stars twinkle faintly in the violet sky",
+    "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/san_francisco.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/san_francisco/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 46.4,
+    "nearRmsPx1x": 6.8,
+    "chalkRmsPx1x": 6.5,
+    "wallPx1x": 2.31,
+    "note": "Stray ball on the wall removed; fog 0.4; bridge lights glow."
+   }
+  },
+  "mexico_city": {
+   "id": "mexico_city",
+   "name": "Mexico City",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 114.3,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the colourful papel picado banners flutter gently in the breeze (a slow per-row wave)",
+    "the golden Angel on top of the column catches a slow moving glint of sunset light",
+    "a thin wisp of smoke rises and drifts from the hazy volcano on the horizon",
+    "purple jacaranda trees drop a few slow drifting petals",
+    "city tower windows flicker on as the sun goes down",
+    "magenta and orange pixel clouds drift slowly across the sky",
+    "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/mexico_city.png",
+   "plate": "plate.json",
+   "region": "latam",
+   "source": "factory",
+   "dir": "assets/plates/mexico_city/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 52.99,
+    "nearRmsPx1x": 2.94,
+    "chalkRmsPx1x": 2.78,
+    "wallPx1x": 0.72,
+    "note": "hfov 53 is the concept's wide framing; chalk 2.9 px; papel picado kept out of the glow."
+   }
+  },
+  "philadelphia": {
+   "id": "philadelphia",
+   "name": "Philadelphia",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 122.2,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the giant neon Liberty Bell swings gently side to side and pulses on a home run",
+    "the bell's neon outline buzzes with an occasional soft flicker",
+    "City Hall's clock face glows warm and the tower catches a slow glint",
+    "the twin glass spires' blue edge lights shimmer slowly up and down",
+    "stars twinkle in the deep blue sky while thin violet clouds drift by (sky layer drift)",
+    "a red aircraft warning light blinks atop the tallest tower",
+    "the HOME RUN DERBY board's bulb border chases around its frame",
+    "row-house and office windows flicker on and off",
+    "light-tower lamp banks glow and softly breathe, moths drifting through their cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/philadelphia.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/philadelphia/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 44.15,
+    "nearRmsPx1x": 2.81,
+    "chalkRmsPx1x": 2.92,
+    "wallPx1x": 1.02,
+    "note": "0 warnings; crowd both sides of the Liberty Bell; bell neon glows."
+   }
+  },
+  "underwater_dome": {
+   "id": "underwater_dome",
+   "name": "Underwater Dome",
+   "weather": {
+    "type": "fog",
+    "intensity": 0.2
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.7,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the whales glide slowly across the dome, their tails beating gently",
+    "schools of glowing fish swirl and drift past the glass",
+    "shafts of blue-green light sway down from the surface",
+    "caustic light ripples dance softly across the field",
+    "the kelp forest sways in the current",
+    "strings of bubbles rise slowly past the dome",
+    "warm windows in the sunken city flicker on and off",
+    "the scoreboard's night-city screen twinkles and its clock hands tick",
+    "light-tower lamp banks glow and breathe in the water haze",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/underwater_dome.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/underwater_dome/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 39.35,
+    "nearRmsPx1x": 4.29,
+    "chalkRmsPx1x": 2.41,
+    "wallPx1x": 1.21,
+    "note": "Final pass: the catcher's-box line stubs that ended in a blurry blob at the bottom seam are erased (fix_copy translating plain dirt sideways), so the tall-phone ground below the boxes is clean. Chalk 2.4 px, 0 warnings. Known: mirrored V shapes in the outer side strips, outside the 9:16 frame. WebP twins regenerated."
+   }
+  },
+  "chicago_north": {
+   "id": "chicago_north",
+   "name": "Chicago North Side",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "fans on the rooftop bleachers across the street shimmer and wave, cheering on a home run",
+    "the string lights over the rooftop bleachers twinkle warmly",
+    "the ivy on the outfield wall rustles in a soft breeze",
+    "golden pixel clouds drift slowly behind the skyline (sky layer drift)",
+    "a sun glint slides down the tall dark tower's windows as the light turns golden",
+    "apartment windows light up one by one as evening comes",
+    "the HOME RUN DERBY board's stars twinkle",
+    "a small flock of birds crosses the golden sky now and then",
+    "light-tower lamp banks glow and breathe, dust motes drifting in their cones",
+    "red aircraft-warning lights blink slowly on the twin antennas"
+   ],
+   "concept": "concepts/round2/chicago_north.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/chicago_north/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 47.99,
+    "nearRmsPx1x": 5.88,
+    "chalkRmsPx1x": 3.92,
+    "wallPx1x": 0.88,
+    "note": "Painted boxes have no back lines; corner smear fixed; rooftop bleachers in the crowd mask."
+   }
+  },
+  "washington": {
+   "id": "washington",
+   "name": "Washington, D.C.",
+   "weather": {
+    "type": "petals",
+    "intensity": 0.4
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 122.5,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "pink cherry petals drift down slowly across the whole scene (weather: petals)",
+    "the cherry blossom trees sway softly and shed a few petals",
+    "the white obelisk catches a slow fading sunset glint on its tip, with a red warning light blinking",
+    "the Capitol dome glows warm and its lights brighten as dusk deepens",
+    "the river beyond the outfield ripples with city light reflections",
+    "the HR scoreboard's digits glow and update after each home run",
+    "soft pink pixel clouds drift slowly while the first stars twinkle",
+    "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/washington.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/washington/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 49.12,
+    "nearRmsPx1x": 19.97,
+    "chalkRmsPx1x": 5.92,
+    "wallPx1x": 2.98,
+    "note": "0 warnings; baked petals and TAP TO SWING removed; the box back lines under the removed text read as slightly worn/patchy chalk."
+   }
+  },
+  "los_angeles": {
+   "id": "los_angeles",
+   "name": "Los Angeles",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 120.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the crescent moon glows softly while stars twinkle across the purple sky",
+    "the red-lit radio mast above the hillside sign blinks slowly",
+    "downtown tower windows flicker; the tallest tower's crown light glows cyan",
+    "the hillside house lights twinkle on and off",
+    "the tall palm fronds sway slowly in a warm breeze",
+    "the zig-zag pavilion roof lights glow and breathe",
+    "a small plane with blinking lights crosses the night sky now and then",
+    "the light-tower lamp banks breathe, moths drifting through their cones",
+    "crowd shimmer in both stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/los_angeles.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/los_angeles/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 43.57,
+    "nearRmsPx1x": 4.99,
+    "chalkRmsPx1x": 3.56,
+    "wallPx1x": 1.79,
+    "note": "Whole row of wall-base balls removed; 0 warnings."
+   }
+  },
+  "sydney": {
+   "id": "sydney",
+   "name": "Sydney",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 122.0,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "rainbow lorikeets flap across the sky now and then",
+    "the harbour water glitters in the low sun; the little sailboat drifts slowly",
+    "the Opera House sails catch a slow moving warm glint",
+    "the needle tower's turret lights glow and blink",
+    "city windows switch on one by one as the evening deepens",
+    "the golden clouds drift slowly across the teal sky (sky layer drift)",
+    "the light-tower lamp banks breathe gently",
+    "the scoreboard's diamond pulses softly",
+    "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/sydney.png",
+   "plate": "plate.json",
+   "region": "oceania",
+   "source": "factory",
+   "dir": "assets/plates/sydney/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 44.83,
+    "nearRmsPx1x": 8.14,
+    "chalkRmsPx1x": 4.95,
+    "wallPx1x": 1.83,
+    "note": "Sunset gaps kept out of the glow; lorikeets are painted static (need sprites for 'lorikeets flap')."
+   }
+  },
+  "tampa_bay": {
+   "id": "tampa_bay",
+   "name": "Tampa Bay",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 123.1,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "distant heat lightning flickers silently inside the far thunderheads now and then",
+    "the tilted dome's teal ring lights chase slowly around its rim",
+    "the dome's warm yellow windows glow and breathe gently",
+    "palm trees sway slowly in the humid breeze",
+    "city skyline windows and teal neon accents flicker on and off",
+    "purple thunderhead clouds drift slowly across the sky",
+    "light-tower lamp banks breathe softly, moths drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/tampa_bay.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/tampa_bay/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 45.89,
+    "nearRmsPx1x": 10.01,
+    "chalkRmsPx1x": 9.73,
+    "wallPx1x": 2.81,
+    "note": "Stylised painted boxes (near rms 10, boxR.outer 23 px); every detected line is on the painted chalk; crowd on the two bleacher blocks."
+   }
+  },
+  "desert_oasis": {
+   "id": "desert_oasis",
+   "name": "Desert Oasis",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "lcf": 115.8,
+    "cf": 121.9,
+    "rcf": 115.8,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the enormous full moon glows with a soft, slowly breathing halo",
+    "stars twinkle across the whole sky, with a rare shooting star",
+    "the camel caravan plods slowly along the dune ridge",
+    "lantern-lit windows in the adobe village flicker like candles",
+    "the moon and lantern reflections ripple on the palm-ringed lake (glow + field shimmer)",
+    "palm fronds sway gently in the night breeze",
+    "the tallest spire's beacon twinkles, the minaret lights glow",
+    "the HOME RUN DERBY board's lights chase slowly",
+    "a faint wisp of sand drifts off the dune crest now and then",
+    "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/desert_oasis.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/desert_oasis/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 48.09,
+    "nearRmsPx1x": 9.43,
+    "chalkRmsPx1x": 4.1,
+    "wallPx1x": 1.87,
+    "note": "4 leftover balls removed; dunes kept out of the glow; moon glows on purpose; painted plate offset."
+   }
+  },
+  "las_vegas": {
+   "id": "las_vegas",
+   "name": "Las Vegas",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night_neon",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "lcf": 115.8,
+    "cf": 128.0,
+    "rcf": 115.8,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the pyramid's sky beam pulses gently and its light slowly breathes",
+    "the WELCOME TO VEGAS sign's marquee bulbs chase around its border",
+    "the starburst atop the sign twinkles and the sign's neon buzzes with a rare soft flicker",
+    "the Eiffel-style tower's gold lights sparkle in slow waves",
+    "the neon hot-air-balloon sign glows and its stripes shimmer",
+    "the observation wheel's rim lights slowly rotate",
+    "casino tower windows and billboard screens flicker and change colour",
+    "stars twinkle in the black desert sky",
+    "an airliner with blinking lights crosses the sky now and then",
+    "palm trees beyond the wall sway gently in the warm desert night air"
+   ],
+   "concept": "concepts/round2/las_vegas.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/las_vegas/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 50.63,
+    "nearRmsPx1x": 8.42,
+    "chalkRmsPx1x": 6.1,
+    "wallPx1x": 2.3,
+    "note": "Pyramid beam repaired; stylised oversized plate; neon strip glows."
+   }
+  },
+  "santo_domingo": {
+   "id": "santo_domingo",
+   "name": "Santo Domingo",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 122.5,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the merengue band in the right-field stands bobs and strums in a slow loop (guitars, bass and hats moving)",
+    "the flag on the hillside ripples in the sea breeze",
+    "the white sailboat drifts slowly across the turquoise sea (sprite-able)",
+    "the Caribbean sea sparkles with slow golden glints near the horizon",
+    "palm fronds sway lazily beside the cathedral and along the hillside",
+    "the cathedral's stone bell tower catches a warm golden glint that slides as the sun lowers",
+    "fluffy golden clouds drift slowly across the blue sky (sky layer drift)",
+    "the DALE DURO board's letters blink softly after a home run",
+    "a few seagulls glide across the sky now and then",
+    "crowd shimmer in the colourful left-field stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/santo_domingo.png",
+   "plate": "plate.json",
+   "region": "latam",
+   "source": "factory",
+   "dir": "assets/plates/santo_domingo/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 42.61,
+    "nearRmsPx1x": 8.66,
+    "chalkRmsPx1x": 10.08,
+    "wallPx1x": 1.57,
+    "note": "DALE DURO board kept; glow off the band's white shirts and facades (glow_zero_boxes); boxL.back hidden under the painted shadow."
+   }
+  },
+  "detroit": {
+   "id": "detroit",
+   "name": "Detroit",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 125.6,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the two tiger statues on the scoreboard get a slow warm rim-light glint, their eyes glowing softly",
+    "the scoreboard screen's lamps buzz with an occasional soft flicker and its numbers update after a home run",
+    "the glowing crown bands on the round Renaissance-style towers pulse slowly in violet and blue",
+    "art deco skyscraper windows flicker on and off one by one",
+    "a red aircraft-warning light blinks on the tallest spire",
+    "amber backlit clouds drift slowly across the dusk sky",
+    "light-tower lamp banks breathe softly, moths drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/detroit.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/detroit/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 33.97,
+    "nearRmsPx1x": 4.5,
+    "chalkRmsPx1x": 3.97,
+    "wallPx1x": 1.12,
+    "note": "Top sky re-bought (no dark band); no painted back lines, hfov 34 narrow but every line on chalk."
+   }
+  },
+  "toronto": {
+   "id": "toronto",
+   "name": "Toronto",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "night",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 100.0,
+    "cf": 123.1,
+    "rf": 100.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the CN-style tower's pink and blue light shafts slowly cycle colours, its pod ring twinkling",
+    "a red aircraft-warning light blinks slowly at the tower's tip and on the twin-antenna skyscraper",
+    "the dome's arch of blue-white light breathes softly",
+    "the lake shimmers with rippling reflections of the city lights",
+    "skyscraper windows flicker on and off across downtown",
+    "stars twinkle in the clear night sky, and now and then a plane crosses with blinking lights",
+    "the video board's skyline graphic pulses and the scoreboard updates after a home run",
+    "light-tower lamp banks glow and breathe, moths drifting through their cones",
+    "the red-white-blue bunting on the stands ripples in the lake breeze",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/toronto.png",
+   "plate": "plate.json",
+   "region": "canada",
+   "source": "factory",
+   "dir": "assets/plates/toronto/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 38.98,
+    "nearRmsPx1x": 9.8,
+    "chalkRmsPx1x": 10.7,
+    "wallPx1x": 2.07,
+    "note": "Inner box lines painted leaning inward (20-25 px); CN-style tower, dome arch and board glow."
+   }
+  },
+  "arizona": {
+   "id": "arizona",
+   "name": "Phoenix",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "lcf": 125.9,
+    "cf": 124.1,
+    "rcf": 125.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the steel light-tower lamp banks glow and breathe softly, moths and dust drifting through their cones",
+    "the salmon-pink sunset clouds drift slowly across the open retractable roof (sky layer drift)",
+    "downtown tower windows flicker on one by one as the sky darkens",
+    "a red aircraft-warning light blinks slowly on the tallest tower's spire",
+    "the first stars twinkle in the deep violet sky between the roof trusses",
+    "the right-field video board loops a slow, softly flickering sunset-skyline picture",
+    "a faint heat shimmer ripples over the red desert mountain",
+    "a lone hawk circles lazily above the saguaros now and then",
+    "crowd shimmer in both tiered stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/arizona.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/arizona/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 45.89,
+    "nearRmsPx1x": 11.5,
+    "chalkRmsPx1x": 5.26,
+    "wallPx1x": 2.97,
+    "note": "Glow kept off the sunlit mountain and facades; painted plate offset (use anchors.paintedPlate)."
+   }
+  },
+  "new_york_bronx": {
+   "id": "new_york_bronx",
+   "name": "New York, the Bronx",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "an elevated subway train glides slowly across the tracks behind the outfield, its windows glowing",
+    "the red aircraft-warning light on the tall spire blinks slowly and its crown lights glow",
+    "Manhattan skyline windows flicker on one by one in the pastel dusk",
+    "the heart BRONX sign glows with a soft neon buzz and a rare flicker",
+    "the small flags on the light towers wave gently",
+    "pink and lavender pixel clouds drift slowly across the sky",
+    "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/new_york_bronx.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/new_york_bronx/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 50.72,
+    "nearRmsPx1x": 8.42,
+    "chalkRmsPx1x": 9.3,
+    "wallPx1x": 2.45,
+    "note": "The painted right box is wider than perspective allows (boxR.outer 24 px); the left box, plate and foul lines fit, so batter-side accuracy is fine. BRONX sign glows."
+   }
+  },
+  "cleveland": {
+   "id": "cleveland",
+   "name": "Cleveland",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the Terminal Tower's lit crown glows and slowly breathes red and gold",
+    "the lake's water ripples, the city lights' reflections shimmering and wobbling on Lake Erie",
+    "a small boat's lights glide slowly across the lake now and then (sprite-able)",
+    "downtown windows flicker on and off across the skyline as night falls",
+    "the scoreboard's pixel crescent moon twinkles, its little stars blinking",
+    "the red neon sign on the right buzzes with a rare soft flicker",
+    "dark pixel clouds drift slowly across the lavender sky (sky layer drift), first stars twinkling",
+    "light-tower lamp banks glow and softly pulse, dust motes drifting through the cones",
+    "the red-white-blue bunting on the upper deck stirs in the lake breeze",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/cleveland.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/cleveland/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 39.31,
+    "nearRmsPx1x": 6.83,
+    "chalkRmsPx1x": 7.04,
+    "wallPx1x": 2.08,
+    "note": "boxR.outer 14.8 px (stylised); crowd covers both decks."
+   }
+  },
+  "sky_islands": {
+   "id": "sky_islands",
+   "name": "Sky Islands",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 129.5,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the waterfalls pour off the island's edges (a slow scrolling shimmer on the painted water)",
+    "the hot-air balloons drift slowly upward and sideways",
+    "the little floating islands bob gently up and down",
+    "the clouds below the island drift slowly past",
+    "the low sun glows with a soft lens flare",
+    "pastel clouds drift across the sky (sky layer drift)",
+    "cottage windows on the floating islands light up warmly",
+    "the HOME RUN DERBY marquee bulbs chase around the board",
+    "a few birds glide between the islands now and then",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/sky_islands.png",
+   "plate": "plate.json",
+   "region": "fantasy",
+   "source": "factory",
+   "dir": "assets/plates/sky_islands/",
+   "qa": {
+    "status": "rough",
+    "hfovDeg": 63.34,
+    "nearRmsPx1x": 8.77,
+    "chalkRmsPx1x": 7.95,
+    "wallPx1x": 0.73,
+    "note": "ROUGH: camera loose. The painted boxes are stylised parallelograms on a high, wide framing (hfov 63): box residuals 16-17 px, the overlay follows the chalk but not tightly, so 3D shadows may land a little off the painted chalk. The plate itself is seamless."
+   }
+  },
+  "baltimore": {
+   "id": "baltimore",
+   "name": "Baltimore",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 125.0,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the tall ships' masts sway very gently in the harbor, their rigging lanterns twinkling warm",
+    "the little white sailboat in the Inner Harbor bobs and drifts slowly past (sprite-able)",
+    "the red-brick warehouse's arched windows light up one by one as dusk deepens, an occasional one flicking off",
+    "the flag on the ship's mast ripples lazily in the harbor breeze",
+    "light-tower lamp banks glow and softly breathe, moths and dust motes drifting through the cones",
+    "downtown tower windows flicker and the gold crown of the art-deco tower catches a slow glint",
+    "peach clouds drift slowly across the darkening sky (sky layer drift) as the first stars twinkle",
+    "the little lamps along the outfield wall pulse softly in sequence",
+    "crowd shimmer in the right-field stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/baltimore.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/baltimore/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 42.77,
+    "nearRmsPx1x": 11.89,
+    "chalkRmsPx1x": 11.27,
+    "wallPx1x": 1.27,
+    "note": "Outpaint re-rolled (no streaks); inner box lines 22-26 px off are the painting's own inconsistent perspective. WebP twins regenerated."
+   }
+  },
+  "kansas_city": {
+   "id": "kansas_city",
+   "name": "Kansas City",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the fountain jets beyond the wall rise and fall in a slow rhythm, their spray shimmering (sprite + mask)",
+    "the waterfalls cascade with a soft scrolling shimmer and a faint mist at their base",
+    "the gold crown on the scoreboard catches a slow travelling glint",
+    "the crown scoreboard's LONGEST / TOTAL numbers tick over after each home run",
+    "downtown skyscraper windows flicker on one by one as the sunset deepens",
+    "the teal-lit spire on the tallest tower pulses softly, a red aircraft light blinking above it",
+    "light-tower lamp banks glow and breathe, moths drifting through their cones",
+    "the orange sunset clouds drift slowly across the sky",
+    "the red-white-blue bunting on the wall ripples in the breeze",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/kansas_city.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/kansas_city/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 40.77,
+    "nearRmsPx1x": 10.66,
+    "chalkRmsPx1x": 9.05,
+    "wallPx1x": 1.96,
+    "note": "Bottom re-bought without a stray line; stylised oversized plate (anchors.paintedPlate)."
+   }
+  },
+  "atlanta": {
+   "id": "atlanta",
+   "name": "Atlanta",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "twilight",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.9,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the golden crown spire of the tallest tower glows and a slow glint slides up its pyramid top",
+    "a red aircraft-warning light blinks slowly on each spire tip",
+    "downtown tower windows flicker on and off one by one in the twilight haze",
+    "peach and coral pixel clouds drift slowly across the teal sky, with a few stars twinkling above",
+    "light-tower lamp banks breathe softly, moths and dust motes drifting through the cones",
+    "warm humid haze gently shimmers low over the skyline (a soft heat-haze band)",
+    "the little red outfield boards' lamps and the pink heart sign on the wall pulse softly",
+    "the dark trees beyond the wall sway a touch in a warm breeze",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/atlanta.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/atlanta/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 45.51,
+    "nearRmsPx1x": 7.1,
+    "chalkRmsPx1x": 3.8,
+    "wallPx1x": 2.5,
+    "note": "0 warnings; crowd_polys cover both tiers; painted plate ~11 px off (anchors.paintedPlate)."
+   }
+  },
+  "monterrey": {
+   "id": "monterrey",
+   "name": "Monterrey",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 124.4,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the beacon tower's green laser shimmers and pulses softly (the beam is NOT in the glow mask: key it by colour, G - max(R, B) > 40, above the skyline; it runs from the tower tip at concept (837, 478) out through the right edge of the concept at (1024, 232) and on to the plate's right edge)",
+    "the saddle mountain's peaks lose their last warm rim light as the dusk deepens",
+    "the low sun flares softly behind the left light tower",
+    "city tower windows flicker on one by one",
+    "the purple-orange pixel clouds drift slowly (sky layer drift)",
+    "the light-tower lamp banks breathe gently, moths drifting through their cones",
+    "a small flock of birds crosses the sunset now and then",
+    "the red cactus flowers beyond the wall sway in the breeze",
+    "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/international/monterrey.png",
+   "plate": "plate.json",
+   "region": "latam",
+   "source": "factory",
+   "dir": "assets/plates/monterrey/",
+   "qa": {
+    "status": "rough",
+    "hfovDeg": 38.12,
+    "nearRmsPx1x": 8.25,
+    "chalkRmsPx1x": 4.34,
+    "wallPx1x": 2.57,
+    "note": "ROUGH: the boxes are painted narrower than regulation, so the solve drops their outer lines (solve_drop) to keep the foul lines and wall exact (0.9-2.6 px): the 3D box model sits wider than the painted boxes. A very faint halo of the outpaint's second laser remains (zoom only). The doubled chalk by the left box is in the concept itself (checked side by side)."
+   }
+  },
+  "milwaukee": {
+   "id": "milwaukee",
+   "name": "Milwaukee",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "dusk",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 100.6,
+    "lcf": 104.9,
+    "cf": 121.9,
+    "rcf": 112.2,
+    "rf": 105.2
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "fallen autumn leaves skitter slowly across the dirt and a few drift down through the light",
+    "the brewery smokestacks breathe slow soft smoke plumes into the evening sky",
+    "the yellow tube slide beyond the wall catches a slow travelling glint",
+    "the GRAIN BELT style neon on the brewery hums with a rare soft flicker",
+    "the lakefront skyline windows flicker on and off",
+    "the little sailboat drifts slowly across the lake, its mast light blinking (sprite)",
+    "the HOME RUN DERBY board's clock ticks and the board sparkles after a home run",
+    "the huge roof truss's lamp banks glow and breathe, moths drifting through the light",
+    "lilac clouds drift slowly across the blue sky",
+    "crowd shimmer under the roof, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/milwaukee.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/milwaukee/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 47.94,
+    "nearRmsPx1x": 12.11,
+    "chalkRmsPx1x": 6.6,
+    "wallPx1x": 2.44,
+    "note": "Outpaint re-bought; crowd under the roof; stylised oversized plate. Known: a mirrored chalk chevron in the far-right margin, outside the 9:16 frame (only windows wider than 9:16)."
+   }
+  },
+  "pittsburgh": {
+   "id": "pittsburgh",
+   "name": "Pittsburgh",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 121.6,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the river behind the wall ripples with the golden sunset reflection shimmering on it",
+    "the yellow suspension bridge's lamps glow and twinkle, a slow glint sliding along its cables",
+    "headlights crawl across the bridge deck now and then (sprite)",
+    "downtown tower and brick building windows flicker on one by one as the light fades",
+    "the pyramid-topped tower's spire light blinks slowly (aircraft light)",
+    "the baseball video boards on both sides spin their pixel ball gently",
+    "golden sunset clouds drift slowly across the sky",
+    "light-tower lamp banks glow and breathe, moths drifting through their cones",
+    "a small flock of birds crosses the amber sky over the hills now and then",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/pittsburgh.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/pittsburgh/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 43.65,
+    "nearRmsPx1x": 7.31,
+    "chalkRmsPx1x": 6.41,
+    "wallPx1x": 1.81,
+    "note": "Right-edge smear mirrored; boxR.inner 16 px (stylised); bridges and facades kept out of the glow."
+   }
+  },
+  "texas": {
+   "id": "texas",
+   "name": "Arlington",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 125.0,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the big white-and-blue star on the roof truss catches a slow glint that travels across its points",
+    "the Texas flag on the right light tower ripples in the evening breeze",
+    "the flat orange horizon glows and slowly cools toward violet as the sunset fades",
+    "small sunset clouds drift slowly through the gap under the roof (sky layer drift)",
+    "the cowboy-hat video board tips its hat after a home run",
+    "the concourse ribbon lights along each deck twinkle and chase slowly",
+    "light-tower lamp banks glow and softly pulse, dust and moths drifting through the cones",
+    "downtown windows flicker on one by one under the roof's shadow",
+    "crowd shimmer across the tiered stands, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/texas.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/texas/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 48.58,
+    "nearRmsPx1x": 8.52,
+    "chalkRmsPx1x": 5.83,
+    "wallPx1x": 4.27,
+    "note": "Final pass: added a skyline EVF seed as glow_small_only (1 EVF call), so only windows glow in the skyline. boxL.back hidden in the painting; stylised offset plate (anchors.paintedPlate)."
+   }
+  },
+  "cincinnati": {
+   "id": "cincinnati",
+   "name": "Cincinnati",
+   "weather": {
+    "type": "none",
+    "intensity": 0.0
+   },
+   "time": "sunset",
+   "gravity": 9.81,
+   "fences": {
+    "lf": 101.0,
+    "cf": 123.1,
+    "rf": 101.0
+   },
+   "wallHeight": 3.0,
+   "living": [
+    "the riverboat's twin smokestacks puff slow soft pixel smoke that drifts off to the side",
+    "the riverboat paddle wheel turns slowly and the boat's cabin lights twinkle",
+    "the Ferris wheel by the river turns slowly with its rim lights chasing",
+    "the Ohio River shimmers with rippling sunset reflections under the blue suspension bridge",
+    "the blue suspension bridge's cable lights twinkle on one by one",
+    "city tower windows flicker on as the sun sets behind the hills",
+    "orange and pink pixel clouds drift slowly across the sunset sky",
+    "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+    "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+   ],
+   "concept": "concepts/round2/cincinnati.png",
+   "plate": "plate.json",
+   "region": "us",
+   "source": "factory",
+   "dir": "assets/plates/cincinnati/",
+   "qa": {
+    "status": "done",
+    "hfovDeg": 42.65,
+    "nearRmsPx1x": 6.6,
+    "chalkRmsPx1x": 6.57,
+    "wallPx1x": 1.64,
+    "note": "boxR.inner 15 px (stylised); crowd hand-traced; lit clouds drift with the sky."
+   }
+  }
+ }
+}

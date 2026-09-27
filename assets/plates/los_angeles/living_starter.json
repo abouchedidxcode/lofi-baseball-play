@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "park": "los_angeles",
+  "mood": "Los Angeles at night: palm tree silhouettes, the Hollywood hills and a Hollywood-style sign, starry purple sky with a crescent moon, zig-zag roof pavilions.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "night",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the crescent moon glows softly while stars twinkle across the purple sky", "the red-lit radio mast above the hillside sign blinks slowly", "downtown tower windows flicker; the tallest tower's crown light glows cyan", "the hillside house lights twinkle on and off", "the tall palm fronds sway slowly in a warm breeze", "the zig-zag pavilion roof lights glow and breathe", "a small plane with blinking lights crosses the night sky now and then", "the light-tower lamp banks breathe, moths drifting through their cones", "crowd shimmer in both stands, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/los_angeles.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 809],
+      "clean": [0, 0, 1088, 809],
+      "layers": [
+        {
+          "atlas": [0, 815, 1280, 138],
+          "y": 183,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 959, 1280, 224],
+          "y": 399,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1189, 1280, 237],
+          "y": 629,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [928, 600, 70, 70]
+        },
+        {
+          "ellipse": [187, 851, 100, 73]
+        },
+        {
+          "ellipse": [1089, 853, 96, 71]
+        }
+      ]
+    }
+  ]
+}

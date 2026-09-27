@@ -1,0 +1,30 @@
+{
+ "id": "minnesota",
+ "name": "Minneapolis",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "twilight",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 124.4,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the gold crown of the tallest tower glows and a slow glint rises up its spire",
+  "office windows in the glass towers flicker on and off one by one",
+  "the blue-lit tower's halo ring pulses softly",
+  "a red aircraft-warning light blinks slowly on top of the skyline",
+  "stars twinkle in the deepening indigo sky",
+  "thin violet clouds drift slowly past the skyline (sky layer drift)",
+  "the big video board's crescent moon and pixel cloud drift gently across its screen",
+  "light-tower lamp banks glow and breathe, moths and dust motes drifting in their cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/minnesota.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

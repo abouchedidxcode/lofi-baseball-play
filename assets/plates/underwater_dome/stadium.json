@@ -1,0 +1,31 @@
+{
+ "id": "underwater_dome",
+ "name": "Underwater Dome",
+ "weather": {
+  "type": "fog",
+  "intensity": 0.2
+ },
+ "time": "night",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 124.7,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the whales glide slowly across the dome, their tails beating gently",
+  "schools of glowing fish swirl and drift past the glass",
+  "shafts of blue-green light sway down from the surface",
+  "caustic light ripples dance softly across the field",
+  "the kelp forest sways in the current",
+  "strings of bubbles rise slowly past the dome",
+  "warm windows in the sunken city flicker on and off",
+  "the scoreboard's night-city screen twinkles and its clock hands tick",
+  "light-tower lamp banks glow and breathe in the water haze",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/underwater_dome.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

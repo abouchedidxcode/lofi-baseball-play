@@ -1,0 +1,63 @@
+{
+ "park": "toronto",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "scoreboard + screen",
+   "poly": [
+    [
+     1008,
+     1043
+    ],
+    [
+     1226,
+     1036
+    ],
+    [
+     1229,
+     1181
+    ],
+    [
+     1008,
+     1185
+    ]
+   ]
+  },
+  {
+   "name": "wall_404",
+   "what": "404 wall number",
+   "rect": [
+    625,
+    1327,
+    668,
+    1354
+   ]
+  },
+  {
+   "name": "ads",
+   "what": "wall signs",
+   "rect": [
+    868,
+    1320,
+    1032,
+    1362
+   ]
+  }
+ ],
+ "removed": [
+  {
+   "name": "dome_sign",
+   "rect": [
+    340,
+    1152,
+    404,
+    1180
+   ],
+   "why": "gen6 (r3): the harbour ferry in BOTH takes sails in front of this tiny sign; the lock would cut a painting-shaped hole through the boat. The sign is illegible at game size and both takes keep it intact."
+  }
+ ]
+}

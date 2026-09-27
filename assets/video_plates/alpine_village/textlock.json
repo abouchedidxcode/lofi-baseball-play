@@ -1,0 +1,29 @@
+{
+ "park": "alpine_village",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "HOME RUN DERBY board",
+   "rect": [
+    908,
+    1148,
+    1142,
+    1274
+   ]
+  },
+  {
+   "name": "wall_420ft",
+   "what": "420 FT wall number",
+   "rect": [
+    596,
+    1303,
+    676,
+    1340
+   ]
+  }
+ ]
+}

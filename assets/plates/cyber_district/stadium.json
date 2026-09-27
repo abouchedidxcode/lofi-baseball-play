@@ -1,0 +1,31 @@
+{
+ "id": "cyber_district",
+ "name": "Cyber District",
+ "weather": {
+  "type": "rain",
+  "intensity": 0.7
+ },
+ "time": "night_neon",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 122.0,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "holographic billboards flicker and glitch now and then (glow mask)",
+  "the giant hologram face on the tower pulses and scanlines roll over it",
+  "flying cars stream slowly between the towers, their tail lights blinking",
+  "the vertical kanji neon sign buzzes with a rare soft flicker",
+  "the jumbotron's glowing baseball slowly spins and pulses",
+  "pink and violet neon reflections ripple across the rain-soaked field and puddles",
+  "rain falls in front of everything, with small splashes on the wet dirt",
+  "red beacons blink on the spire tips",
+  "the neon trim around the stands breathes softly",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/cyber_district.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

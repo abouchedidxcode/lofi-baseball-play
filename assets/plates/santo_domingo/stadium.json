@@ -1,0 +1,31 @@
+{
+ "id": "santo_domingo",
+ "name": "Santo Domingo",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 122.5,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the merengue band in the right-field stands bobs and strums in a slow loop (guitars, bass and hats moving)",
+  "the flag on the hillside ripples in the sea breeze",
+  "the white sailboat drifts slowly across the turquoise sea (sprite-able)",
+  "the Caribbean sea sparkles with slow golden glints near the horizon",
+  "palm fronds sway lazily beside the cathedral and along the hillside",
+  "the cathedral's stone bell tower catches a warm golden glint that slides as the sun lowers",
+  "fluffy golden clouds drift slowly across the blue sky (sky layer drift)",
+  "the DALE DURO board's letters blink softly after a home run",
+  "a few seagulls glide across the sky now and then",
+  "crowd shimmer in the colourful left-field stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/santo_domingo.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

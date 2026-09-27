@@ -1,0 +1,30 @@
+{
+ "id": "venice_canals",
+ "name": "Venice",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 128.0,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "gondolas drift slowly across the lagoon behind the outfield wall",
+  "lantern and window reflections ripple and shimmer in the lagoon",
+  "the quay lamp posts flicker warmly",
+  "palazzo and church windows glow and flicker",
+  "the pink dusk clouds drift slowly (sky layer drift)",
+  "a few gulls glide across the dusk sky now and then",
+  "stars begin to twinkle in the blue-violet sky",
+  "the scoreboard's diamond outline pulses softly",
+  "the light-tower lamp banks breathe gently, moths drifting through their cones"
+ ],
+ "concept": "concepts/international/venice_canals.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

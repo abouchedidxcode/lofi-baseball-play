@@ -1,0 +1,86 @@
+{
+ "park": "cyber_district",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: 498 FT",
+   "rect": [
+    917,
+    1283,
+    1005,
+    1320
+   ]
+  },
+  {
+   "name": "living_jumbotron",
+   "what": "living.json jumbotron: painted sign",
+   "rect": [
+    500,
+    964,
+    786,
+    1116
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "vertical kanji neon sign (mirai yakyu)",
+   "rect": [
+    592,
+    778,
+    628,
+    930
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "vertical katakana neon sign on the pink tower",
+   "rect": [
+    866,
+    706,
+    898,
+    774
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_2",
+   "what": "498 FT board frame",
+   "rect": [
+    903,
+    1272,
+    1017,
+    1330
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_3",
+   "what": "small left wall sign",
+   "rect": [
+    134,
+    1300,
+    180,
+    1319
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_4",
+   "what": "small right wall sign",
+   "rect": [
+    1216,
+    1300,
+    1244,
+    1321
+   ],
+   "manual": true
+  }
+ ]
+}

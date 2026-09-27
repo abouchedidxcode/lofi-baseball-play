@@ -1,0 +1,59 @@
+{
+ "park": "seattle",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "HOME RUN board (stars drawn on top)",
+   "rect": [
+    505,
+    1133,
+    770,
+    1244
+   ]
+  },
+  {
+   "name": "wall_401",
+   "what": "401 wall number",
+   "rect": [
+    525,
+    1314,
+    572,
+    1342
+   ]
+  },
+  {
+   "name": "ads_l",
+   "what": "left stand fascia signs",
+   "rect": [
+    0,
+    1200,
+    395,
+    1238
+   ]
+  },
+  {
+   "name": "ads_r",
+   "what": "right stand fascia signs",
+   "rect": [
+    945,
+    1202,
+    1255,
+    1236
+   ]
+  },
+  {
+   "name": "ads_upper_r",
+   "what": "upper right fascia signs",
+   "rect": [
+    955,
+    1110,
+    1280,
+    1142
+   ]
+  }
+ ]
+}

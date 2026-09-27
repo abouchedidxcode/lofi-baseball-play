@@ -1,0 +1,464 @@
+{
+ "version": 1,
+ "id": "desert_oasis",
+ "name": "Desert Oasis",
+ "concept": "concepts/international/desert_oasis.png",
+ "weather": "clear",
+ "time": "twilight",
+ "files": {
+  "plate": "plate.png",
+  "plate1x": "plate_1x.png",
+  "masks": {
+   "sky": "sky.png",
+   "crowd": "crowd.png",
+   "glow": "glow.png",
+   "field": "field.png",
+   "dirt": "dirt.png"
+  },
+  "masksPacked1x": {
+   "file": "masks_1x.png",
+   "channels": {
+    "r": "glow",
+    "g": "crowd",
+    "b": "field",
+    "a": "sky"
+   }
+  },
+  "dirt1x": "dirt_1x.png",
+  "skyLayer1x": "sky_layer_1x.png"
+ },
+ "size": {
+  "w": 2560,
+  "h": 4800,
+  "scale": 2,
+  "w1x": 1280,
+  "h1x": 2400
+ },
+ "frame": {
+  "conceptRectPx": [
+   256,
+   640,
+   2048,
+   3648
+  ],
+  "axisPx": [
+   1280,
+   2464
+  ],
+  "pxPerTan": 2295.25,
+  "tanRect": {
+   "left": -0.557673,
+   "right": 0.557673,
+   "top": 1.073521,
+   "bottom": -1.017754
+  },
+  "coversAspectDown": 0.4384,
+  "note": "Camera-aligned full-screen quad: for a screen point at NDC (nx, ny) with the live camera, tx = nx * tan(hfov/2), ty = ny * tan(vfov/2) (hfov/vfov = camera's current fovs), then plate px = (axisPx.x + tx * pxPerTan, axisPx.y - ty * pxPerTan) and uv = (px.x / w, 1 - px.y / h) for a flipY texture. The concept's 9:16 frame is exactly the reference view (hfov spans conceptRectPx width)."
+ },
+ "camera": {
+  "position": [
+   -0.0641,
+   1.9728,
+   4.2196
+  ],
+  "rotation": [
+   0.112661,
+   -0.001414,
+   0.007435
+  ],
+  "order": "YXZ",
+  "pitchDeg": 6.455,
+  "yawDeg": -0.081,
+  "rollDeg": 0.426,
+  "hfovDeg": 48.087,
+  "vfovDegAt9x16": 76.947,
+  "refAspect": 0.5625,
+  "near": 0.1,
+  "far": 5000,
+  "fitRule": "aspect <= 9:16: hold hfovDeg (vfov = 2 atan(tan(hfov/2) / aspect)); aspect > 9:16 never happens (9:16 column)",
+  "note": "THREE.PerspectiveCamera: camera.position.set(...position); camera.rotation.set(...rotation) with rotation.order 'YXZ'; camera.fov = vfov for the live aspect. Solved from the painted landmarks with a real-scale field."
+ },
+ "fit": {
+  "residualPx1x": {
+   "plate.FL": 14.41,
+   "plate.FR": 16.24,
+   "plate.SL": 14.1,
+   "plate.SR": 14.55,
+   "plate.tip": 16.84,
+   "boxL.front": 3.28,
+   "boxL.back": 3.42,
+   "boxL.inner": 3.6,
+   "boxL.outer": 2.44,
+   "boxR.front": 1.76,
+   "boxR.back": 1.09,
+   "boxR.inner": 4.53,
+   "boxR.outer": 10.0,
+   "foulL": 1.25,
+   "foulR": 0.75,
+   "moundC": 35.76,
+   "moundSize": 13.5,
+   "wall": 1.87
+  },
+  "nearFieldRmsPx1x": 9.43,
+  "nearFieldRmsPxAt390w": 3.59,
+  "note": "px at the concept's 1x scale (1024 wide); at 390 CSS px wide divide by 2.63. The mound is painted closer and deeper than regulation, see anchors.machine."
+ },
+ "anchors": {
+  "machine": {
+   "position": [
+    0.348,
+    0.0,
+    -11.429
+   ],
+   "pitchDistanceM": 11.43,
+   "conceptHeightM": 1.68,
+   "conceptWidthM": 1.12,
+   "baseUv": [
+    0.52187,
+    0.63125
+   ],
+   "topUv": [
+    0.52187,
+    0.57625
+   ],
+   "bodyConceptPx": [
+    498,
+    1063,
+    582,
+    1195
+   ],
+   "fit": "machine_fit.py (hand body box)",
+   "uv": [
+    0.50742,
+    0.63229
+   ],
+   "regulationSpotUv": [
+    0.50004,
+    0.60499
+   ],
+   "note": "position = where the 3D machine stands: the ground centre of the GLB box whose front bottom edge sits on the painted machine's base (wheels / feet) and whose top edge projects onto the painted top, under this camera (tools/plates/machine_fit.py). The concepts paint the machine on the FRONT of the mound, often metres closer than the mound centre (uv) or regulation (regulationSpotUv, z = -18.14). conceptHeightM = the height the 3D machine is scaled to; conceptWidthM = the painted body width at that depth (the GLB is narrower)."
+  },
+  "paintedMound": {
+   "center": [
+    0.105,
+    0.0,
+    -10.742
+   ],
+   "radiusX": 1.88,
+   "radiusZ": 2.18,
+   "note": "the painted mound as an ellipse on the ground (y = 0) under this camera"
+  },
+  "paintedPlate": {
+   "center": [
+    0.017,
+    0.0,
+    -0.431
+   ],
+   "uv": [
+    0.51139,
+    0.78358
+   ],
+   "offsetFromRegulationM": [
+    0.017,
+    0.0,
+    -0.172
+   ],
+   "widthM": 0.484,
+   "note": "the painted plate's top face on the ground under this camera (regulation: centre z = -0.24, width 0.432). Aim pitches / the strike zone at the painted plate by adding offsetFromRegulationM if it is more than a few cm."
+  },
+  "batter": {
+   "conceptFeet": [
+    -0.979,
+    0.0,
+    0.717
+   ],
+   "conceptFeetUv": [
+    0.24205,
+    0.85792
+   ],
+   "conceptStanceHeightM": 2.47,
+   "conceptHeadUv": [
+    0.24205,
+    0.49833
+   ],
+   "boxCenter": [
+    -0.977,
+    0.0,
+    -0.216
+   ],
+   "note": "conceptFeet = where the concept's batter stands under this camera (feet midpoint, approximate); conceptStanceHeightM = ground to helmet top of the painted stance at that depth (hero scale)."
+  },
+  "batterConcept": {
+   "feetMidX": 206,
+   "feetBottomY": 1697,
+   "helmetTopY": 1026,
+   "space": "concept px (1024x1824); map via frame.conceptRectPx",
+   "note": "Painted batter (factory: EVF-SAM 'baseball player' mask of the concept, bat removed by an opening; checked visually). Fit #23's idle stance to this screen span. Reference implementation: src/game/batter.js fitToPlate()."
+  }
+ },
+ "lines": {
+  "wallBaseUv": [
+   [
+    0.0,
+    0.5751
+   ],
+   [
+    0.05,
+    0.5751
+   ],
+   [
+    0.1,
+    0.5751
+   ],
+   [
+    0.15,
+    0.57467
+   ],
+   [
+    0.2,
+    0.5743
+   ],
+   [
+    0.25,
+    0.574
+   ],
+   [
+    0.3,
+    0.57375
+   ],
+   [
+    0.35,
+    0.57356
+   ],
+   [
+    0.4,
+    0.57343
+   ],
+   [
+    0.45,
+    0.57337
+   ],
+   [
+    0.5,
+    0.57336
+   ],
+   [
+    0.55,
+    0.57342
+   ],
+   [
+    0.6,
+    0.57353
+   ],
+   [
+    0.65,
+    0.57371
+   ],
+   [
+    0.7,
+    0.57395
+   ],
+   [
+    0.75,
+    0.57424
+   ],
+   [
+    0.8,
+    0.5746
+   ],
+   [
+    0.85,
+    0.57502
+   ],
+   [
+    0.9,
+    0.57549
+   ],
+   [
+    0.95,
+    0.57549
+   ],
+   [
+    1.0,
+    0.57549
+   ]
+  ],
+  "wallTopUv": [
+   [
+    0.01936,
+    0.56065
+   ],
+   [
+    0.0575,
+    0.56095
+   ],
+   [
+    0.09446,
+    0.56122
+   ],
+   [
+    0.13035,
+    0.56147
+   ],
+   [
+    0.1653,
+    0.56171
+   ],
+   [
+    0.1994,
+    0.56193
+   ],
+   [
+    0.23275,
+    0.56213
+   ],
+   [
+    0.26546,
+    0.56233
+   ],
+   [
+    0.29761,
+    0.56252
+   ],
+   [
+    0.32929,
+    0.56269
+   ],
+   [
+    0.36057,
+    0.56286
+   ],
+   [
+    0.39154,
+    0.56301
+   ],
+   [
+    0.42227,
+    0.56316
+   ],
+   [
+    0.45282,
+    0.5633
+   ],
+   [
+    0.48328,
+    0.56343
+   ],
+   [
+    0.51369,
+    0.56355
+   ],
+   [
+    0.54414,
+    0.56366
+   ],
+   [
+    0.57469,
+    0.56377
+   ],
+   [
+    0.6054,
+    0.56386
+   ],
+   [
+    0.63636,
+    0.56395
+   ],
+   [
+    0.66763,
+    0.56404
+   ],
+   [
+    0.69928,
+    0.56411
+   ],
+   [
+    0.7314,
+    0.56418
+   ],
+   [
+    0.76407,
+    0.56425
+   ],
+   [
+    0.79739,
+    0.5643
+   ],
+   [
+    0.83144,
+    0.56435
+   ],
+   [
+    0.86634,
+    0.5644
+   ],
+   [
+    0.90217,
+    0.56443
+   ],
+   [
+    0.93906,
+    0.56445
+   ],
+   [
+    0.97714,
+    0.56446
+   ]
+  ],
+  "horizonUv": [
+   [
+    0.0,
+    0.56545
+   ],
+   [
+    1.0,
+    0.56942
+   ]
+  ],
+  "note": "wallBase = painted wall base (fit); wallTop = projected 3D fence top (wallHeight m) under the solved camera"
+ },
+ "lighting": {
+  "mood": "twilight: cool floodlight key, blue-grey fill",
+  "key": {
+   "color": "#cfdcff",
+   "intensity": 1.7,
+   "dir": [
+    0.6281,
+    0.7328,
+    0.2617
+   ]
+  },
+  "hemi": {
+   "sky": "#4a5a80",
+   "ground": "#3a2a24",
+   "intensity": 0.8
+  },
+  "rim": {
+   "color": "#7fa8ff",
+   "intensity": 0.8,
+   "dir": [
+    -0.2683,
+    0.3578,
+    -0.8944
+   ]
+  },
+  "shadow": {
+   "opacity": 0.45,
+   "softnessM": 1.0
+  },
+  "exposure": 0.95,
+  "note": "dir points from the scene TOWARD the light. Shadows fall on the invisible ground (y = 0). Intensities assume physically-based THREE lights with ACES-ish tonemapping."
+ },
+ "fog": {
+  "color": "#543f75",
+  "near": 60,
+  "far": 420,
+  "note": "for 3D things far out (the batted ball near the wall): fade toward the painting's far-field colour"
+ },
+ "paintedPixelSize1x": 7.3,
+ "palette": {
+  "skyTop": "#071638",
+  "field": "#593713"
+ },
+ "sprites": []
+}

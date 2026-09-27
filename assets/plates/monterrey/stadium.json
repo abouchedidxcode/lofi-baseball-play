@@ -1,0 +1,30 @@
+{
+ "id": "monterrey",
+ "name": "Monterrey",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 124.4,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the beacon tower's green laser shimmers and pulses softly (the beam is NOT in the glow mask: key it by colour, G - max(R, B) > 40, above the skyline; it runs from the tower tip at concept (837, 478) out through the right edge of the concept at (1024, 232) and on to the plate's right edge)",
+  "the saddle mountain's peaks lose their last warm rim light as the dusk deepens",
+  "the low sun flares softly behind the left light tower",
+  "city tower windows flicker on one by one",
+  "the purple-orange pixel clouds drift slowly (sky layer drift)",
+  "the light-tower lamp banks breathe gently, moths drifting through their cones",
+  "a small flock of birds crosses the sunset now and then",
+  "the red cactus flowers beyond the wall sway in the breeze",
+  "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/monterrey.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

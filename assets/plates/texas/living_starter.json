@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "park": "texas",
+  "mood": "Arlington, Texas, in hot summer dusk: a huge retractable roof, a big Texas-style star, cowboy hat details, a flat wide orange horizon.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "sunset",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the big white-and-blue star on the roof truss catches a slow glint that travels across its points", "the Texas flag on the right light tower ripples in the evening breeze", "the flat orange horizon glows and slowly cools toward violet as the sunset fades", "small sunset clouds drift slowly through the gap under the roof (sky layer drift)", "the cowboy-hat video board tips its hat after a home run", "the concourse ribbon lights along each deck twinkle and chase slowly", "light-tower lamp banks glow and softly pulse, dust and moths drifting through the cones", "downtown windows flicker on one by one under the roof's shadow", "crowd shimmer across the tiered stands, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "no drifting-cloud sheet: closed roof: the open sky is a sliver behind the truss",
+  "effects": []
+}

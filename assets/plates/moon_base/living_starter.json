@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "park": "moon_base",
+  "mood": "airless space: hard white sun from the right, black sky, blue earthshine rim, crisp shadows",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "space",
+  "_weather": "none",
+  "_lifeIdeas": [],
+  "_clouds": "no drifting-cloud sheet: geodesic dome struts + the Earth: use the globe effect, stars, shooting stars",
+  "effects": []
+}

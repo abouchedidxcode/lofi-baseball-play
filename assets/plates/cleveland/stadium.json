@@ -1,0 +1,31 @@
+{
+ "id": "cleveland",
+ "name": "Cleveland",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "twilight",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 121.9,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the Terminal Tower's lit crown glows and slowly breathes red and gold",
+  "the lake's water ripples, the city lights' reflections shimmering and wobbling on Lake Erie",
+  "a small boat's lights glide slowly across the lake now and then (sprite-able)",
+  "downtown windows flicker on and off across the skyline as night falls",
+  "the scoreboard's pixel crescent moon twinkles, its little stars blinking",
+  "the red neon sign on the right buzzes with a rare soft flicker",
+  "dark pixel clouds drift slowly across the lavender sky (sky layer drift), first stars twinkling",
+  "light-tower lamp banks glow and softly pulse, dust motes drifting through the cones",
+  "the red-white-blue bunting on the upper deck stirs in the lake breeze",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/cleveland.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

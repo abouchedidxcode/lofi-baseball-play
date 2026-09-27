@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "park": "desert_oasis",
+  "mood": "A ballpark in a desert oasis at twilight: towering sand dunes, a caravan of camels on a ridge, a palm-ringed lake, an enormous full moon and a sky full of stars.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "twilight",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the enormous full moon glows with a soft, slowly breathing halo", "stars twinkle across the whole sky, with a rare shooting star", "the camel caravan plods slowly along the dune ridge", "lantern-lit windows in the adobe village flicker like candles", "the moon and lantern reflections ripple on the palm-ringed lake (glow + field shimmer)", "palm fronds sway gently in the night breeze", "the tallest spire's beacon twinkles, the minaret lights glow", "the HOME RUN DERBY board's lights chase slowly", "a faint wisp of sand drifts off the dune crest now and then", "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/desert_oasis.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 784],
+      "clean": [0, 0, 1088, 784],
+      "layers": [
+        {
+          "atlas": [0, 790, 1280, 196],
+          "y": 182,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 992, 1280, 302],
+          "y": 333,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1300, 1280, 286],
+          "y": 581,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [663, 534, 147, 162]
+        },
+        {
+          "ellipse": [645, 470, 81, 72]
+        },
+        {
+          "ellipse": [582, 602, 77, 77]
+        }
+      ]
+    }
+  ]
+}

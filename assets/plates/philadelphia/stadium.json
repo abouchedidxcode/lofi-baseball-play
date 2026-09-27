@@ -1,0 +1,31 @@
+{
+ "id": "philadelphia",
+ "name": "Philadelphia",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "twilight",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 122.2,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the giant neon Liberty Bell swings gently side to side and pulses on a home run",
+  "the bell's neon outline buzzes with an occasional soft flicker",
+  "City Hall's clock face glows warm and the tower catches a slow glint",
+  "the twin glass spires' blue edge lights shimmer slowly up and down",
+  "stars twinkle in the deep blue sky while thin violet clouds drift by (sky layer drift)",
+  "a red aircraft warning light blinks atop the tallest tower",
+  "the HOME RUN DERBY board's bulb border chases around its frame",
+  "row-house and office windows flicker on and off",
+  "light-tower lamp banks glow and softly breathe, moths drifting through their cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/philadelphia.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

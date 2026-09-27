@@ -1,0 +1,849 @@
+{
+ "version": 1,
+ "park": "desert_oasis",
+ "mood": "A desert oasis at moonrise: the caravan plodding down the dune toward the city, stars twinkling, the moon breathing, lantern light flickering on the lake, bats over the water",
+ "grid": "art",
+ "style": "living_style.json",
+ "seed": 6,
+ "palette": {
+  "beacon": "#e8261c",
+  "moonGlow": "#fbe6c0",
+  "lantern": "#ffc978",
+  "lake": "#bcd0ff",
+  "sand": "#e6a86e",
+  "sand2": "#c98a5c",
+  "bulb": "#ffc860"
+ },
+ "masks": {
+  "city": "living_masks_1x.png:r",
+  "lanterns": "living_masks_1x.png:r",
+  "stars": "living_masks_1x.png:g",
+  "water": "living_masks_1x.png:b",
+  "caravan": "living_masks_1x.png:a"
+ },
+ "effects": [
+  {
+   "id": "clouds",
+   "type": "clouds",
+   "texture": "living_clouds.png",
+   "region": [
+    96,
+    96,
+    1088,
+    784
+   ],
+   "clean": [
+    0,
+    0,
+    1088,
+    784
+   ],
+   "layers": [
+    {
+     "atlas": [
+      0,
+      790,
+      1280,
+      196
+     ],
+     "y": 182,
+     "x": 0,
+     "band": 0,
+     "speed": 0
+    },
+    {
+     "atlas": [
+      0,
+      992,
+      1280,
+      302
+     ],
+     "y": 333,
+     "x": 0,
+     "band": 1,
+     "speed": 6.5
+    },
+    {
+     "atlas": [
+      0,
+      1300,
+      1280,
+      286
+     ],
+     "y": 581,
+     "x": 0,
+     "band": 2,
+     "speed": 4.5
+    }
+   ],
+   "gap": 96,
+   "relight": 0.5,
+   "snap": 1,
+   "exclude": [
+    {
+     "ellipse": [
+      663,
+      534,
+      147,
+      162
+     ]
+    },
+    {
+     "ellipse": [
+      645,
+      470,
+      81,
+      72
+     ]
+    },
+    {
+     "ellipse": [
+      582,
+      602,
+      77,
+      77
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stars",
+   "type": "flicker",
+   "mode": "twinkle",
+   "mask": "stars",
+   "rect": [
+    96,
+    96,
+    1088,
+    700
+   ],
+   "depth": 0.6,
+   "breathe": 0.02
+  },
+  {
+   "id": "moon_glow",
+   "type": "halo",
+   "center": [
+    650,
+    532
+   ],
+   "radius": [
+    170,
+    170
+   ],
+   "hole": 0.62,
+   "color": "$moonGlow",
+   "intensity": 0.1,
+   "pulse": [
+    0.3,
+    0.06
+   ],
+   "on": "homerun",
+   "boost": 0.8
+  },
+  {
+   "id": "shooting_star",
+   "type": "chase",
+   "mode": "comet",
+   "mask": "sky",
+   "paths": [
+    [
+     [
+      170,
+      230
+     ],
+     [
+      430,
+      330
+     ]
+    ],
+    [
+     [
+      1130,
+      190
+     ],
+     [
+      880,
+      290
+     ]
+    ],
+    [
+     [
+      240,
+      420
+     ],
+     [
+      470,
+      470
+     ]
+    ]
+   ],
+   "length": 110,
+   "width": 3,
+   "travel": 0.8,
+   "interval": [
+    9,
+    17
+   ],
+   "delay": 5,
+   "color": "#fff4dc",
+   "intensity": 0.9
+  },
+  {
+   "id": "sand_wisp",
+   "type": "smoke",
+   "origin": [
+    222,
+    834
+   ],
+   "count": 8,
+   "life": 5,
+   "rise": 2,
+   "wind": [
+    12,
+    -1
+   ],
+   "wobble": 0.5,
+   "spread": 10,
+   "size": [
+    3,
+    12
+   ],
+   "color": [
+    "$sand",
+    "$sand2"
+   ],
+   "intensity": 0.22,
+   "levels": 4
+  },
+  {
+   "id": "caravan_patch",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_caravan_patch.png",
+    "px": 1
+   },
+   "blend": "alpha",
+   "path": [
+    [
+     268,
+     822
+    ],
+    [
+     268.001,
+     822
+    ]
+   ],
+   "mode": "interval",
+   "duration": 1000000000.0,
+   "start": -500000000.0,
+   "interval": [
+    1,
+    1
+   ],
+   "anchor": [
+    0,
+    0
+   ],
+   "flipX": false,
+   "snap": true,
+   "_note": "the ridge with the painted camels painted out (tools/living/parks/desert_oasis_caravan.py); the camels walk as the sprites below"
+  },
+  {
+   "id": "camel_0",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_camel_0.png",
+    "frames": 4,
+    "fps": 3.2,
+    "px": 1
+   },
+   "blend": "alpha",
+   "path": [
+    [
+     150,
+     894.21
+    ],
+    [
+     226,
+     846.21
+    ],
+    [
+     680,
+     962.89
+    ]
+   ],
+   "mode": "loop",
+   "speed": 14.0,
+   "start": -12.0994,
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "flipX": false,
+   "snap": true,
+   "fpsJitter": 0,
+   "occlude": "caravan"
+  },
+  {
+   "id": "camel_1",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_camel_1.png",
+    "frames": 4,
+    "fps": 3.2,
+    "px": 1
+   },
+   "blend": "alpha",
+   "path": [
+    [
+     150,
+     897.22
+    ],
+    [
+     226,
+     849.22
+    ],
+    [
+     680,
+     965.89
+    ]
+   ],
+   "mode": "loop",
+   "speed": 14.0,
+   "start": -14.6806,
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "flipX": false,
+   "snap": true,
+   "fpsJitter": 0,
+   "occlude": "caravan"
+  },
+  {
+   "id": "camel_2",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_camel_2.png",
+    "frames": 4,
+    "fps": 3.2,
+    "px": 1
+   },
+   "blend": "alpha",
+   "path": [
+    [
+     150,
+     896.62
+    ],
+    [
+     226,
+     848.62
+    ],
+    [
+     680,
+     965.3
+    ]
+   ],
+   "mode": "loop",
+   "speed": 14.0,
+   "start": -18.2943,
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "flipX": false,
+   "snap": true,
+   "fpsJitter": 0,
+   "occlude": "caravan"
+  },
+  {
+   "id": "camel_3",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_camel_3.png",
+    "frames": 4,
+    "fps": 3.2,
+    "px": 1
+   },
+   "blend": "alpha",
+   "path": [
+    [
+     150,
+     896.67
+    ],
+    [
+     226,
+     848.67
+    ],
+    [
+     680,
+     965.35
+    ]
+   ],
+   "mode": "loop",
+   "speed": 14.0,
+   "start": -21.7237,
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "flipX": false,
+   "snap": true,
+   "fpsJitter": 0,
+   "occlude": "caravan"
+  },
+  {
+   "id": "city_windows",
+   "type": "flicker",
+   "mode": "windows",
+   "mask": "city",
+   "cells": "mask",
+   "rect": [
+    575,
+    660,
+    490,
+    350
+   ],
+   "rate": 0.06,
+   "breathe": 0.015,
+   "depth": 0.5,
+   "dusk": {
+    "fraction": 0.2,
+    "start": 0.8,
+    "duration": 80
+   },
+   "off": [
+    0.82,
+    0.82,
+    0.95
+   ]
+  },
+  {
+   "id": "lanterns",
+   "type": "flicker",
+   "mode": "fire",
+   "mask": "lanterns",
+   "cells": "mask",
+   "rect": [
+    0,
+    1010,
+    1280,
+    235
+   ],
+   "depth": 0.35
+  },
+  {
+   "id": "beacons",
+   "type": "blink",
+   "blend": "alpha",
+   "defaults": {
+    "color": "$beacon",
+    "period": 2.6,
+    "duty": 0.42,
+    "pattern": "blink",
+    "size": 4,
+    "glow": 7,
+    "intensity": 0.9
+   },
+   "lights": [
+    {
+     "p": [
+      830,
+      672
+     ],
+     "phase": 0
+    }
+   ]
+  },
+  {
+   "id": "minaret_lamps",
+   "type": "blink",
+   "blend": "screen",
+   "defaults": {
+    "color": "$lantern",
+    "period": 5.5,
+    "duty": 0.6,
+    "pattern": "pulse",
+    "size": 4,
+    "glow": 9,
+    "intensity": 0.55
+   },
+   "lights": [
+    {
+     "p": [
+      1009,
+      746
+     ],
+     "phase": 0
+    },
+    {
+     "p": [
+      696,
+      778
+     ],
+     "phase": 0.4
+    },
+    {
+     "p": [
+      754,
+      820
+     ],
+     "phase": 0.7
+    }
+   ]
+  },
+  {
+   "id": "lake",
+   "type": "drift",
+   "mode": "shimmer",
+   "mask": "water",
+   "rect": [
+    418,
+    1092,
+    650,
+    165
+   ],
+   "amp": [
+    2,
+    0
+   ],
+   "wavelength": 7,
+   "speed": 0.5,
+   "sparkle": 0.005,
+   "color": "$lake"
+  },
+  {
+   "id": "lamp_halo_left",
+   "type": "halo",
+   "center": [
+    228,
+    945
+   ],
+   "radius": [
+    90,
+    78
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.2,
+   "pulse": [
+    0.05,
+    0.11
+   ],
+   "on": "homerun",
+   "boost": 0.5
+  },
+  {
+   "id": "lamp_halo_right",
+   "type": "halo",
+   "center": [
+    1068,
+    948
+   ],
+   "radius": [
+    90,
+    78
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.2,
+   "pulse": [
+    0.05,
+    0.09
+   ],
+   "on": "homerun",
+   "boost": 0.5
+  },
+  {
+   "id": "moths_left",
+   "type": "particles",
+   "region": {
+    "rect": [
+     160,
+     890,
+     140,
+     120
+    ]
+   },
+   "count": {
+    "low": 0,
+    "mid": 4,
+    "high": 6
+   },
+   "size": 4,
+   "color": "#fff6e6",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    26,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0.3,
+   "intensity": 0.55,
+   "minQuality": "mid"
+  },
+  {
+   "id": "moths_right",
+   "type": "particles",
+   "region": {
+    "rect": [
+     1000,
+     895,
+     140,
+     120
+    ]
+   },
+   "count": {
+    "low": 0,
+    "mid": 4,
+    "high": 6
+   },
+   "size": 4,
+   "color": "#fff6e6",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    26,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0.3,
+   "intensity": 0.55,
+   "minQuality": "mid"
+  },
+  {
+   "id": "bats",
+   "type": "sprite",
+   "sprite": "bird_far",
+   "colors": "bird",
+   "paths": [
+    [
+     [
+      -40,
+      760
+     ],
+     [
+      180,
+      700
+     ],
+     [
+      330,
+      780
+     ],
+     [
+      520,
+      720
+     ],
+     [
+      700,
+      800
+     ],
+     [
+      900,
+      730
+     ],
+     [
+      1100,
+      790
+     ],
+     [
+      1320,
+      740
+     ]
+    ],
+    [
+     [
+      1320,
+      820
+     ],
+     [
+      1120,
+      760
+     ],
+     [
+      940,
+      830
+     ],
+     [
+      760,
+      770
+     ],
+     [
+      560,
+      840
+     ],
+     [
+      380,
+      790
+     ],
+     [
+      180,
+      850
+     ],
+     [
+      -40,
+      800
+     ]
+    ]
+   ],
+   "speed": 110,
+   "speedJitter": 0.2,
+   "mode": "interval",
+   "interval": [
+    10,
+    18
+   ],
+   "start": 0.4,
+   "flock": {
+    "count": 3,
+    "sizes": [
+     2,
+     3,
+     3
+    ],
+    "formation": "loose",
+    "spread": [
+     80,
+     40
+    ],
+    "lag": 0.3,
+    "wander": [
+     22,
+     16
+    ]
+   },
+   "bob": [
+    5,
+    1.6
+   ]
+  },
+  {
+   "id": "derby_bulbs",
+   "type": "chase",
+   "mode": "bulbs",
+   "path": [
+    [
+     938,
+     1263
+    ],
+    [
+     1102,
+     1263
+    ]
+   ],
+   "count": 7,
+   "pattern": "wave",
+   "speed": 0.25,
+   "waves": 1,
+   "base": 0.2,
+   "size": 4,
+   "glow": 5,
+   "color": "$bulb",
+   "intensity": 0.7,
+   "on": "homerun"
+  },
+  {
+   "id": "derby_board",
+   "type": "sign",
+   "rect": [
+    935,
+    1165,
+    185,
+    90
+   ],
+   "delay": 0.35,
+   "sweep": 0.7,
+   "blinks": 2,
+   "rate": 1.4,
+   "duty": 0.62,
+   "dip": 0,
+   "hold": 1.4,
+   "release": 1.2,
+   "lift": 0.34,
+   "spill": 10,
+   "idle": {
+    "every": [
+     14,
+     24
+    ],
+    "travel": 2.0,
+    "lift": 0.12,
+    "width": 0.1,
+    "start": 6
+   }
+  },
+  {
+   "id": "crowd",
+   "type": "crowd",
+   "rect": [
+    0,
+    1240,
+    1280,
+    72
+   ],
+   "mask": "crowd",
+   "cell": [
+    4,
+    4
+   ],
+   "shimmer": 0.06,
+   "shimmerRate": 2.5,
+   "cheer": {
+    "lift": 0.14,
+    "bob": 2
+   },
+   "flashes": {
+    "rects": [
+     [
+      0,
+      1245,
+      460,
+      62
+     ],
+     [
+      785,
+      1245,
+      495,
+      62
+     ]
+    ],
+    "count": {
+     "low": 24,
+     "mid": 40,
+     "high": 56
+    },
+    "idle": 0.012,
+    "burst": 0.7,
+    "size": 4,
+    "glow": 7,
+    "intensity": 1.0
+   }
+  },
+  {
+   "id": "breathe",
+   "type": "breathe",
+   "amp": 0.008,
+   "period": 14,
+   "tint": [
+    0.003,
+    0,
+    0.002
+   ],
+   "minQuality": "mid"
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "park": "sydney",
+  "mood": "Sydney on a clear evening: a cricket ground converted for baseball, the Opera House and Harbour Bridge in the distance, lorikeets flying, soft teal and gold sky.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "sunset",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["rainbow lorikeets flap across the sky now and then", "the harbour water glitters in the low sun; the little sailboat drifts slowly", "the Opera House sails catch a slow moving warm glint", "the needle tower's turret lights glow and blink", "city windows switch on one by one as the evening deepens", "the golden clouds drift slowly across the teal sky (sky layer drift)", "the light-tower lamp banks breathe gently", "the scoreboard's diamond pulses softly", "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/sydney.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 779],
+      "clean": [0, 0, 1088, 779],
+      "layers": [
+        {
+          "atlas": [0, 785, 1280, 280],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 1071, 1280, 431],
+          "y": 289,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1508, 1280, 231],
+          "y": 638,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [540, 555, 60, 55]
+        },
+        {
+          "ellipse": [690, 688, 45, 40]
+        },
+        {
+          "ellipse": [845, 665, 60, 55]
+        },
+        {
+          "ellipse": [828, 857, 65, 55]
+        }
+      ]
+    }
+  ]
+}

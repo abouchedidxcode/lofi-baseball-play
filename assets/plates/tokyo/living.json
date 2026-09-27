@@ -1,0 +1,727 @@
+{
+  "version": 1,
+  "park": "tokyo",
+  "mood": "rainy neon night under the Tower (v2): rain glittering in the floodlights, low clouds sliding over the city, neon humming, the field a rippling wet mirror",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 3,
+  "palette": {
+    "lamp": "#dfe8ff",
+    "beacon": "#ff2c3c",
+    "tower": "#ffa860",
+    "rain": "#d6e2ff",
+    "splash": "#e4e8ff"
+  },
+  "masks": {
+    "windows": "living_masks_1x.png:r",
+    "tower": "living_masks_1x.png:g",
+    "hrsign": "living_masks_1x.png:g",
+    "funsign": "living_masks_1x.png:g",
+    "banner1": "living_masks_1x.png:g",
+    "banner2": "living_masks_1x.png:g",
+    "reflect": "living_masks_1x.png:b",
+    "stands": "living_masks_1x.png:a"
+  },
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds_v2.png",
+      "region": [
+        96,
+        96,
+        1088,
+        587
+      ],
+      "clean": [
+        0,
+        0,
+        1088,
+        587
+      ],
+      "layers": [
+        {
+          "atlas": [
+            0,
+            593,
+            1280,
+            161
+          ],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 12
+        },
+        {
+          "atlas": [
+            0,
+            760,
+            1280,
+            209
+          ],
+          "y": 296,
+          "x": 0,
+          "band": 1,
+          "speed": 8
+        },
+        {
+          "atlas": [
+            0,
+            975,
+            1280,
+            120
+          ],
+          "y": 468,
+          "x": 0,
+          "band": 2,
+          "speed": 5
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1
+    },
+    {
+      "id": "neon",
+      "type": "flicker",
+      "mode": "neon",
+      "mask": "glow",
+      "cell": [
+        20,
+        20
+      ],
+      "rect": [
+        128,
+        520,
+        1024,
+        530
+      ],
+      "rate": 0.05,
+      "depth": 0.5,
+      "exclude": [
+        {
+          "ellipse": [
+            765,
+            800,
+            105,
+            300
+          ]
+        },
+        {
+          "ellipse": [
+            245,
+            805,
+            80,
+            55
+          ]
+        },
+        {
+          "ellipse": [
+            1038,
+            805,
+            80,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "type": "flicker",
+      "mode": "windows",
+      "mask": "windows",
+      "cells": "mask",
+      "rect": [
+        128,
+        520,
+        1024,
+        560
+      ],
+      "rate": 0.08,
+      "breathe": 0.012,
+      "dusk": {
+        "fraction": 0.12,
+        "start": 0.8,
+        "duration": 60
+      },
+      "off": [
+        0.86,
+        0.88,
+        1.0
+      ]
+    },
+    {
+      "id": "tower_shimmer",
+      "type": "chase",
+      "mode": "glint",
+      "mask": "tower",
+      "path": [
+        [
+          765,
+          1080
+        ],
+        [
+          765,
+          900
+        ],
+        [
+          765,
+          700
+        ],
+        [
+          764,
+          527
+        ]
+      ],
+      "length": 56,
+      "width": 230,
+      "period": 12,
+      "travel": 4.5,
+      "delay": 1.0,
+      "color": "$tower",
+      "intensity": 0.42,
+      "levels": 4
+    },
+    {
+      "id": "beacons",
+      "type": "blink",
+      "defaults": {
+        "color": "$beacon",
+        "period": 2.4,
+        "duty": 0.45,
+        "pattern": "blink",
+        "size": 3,
+        "glow": 6,
+        "intensity": 0.95
+      },
+      "lights": [
+        {
+          "p": [
+            764,
+            530
+          ],
+          "phase": 0.0,
+          "period": 3.0
+        },
+        {
+          "p": [
+            366,
+            534
+          ],
+          "phase": 0.35
+        },
+        {
+          "p": [
+            536,
+            624
+          ],
+          "phase": 0.7,
+          "period": 2.7
+        },
+        {
+          "p": [
+            918,
+            645
+          ],
+          "phase": 0.15
+        },
+        {
+          "p": [
+            944,
+            643
+          ],
+          "phase": 0.55
+        },
+        {
+          "p": [
+            869,
+            740
+          ],
+          "phase": 0.85,
+          "period": 2.1
+        }
+      ]
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        245,
+        805
+      ],
+      "radius": [
+        110,
+        66
+      ],
+      "hole": 0.35,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.06,
+        0.1
+      ],
+      "on": "homerun",
+      "boost": 0.6
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1038,
+        805
+      ],
+      "radius": [
+        110,
+        66
+      ],
+      "hole": 0.35,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.06,
+        0.085
+      ],
+      "on": "homerun",
+      "boost": 0.6
+    },
+    {
+      "id": "beam_left",
+      "type": "cone",
+      "minQuality": "mid",
+      "apex": [
+        250,
+        845
+      ],
+      "target": [
+        560,
+        1520
+      ],
+      "width": [
+        45,
+        250
+      ],
+      "color": "$lamp",
+      "intensity": 0.055,
+      "falloff": 1.4,
+      "shafts": 0.5,
+      "levels": 6
+    },
+    {
+      "id": "beam_right",
+      "type": "cone",
+      "minQuality": "mid",
+      "apex": [
+        1032,
+        845
+      ],
+      "target": [
+        720,
+        1520
+      ],
+      "width": [
+        45,
+        250
+      ],
+      "color": "$lamp",
+      "intensity": 0.055,
+      "falloff": 1.4,
+      "shafts": 0.5,
+      "levels": 6
+    },
+    {
+      "id": "rain_in_lights",
+      "type": "rain",
+      "lights": [
+        {
+          "ellipse": [
+            245,
+            815,
+            150,
+            150
+          ]
+        },
+        {
+          "coneOf": "beam_left",
+          "gain": 0.75
+        },
+        {
+          "ellipse": [
+            1038,
+            815,
+            150,
+            150
+          ]
+        },
+        {
+          "coneOf": "beam_right",
+          "gain": 0.75
+        }
+      ],
+      "count": {
+        "low": 100,
+        "mid": 160,
+        "high": 220
+      },
+      "speed": [
+        430,
+        580
+      ],
+      "length": [
+        18,
+        32
+      ],
+      "angle": 7,
+      "width": 1,
+      "color": "$rain",
+      "intensity": 1.25,
+      "twinkle": 0.5,
+      "weather": [
+        "rain",
+        "storm"
+      ],
+      "listen": [
+        "weather:change"
+      ],
+      "on": "lightning"
+    },
+    {
+      "id": "rain_in_neon",
+      "type": "rain",
+      "minQuality": "mid",
+      "lights": [
+        {
+          "ellipse": [
+            455,
+            900,
+            110,
+            150
+          ],
+          "gain": 0.6
+        },
+        {
+          "ellipse": [
+            765,
+            850,
+            90,
+            200
+          ],
+          "gain": 0.55
+        },
+        {
+          "ellipse": [
+            950,
+            880,
+            90,
+            140
+          ],
+          "gain": 0.5
+        }
+      ],
+      "count": {
+        "low": 0,
+        "mid": 80,
+        "high": 120
+      },
+      "speed": [
+        300,
+        380
+      ],
+      "length": [
+        10,
+        16
+      ],
+      "angle": 7,
+      "width": 1,
+      "color": "#e6dcff",
+      "intensity": 0.6,
+      "twinkle": 0.6,
+      "weather": [
+        "rain",
+        "storm"
+      ],
+      "listen": [
+        "weather:change"
+      ]
+    },
+    {
+      "id": "reflections",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "reflect",
+      "rect": [
+        0,
+        1236,
+        1280,
+        560
+      ],
+      "amp": [
+        3,
+        0
+      ],
+      "wavelength": 6,
+      "speed": 0.5,
+      "sparkle": 0.008,
+      "color": "#e8dcff",
+      "intensity": 0.6
+    },
+    {
+      "id": "puddle_splashes",
+      "type": "particles",
+      "region": {
+        "rect": [
+          140,
+          1240,
+          1000,
+          330
+        ]
+      },
+      "mask": "reflect",
+      "count": {
+        "low": 10,
+        "mid": 18,
+        "high": 26
+      },
+      "shape": "dot",
+      "size": 4,
+      "color": [
+        "$splash",
+        "#ffd6f4",
+        "#cfe6ff"
+      ],
+      "vel": [
+        0,
+        0
+      ],
+      "wander": [
+        0,
+        0
+      ],
+      "life": [
+        0.25,
+        0.5
+      ],
+      "twinkle": 0.4,
+      "intensity": 0.55
+    },
+    {
+      "id": "crowd",
+      "type": "crowd",
+      "rect": [
+        0,
+        1034,
+        1280,
+        158
+      ],
+      "mask": "stands",
+      "cell": [
+        4,
+        4
+      ],
+      "shimmer": 0.06,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            0,
+            1040,
+            465,
+            150
+          ],
+          [
+            824,
+            1038,
+            456,
+            150
+          ]
+        ],
+        "count": {
+          "low": 20,
+          "mid": 34,
+          "high": 48
+        },
+        "idle": 0.012,
+        "burst": 0.7,
+        "size": 4,
+        "glow": 7,
+        "color": "#f4f2ff",
+        "intensity": 1.0
+      }
+    },
+    {
+      "id": "hr_sign",
+      "type": "sign",
+      "rect": [
+        168,
+        1134,
+        228,
+        48
+      ],
+      "mask": "hrsign",
+      "on": "homerun",
+      "delay": 0.35,
+      "sweep": 0.7,
+      "blinks": 2,
+      "rate": 1.4,
+      "duty": 0.62,
+      "dip": 0.0,
+      "hold": 1.4,
+      "release": 1.2,
+      "lift": 0.38,
+      "tint": [
+        1.0,
+        0.95,
+        1.05
+      ],
+      "spill": 14,
+      "spillLift": 0.3,
+      "idle": {
+        "every": [
+          12,
+          20
+        ],
+        "travel": 2.0,
+        "lift": 0.14,
+        "width": 0.12,
+        "start": 2.2
+      }
+    },
+    {
+      "id": "fun_sign",
+      "type": "sign",
+      "rect": [
+        906,
+        1134,
+        206,
+        48
+      ],
+      "mask": "funsign",
+      "on": "homerun",
+      "delay": 0.6,
+      "sweep": 0.7,
+      "blinks": 2,
+      "rate": 1.3,
+      "duty": 0.62,
+      "dip": 0.0,
+      "hold": 1.4,
+      "release": 1.2,
+      "lift": 0.3,
+      "tint": [
+        1.0,
+        0.95,
+        1.05
+      ],
+      "spill": 14,
+      "spillLift": 0.3,
+      "idle": {
+        "every": [
+          14,
+          24
+        ],
+        "travel": 2.0,
+        "lift": 0.14,
+        "width": 0.12,
+        "start": 8
+      }
+    },
+    {
+      "id": "banner_left",
+      "type": "sign",
+      "rect": [
+        144,
+        968,
+        222,
+        82
+      ],
+      "mask": "banner1",
+      "on": "homerun",
+      "delay": 0.9,
+      "sweep": 0.8,
+      "blinks": 1,
+      "rate": 1.2,
+      "duty": 0.6,
+      "dip": 0.0,
+      "hold": 1.0,
+      "release": 1.2,
+      "lift": 0.26,
+      "tint": [
+        1.02,
+        0.95,
+        1.06
+      ],
+      "spill": 10,
+      "spillLift": 0.2,
+      "idle": {
+        "every": [
+          16,
+          26
+        ],
+        "travel": 2.4,
+        "lift": 0.12,
+        "width": 0.12,
+        "start": 5
+      }
+    },
+    {
+      "id": "banner_right",
+      "type": "sign",
+      "rect": [
+        928,
+        966,
+        216,
+        82
+      ],
+      "mask": "banner2",
+      "on": "homerun",
+      "delay": 1.1,
+      "sweep": 0.8,
+      "blinks": 1,
+      "rate": 1.2,
+      "duty": 0.6,
+      "dip": 0.0,
+      "hold": 1.0,
+      "release": 1.2,
+      "lift": 0.26,
+      "tint": [
+        1.02,
+        0.95,
+        1.06
+      ],
+      "spill": 10,
+      "spillLift": 0.2,
+      "idle": {
+        "every": [
+          16,
+          28
+        ],
+        "travel": 2.4,
+        "lift": 0.12,
+        "width": 0.12,
+        "start": 13
+      }
+    },
+    {
+      "id": "lightning",
+      "type": "lightning",
+      "mask": "sky",
+      "color": "#dfe4ff",
+      "intensity": 0.45,
+      "ambient": 0.05
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.006,
+      "period": 16,
+      "tint": [
+        -0.002,
+        0.0,
+        0.004
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

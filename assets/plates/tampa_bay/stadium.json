@@ -1,0 +1,29 @@
+{
+ "id": "tampa_bay",
+ "name": "Tampa Bay",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 123.1,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "distant heat lightning flickers silently inside the far thunderheads now and then",
+  "the tilted dome's teal ring lights chase slowly around its rim",
+  "the dome's warm yellow windows glow and breathe gently",
+  "palm trees sway slowly in the humid breeze",
+  "city skyline windows and teal neon accents flicker on and off",
+  "purple thunderhead clouds drift slowly across the sky",
+  "light-tower lamp banks breathe softly, moths drifting through the cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/tampa_bay.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

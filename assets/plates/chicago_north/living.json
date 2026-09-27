@@ -1,0 +1,784 @@
+{
+  "version": 1,
+  "park": "chicago_north",
+  "mood": "north-side summer afternoon turning golden: clouds sailing in off the lake, gulls and pigeons over the ivy, rooftop fans across the street, string lights twinkling on",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 7,
+  "palette": {
+    "lamp": "#fff0d0",
+    "sun": "#ffd9a0",
+    "beacon": "#e8261c",
+    "bulb": "#ffd890"
+  },
+  "masks": {
+    "windows": "living_masks_1x.png:r",
+    "bulbs": "living_masks_1x.png:r",
+    "tower": "living_masks_1x.png:g",
+    "board": "living_masks_1x.png:g",
+    "ivy": "living_masks_1x.png:b",
+    "fans": "living_masks_1x.png:a"
+  },
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [
+        96,
+        96,
+        1088,
+        706
+      ],
+      "clean": [
+        0,
+        0,
+        1088,
+        706
+      ],
+      "layers": [
+        {
+          "atlas": [
+            0,
+            712,
+            1280,
+            300
+          ],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 11
+        },
+        {
+          "atlas": [
+            0,
+            1018,
+            1280,
+            395
+          ],
+          "y": 204,
+          "x": 0,
+          "band": 1,
+          "speed": 7
+        },
+        {
+          "atlas": [
+            0,
+            1419,
+            1280,
+            245
+          ],
+          "y": 557,
+          "x": 0,
+          "band": 2,
+          "speed": 4.5
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [
+            1029,
+            688,
+            104,
+            97
+          ]
+        },
+        {
+          "ellipse": [
+            1075,
+            724,
+            74,
+            71
+          ]
+        },
+        {
+          "ellipse": [
+            1084,
+            682,
+            67,
+            89
+          ]
+        },
+        {
+          "ellipse": [
+            206,
+            662,
+            95,
+            68
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sun_glow",
+      "type": "halo",
+      "center": [
+        1120,
+        820
+      ],
+      "radius": [
+        170,
+        120
+      ],
+      "color": "$sun",
+      "intensity": 0.1,
+      "pulse": [
+        0.25,
+        0.05
+      ],
+      "rays": {
+        "count": 9,
+        "amount": 0.5,
+        "sharpness": 8,
+        "length": 1.8,
+        "spin": 0.015,
+        "up": true
+      }
+    },
+    {
+      "id": "tower_glint",
+      "type": "chase",
+      "mode": "glint",
+      "mask": "tower",
+      "path": [
+        [
+          648,
+          535
+        ],
+        [
+          648,
+          620
+        ],
+        [
+          648,
+          720
+        ],
+        [
+          648,
+          820
+        ],
+        [
+          648,
+          900
+        ]
+      ],
+      "length": 28,
+      "width": 110,
+      "period": 13,
+      "travel": 5.5,
+      "delay": 1.2,
+      "color": "#ffd49a",
+      "intensity": 0.24,
+      "levels": 3
+    },
+    {
+      "id": "windows",
+      "type": "flicker",
+      "mode": "windows",
+      "mask": "windows",
+      "cells": "mask",
+      "rect": [
+        0,
+        560,
+        1280,
+        540
+      ],
+      "rate": 0.06,
+      "breathe": 0.015,
+      "depth": 0.5,
+      "dusk": {
+        "fraction": 0.25,
+        "start": 0.8,
+        "duration": 70
+      },
+      "off": [
+        0.88,
+        0.88,
+        0.95
+      ]
+    },
+    {
+      "id": "string_lights",
+      "type": "flicker",
+      "mode": "twinkle",
+      "mask": "bulbs",
+      "cells": "mask",
+      "rect": [
+        838,
+        884,
+        196,
+        32
+      ],
+      "depth": 0.55,
+      "breathe": 0.03
+    },
+    {
+      "id": "antenna_beacons",
+      "type": "blink",
+      "blend": "alpha",
+      "defaults": {
+        "color": "$beacon",
+        "period": 2.6,
+        "duty": 0.42,
+        "pattern": "blink",
+        "size": 3,
+        "glow": 6,
+        "intensity": 0.95
+      },
+      "lights": [
+        {
+          "p": [
+            633,
+            492
+          ],
+          "phase": 0.0
+        },
+        {
+          "p": [
+            661,
+            506
+          ],
+          "phase": 0.5
+        }
+      ]
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        210,
+        675
+      ],
+      "radius": [
+        95,
+        75
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.05,
+        0.11
+      ],
+      "on": "homerun",
+      "boost": 0.5
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1036,
+        680
+      ],
+      "radius": [
+        95,
+        75
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.16,
+      "pulse": [
+        0.05,
+        0.09
+      ],
+      "on": "homerun",
+      "boost": 0.5
+    },
+    {
+      "id": "motes_left",
+      "type": "particles",
+      "minQuality": "mid",
+      "region": {
+        "rect": [
+          140,
+          640,
+          150,
+          160
+        ]
+      },
+      "count": {
+        "low": 0,
+        "mid": 8,
+        "high": 12
+      },
+      "size": 4,
+      "color": [
+        "#fff2d6",
+        "#ffe0a8"
+      ],
+      "vel": [
+        1.5,
+        2
+      ],
+      "wander": [
+        14,
+        8
+      ],
+      "wanderFreq": 0.2,
+      "life": [
+        5,
+        9
+      ],
+      "twinkle": 0.55,
+      "intensity": 0.5
+    },
+    {
+      "id": "motes_right",
+      "type": "particles",
+      "minQuality": "mid",
+      "region": {
+        "rect": [
+          965,
+          645,
+          150,
+          160
+        ]
+      },
+      "count": {
+        "low": 0,
+        "mid": 8,
+        "high": 12
+      },
+      "size": 4,
+      "color": [
+        "#fff2d6",
+        "#ffe0a8"
+      ],
+      "vel": [
+        -1.5,
+        2
+      ],
+      "wander": [
+        14,
+        8
+      ],
+      "wanderFreq": 0.2,
+      "life": [
+        5,
+        9
+      ],
+      "twinkle": 0.55,
+      "intensity": 0.5
+    },
+    {
+      "id": "birds_flock",
+      "type": "sprite",
+      "sprite": [
+        "bird_near",
+        "bird_mid",
+        "bird_mid",
+        "bird_near",
+        "bird_mid"
+      ],
+      "colors": "bird",
+      "paths": [
+        [
+          [
+            -60,
+            420
+          ],
+          [
+            300,
+            370
+          ],
+          [
+            700,
+            340
+          ],
+          [
+            1060,
+            300
+          ],
+          [
+            1340,
+            270
+          ]
+        ],
+        [
+          [
+            1340,
+            260
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            640,
+            320
+          ],
+          [
+            300,
+            300
+          ],
+          [
+            -60,
+            340
+          ]
+        ],
+        [
+          [
+            -60,
+            540
+          ],
+          [
+            260,
+            470
+          ],
+          [
+            620,
+            430
+          ],
+          [
+            980,
+            440
+          ],
+          [
+            1340,
+            400
+          ]
+        ]
+      ],
+      "speed": 125,
+      "speedJitter": 0.15,
+      "mode": "interval",
+      "interval": [
+        9,
+        16
+      ],
+      "start": 0.3,
+      "reverse": "random",
+      "flock": {
+        "count": 5,
+        "sizes": [
+          3,
+          4,
+          5
+        ],
+        "formation": "loose",
+        "spread": [
+          72,
+          34
+        ],
+        "lag": 0.35,
+        "wander": [
+          5,
+          3
+        ]
+      },
+      "glide": [
+        1.3,
+        0.9
+      ],
+      "bob": [
+        3,
+        0.3
+      ]
+    },
+    {
+      "id": "gulls",
+      "type": "sprite",
+      "sprite": "gull_mid",
+      "colors": "gull",
+      "paths": [
+        [
+          [
+            1340,
+            200
+          ],
+          [
+            1000,
+            250
+          ],
+          [
+            700,
+            230
+          ],
+          [
+            380,
+            290
+          ],
+          [
+            -60,
+            270
+          ]
+        ],
+        [
+          [
+            -60,
+            330
+          ],
+          [
+            260,
+            280
+          ],
+          [
+            600,
+            300
+          ],
+          [
+            1000,
+            220
+          ],
+          [
+            1340,
+            240
+          ]
+        ]
+      ],
+      "speed": 85,
+      "speedJitter": 0.1,
+      "mode": "interval",
+      "interval": [
+        18,
+        30
+      ],
+      "start": 6,
+      "flock": {
+        "count": 2,
+        "sizes": [
+          1,
+          2,
+          2
+        ],
+        "formation": "loose",
+        "spread": [
+          60,
+          26
+        ],
+        "lag": 0.8,
+        "wander": [
+          10,
+          6
+        ]
+      },
+      "glide": [
+        0.9,
+        2.6
+      ],
+      "bob": [
+        2,
+        0.18
+      ]
+    },
+    {
+      "id": "birds_far",
+      "type": "sprite",
+      "sprite": "bird_far",
+      "colors": "birdFar",
+      "path": [
+        [
+          -40,
+          760
+        ],
+        [
+          300,
+          735
+        ],
+        [
+          640,
+          750
+        ],
+        [
+          980,
+          725
+        ],
+        [
+          1320,
+          745
+        ]
+      ],
+      "speed": 38,
+      "speedJitter": 0.15,
+      "mode": "interval",
+      "interval": [
+        22,
+        38
+      ],
+      "start": 3.5,
+      "reverse": "random",
+      "flock": {
+        "count": 8,
+        "sizes": [
+          6,
+          8
+        ],
+        "formation": "loose",
+        "spread": [
+          26,
+          9
+        ],
+        "lag": 0.5,
+        "wander": [
+          5,
+          3
+        ]
+      },
+      "bob": [
+        2,
+        0.2
+      ],
+      "occlude": "clouds:sky"
+    },
+    {
+      "id": "ivy_rustle",
+      "type": "flag",
+      "rect": [
+        0,
+        1076,
+        1280,
+        170
+      ],
+      "mask": "ivy",
+      "anchor": "top",
+      "amp": 1.6,
+      "wavelength": 120,
+      "speed": 0.25,
+      "dir": [
+        1,
+        0.4
+      ],
+      "stiffness": 0.6,
+      "gust": 0.6
+    },
+    {
+      "id": "fans",
+      "type": "crowd",
+      "rect": [
+        0,
+        910,
+        1280,
+        180
+      ],
+      "mask": "fans",
+      "cell": [
+        4,
+        4
+      ],
+      "shimmer": 0.07,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            0,
+            1040,
+            450,
+            48
+          ],
+          [
+            752,
+            912,
+            262,
+            40
+          ],
+          [
+            300,
+            990,
+            170,
+            55
+          ],
+          [
+            0,
+            935,
+            112,
+            62
+          ]
+        ],
+        "count": {
+          "low": 14,
+          "mid": 22,
+          "high": 30
+        },
+        "idle": 0.01,
+        "burst": 0.7,
+        "size": 4,
+        "glow": 7,
+        "intensity": 1.0
+      }
+    },
+    {
+      "id": "derby_board",
+      "type": "sign",
+      "rect": [
+        900,
+        1136,
+        200,
+        58
+      ],
+      "mask": "board",
+      "on": "homerun",
+      "delay": 0.4,
+      "sweep": 0.7,
+      "blinks": 2,
+      "rate": 1.4,
+      "duty": 0.62,
+      "dip": 0.0,
+      "hold": 1.4,
+      "release": 1.2,
+      "lift": 0.4,
+      "tint": [
+        1.05,
+        0.98,
+        0.9
+      ],
+      "spill": 8,
+      "spillLift": 0.15,
+      "idle": {
+        "every": [
+          14,
+          22
+        ],
+        "travel": 2.0,
+        "lift": 0.14,
+        "width": 0.12,
+        "start": 4
+      }
+    },
+    {
+      "id": "derby_stars",
+      "type": "pips",
+      "items": [
+        [
+          913,
+          1183,
+          9
+        ],
+        [
+          1037,
+          1181,
+          10
+        ],
+        [
+          1074,
+          1175,
+          10
+        ]
+      ],
+      "mask": "board",
+      "maskMin": 0.2,
+      "dim": 0.55,
+      "pop": 0.6,
+      "popTime": 0.9,
+      "delay": 0.8
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.008,
+      "period": 14,
+      "tint": [
+        0.004,
+        0.0,
+        -0.004
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "boston",
+ "name": "Boston",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 96.0,
+  "lcf": 115.5,
+  "cf": 121.9,
+  "rf": 99.0
+ },
+ "wallHeight": 6.0,
+ "living": [
+  "the PIXEL triangle sign's neon hums with a rare soft flicker (glow mask)",
+  "light-tower lamp banks glow and breathe gently, moths and dust motes drifting through their cones",
+  "the golden-hour pixel clouds drift slowly across the sunset (sky layer drift)",
+  "brownstone and Back Bay tower windows flicker on one by one as the sunset deepens",
+  "the LONG LIVE LOFI board's little heart pulses softly",
+  "the manual scoreboard on the green wall flips a number tile after each home run",
+  "a small flock of birds crosses the orange sky now and then",
+  "a red aircraft-warning light blinks slowly on top of the tallest tower",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "wallProfile": [
+  {
+   "sprayFrom": -45,
+   "sprayTo": -6,
+   "heightM": 18.0,
+   "note": "the painted Green Monster in left field"
+  }
+ ],
+ "concept": "concepts/round2/boston.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "baltimore",
+ "name": "Baltimore",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 125.0,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the tall ships' masts sway very gently in the harbor, their rigging lanterns twinkling warm",
+  "the little white sailboat in the Inner Harbor bobs and drifts slowly past (sprite-able)",
+  "the red-brick warehouse's arched windows light up one by one as dusk deepens, an occasional one flicking off",
+  "the flag on the ship's mast ripples lazily in the harbor breeze",
+  "light-tower lamp banks glow and softly breathe, moths and dust motes drifting through the cones",
+  "downtown tower windows flicker and the gold crown of the art-deco tower catches a slow glint",
+  "peach clouds drift slowly across the darkening sky (sky layer drift) as the first stars twinkle",
+  "the little lamps along the outfield wall pulse softly in sequence",
+  "crowd shimmer in the right-field stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/baltimore.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

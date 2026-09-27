@@ -1,0 +1,706 @@
+{
+  "version": 1,
+  "park": "anaheim",
+  "mood": "sunny SoCal afternoon: the rockpile falls tumbling, palms swaying, gulls gliding over puffs of cloud, geysers on a home run",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 6,
+  "palette": {},
+  "masks": {
+    "falls": "living_masks_1x.png:r",
+    "palms": "living_masks_1x.png:g",
+    "pennants": "living_masks_1x.png:b"
+  },
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [
+        96,
+        96,
+        1088,
+        687
+      ],
+      "clean": [
+        0,
+        0,
+        1088,
+        687
+      ],
+      "layers": [
+        {
+          "atlas": [
+            0,
+            693,
+            1280,
+            142
+          ],
+          "y": 415,
+          "x": 0,
+          "band": 1,
+          "speed": 8
+        },
+        {
+          "atlas": [
+            0,
+            841,
+            1280,
+            132
+          ],
+          "y": 642,
+          "x": 0,
+          "band": 2,
+          "speed": 5
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [
+            1080,
+            665,
+            119,
+            121
+          ]
+        },
+        {
+          "ellipse": [
+            201,
+            666,
+            118,
+            123
+          ]
+        },
+        {
+          "ellipse": [
+            921,
+            762,
+            77,
+            76
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cloud_high",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_cloud_b.png",
+        "frames": 1,
+        "px": 1
+      },
+      "path": [
+        [
+          -160,
+          300
+        ],
+        [
+          1440,
+          300
+        ]
+      ],
+      "speed": 9,
+      "mode": "loop",
+      "start": -60,
+      "flipX": false,
+      "fadeEnds": 0.0
+    },
+    {
+      "id": "cloud_top",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_cloud_b.png",
+        "frames": 1,
+        "px": 1
+      },
+      "path": [
+        [
+          -160,
+          170
+        ],
+        [
+          1440,
+          170
+        ]
+      ],
+      "speed": 11,
+      "mode": "loop",
+      "start": -100,
+      "flipX": true,
+      "fadeEnds": 0.0
+    },
+    {
+      "id": "gulls",
+      "type": "sprite",
+      "sprite": "gull_mid",
+      "colors": "gull",
+      "paths": [
+        [
+          [
+            1340,
+            260
+          ],
+          [
+            1000,
+            300
+          ],
+          [
+            700,
+            280
+          ],
+          [
+            380,
+            340
+          ],
+          [
+            -60,
+            320
+          ]
+        ],
+        [
+          [
+            -60,
+            380
+          ],
+          [
+            260,
+            330
+          ],
+          [
+            600,
+            350
+          ],
+          [
+            1000,
+            270
+          ],
+          [
+            1340,
+            290
+          ]
+        ],
+        [
+          [
+            -60,
+            520
+          ],
+          [
+            300,
+            470
+          ],
+          [
+            640,
+            500
+          ],
+          [
+            980,
+            450
+          ],
+          [
+            1340,
+            480
+          ]
+        ]
+      ],
+      "speed": 88,
+      "speedJitter": 0.12,
+      "mode": "interval",
+      "interval": [
+        10,
+        18
+      ],
+      "start": 0.6,
+      "reverse": "random",
+      "flock": {
+        "count": 3,
+        "sizes": [
+          1,
+          2,
+          3
+        ],
+        "formation": "loose",
+        "spread": [
+          64,
+          28
+        ],
+        "lag": 0.8,
+        "wander": [
+          10,
+          6
+        ]
+      },
+      "glide": [
+        0.9,
+        2.6
+      ],
+      "bob": [
+        2,
+        0.18
+      ]
+    },
+    {
+      "id": "birds_far",
+      "type": "sprite",
+      "sprite": "bird_far",
+      "colors": "birdFar",
+      "path": [
+        [
+          -40,
+          760
+        ],
+        [
+          300,
+          735
+        ],
+        [
+          640,
+          750
+        ],
+        [
+          980,
+          730
+        ],
+        [
+          1320,
+          745
+        ]
+      ],
+      "speed": 36,
+      "speedJitter": 0.15,
+      "mode": "interval",
+      "interval": [
+        24,
+        40
+      ],
+      "start": 5,
+      "reverse": "random",
+      "flock": {
+        "count": 7,
+        "sizes": [
+          5,
+          6,
+          7
+        ],
+        "formation": "loose",
+        "spread": [
+          26,
+          9
+        ],
+        "lag": 0.5,
+        "wander": [
+          5,
+          3
+        ]
+      },
+      "bob": [
+        2,
+        0.2
+      ],
+      "occlude": "clouds:sky"
+    },
+    {
+      "id": "falls_shimmer",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "falls",
+      "rect": [
+        490,
+        930,
+        215,
+        290
+      ],
+      "amp": [
+        1,
+        0
+      ],
+      "wavelength": 5,
+      "speed": 1.6,
+      "sparkle": 0.02,
+      "color": "#f4fbff",
+      "intensity": 0.55
+    },
+    {
+      "id": "falls_foam",
+      "type": "particles",
+      "region": {
+        "rect": [
+          495,
+          935,
+          205,
+          270
+        ]
+      },
+      "mask": "falls",
+      "count": {
+        "low": 24,
+        "mid": 40,
+        "high": 56
+      },
+      "size": 5,
+      "shape": "dot",
+      "color": [
+        "#ffffff",
+        "#e2f4ff",
+        "#c2e6fa"
+      ],
+      "vel": [
+        0,
+        52
+      ],
+      "wander": [
+        1,
+        2
+      ],
+      "wanderFreq": 0.3,
+      "life": [
+        1.2,
+        2.2
+      ],
+      "twinkle": 0.3,
+      "intensity": 0.7,
+      "on": {
+        "homerun": [
+          0.3,
+          2.5,
+          1.5,
+          1
+        ]
+      }
+    },
+    {
+      "id": "falls_mist",
+      "type": "particles",
+      "region": {
+        "rect": [
+          480,
+          1180,
+          240,
+          34
+        ]
+      },
+      "count": {
+        "low": 8,
+        "mid": 14,
+        "high": 18
+      },
+      "size": [
+        5,
+        10
+      ],
+      "shape": "soft",
+      "color": [
+        "#ffffff",
+        "#e6f4fb"
+      ],
+      "vel": [
+        0,
+        -6
+      ],
+      "wander": [
+        8,
+        3
+      ],
+      "wanderFreq": 0.15,
+      "life": [
+        2.5,
+        4.5
+      ],
+      "intensity": 0.35,
+      "on": {
+        "homerun": [
+          0.3,
+          2.5,
+          1.5,
+          2
+        ]
+      }
+    },
+    {
+      "id": "geyser_left",
+      "type": "particles",
+      "region": {
+        "rect": [
+          520,
+          900,
+          24,
+          16
+        ]
+      },
+      "count": {
+        "low": 8,
+        "mid": 12,
+        "high": 16
+      },
+      "size": 5,
+      "shape": "dot",
+      "color": [
+        "#ffffff",
+        "#dff2ff"
+      ],
+      "vel": [
+        0,
+        -70
+      ],
+      "wander": [
+        4,
+        2
+      ],
+      "wanderFreq": 0.6,
+      "life": [
+        0.7,
+        1.2
+      ],
+      "intensity": 0.0,
+      "on": {
+        "homerun": [
+          0.4,
+          2.4,
+          1.4,
+          1
+        ]
+      }
+    },
+    {
+      "id": "geyser_right",
+      "type": "particles",
+      "region": {
+        "rect": [
+          640,
+          925,
+          24,
+          16
+        ]
+      },
+      "count": {
+        "low": 8,
+        "mid": 12,
+        "high": 16
+      },
+      "size": 5,
+      "shape": "dot",
+      "color": [
+        "#ffffff",
+        "#dff2ff"
+      ],
+      "vel": [
+        0,
+        -70
+      ],
+      "wander": [
+        4,
+        2
+      ],
+      "wanderFreq": 0.6,
+      "life": [
+        0.7,
+        1.2
+      ],
+      "intensity": 0.0,
+      "on": {
+        "homerun": [
+          0.6,
+          2.4,
+          1.4,
+          1
+        ]
+      }
+    },
+    {
+      "id": "palms",
+      "type": "flag",
+      "rect": [
+        330,
+        860,
+        600,
+        170
+      ],
+      "mask": "palms",
+      "anchor": "bottom",
+      "amp": 1.6,
+      "wavelength": 70,
+      "speed": 0.22,
+      "dir": [
+        1,
+        0.25
+      ],
+      "stiffness": 1.4,
+      "gust": 0.6
+    },
+    {
+      "id": "pennant_left",
+      "type": "flag",
+      "rect": [
+        252,
+        914,
+        46,
+        50
+      ],
+      "mask": "pennants",
+      "anchor": "left",
+      "amp": 2.2,
+      "wavelength": 26,
+      "speed": 0.45,
+      "dir": [
+        0.2,
+        1
+      ],
+      "stiffness": 1.0,
+      "gust": 0.6,
+      "on": "homerun"
+    },
+    {
+      "id": "pennant_right",
+      "type": "flag",
+      "rect": [
+        997,
+        904,
+        60,
+        56
+      ],
+      "mask": "pennants",
+      "anchor": "left",
+      "amp": 2.4,
+      "wavelength": 30,
+      "speed": 0.42,
+      "dir": [
+        0.2,
+        1
+      ],
+      "stiffness": 1.0,
+      "gust": 0.6,
+      "on": "homerun"
+    },
+    {
+      "id": "tower_glint",
+      "type": "chase",
+      "mode": "glint",
+      "mask": "glow",
+      "path": [
+        [
+          845,
+          620
+        ],
+        [
+          845,
+          780
+        ],
+        [
+          845,
+          960
+        ]
+      ],
+      "length": 40,
+      "width": 80,
+      "period": 15,
+      "travel": 5,
+      "delay": 2,
+      "color": "#fff6e0",
+      "intensity": 0.35,
+      "levels": 4
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        201,
+        666
+      ],
+      "radius": [
+        90,
+        80
+      ],
+      "hole": 0.35,
+      "color": "$lamp",
+      "intensity": 0.1,
+      "pulse": [
+        0.05,
+        0.1
+      ],
+      "on": "homerun",
+      "boost": 0.6
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1080,
+        665
+      ],
+      "radius": [
+        90,
+        80
+      ],
+      "hole": 0.35,
+      "color": "$lamp",
+      "intensity": 0.1,
+      "pulse": [
+        0.05,
+        0.085
+      ],
+      "on": "homerun",
+      "boost": 0.6
+    },
+    {
+      "id": "crowd",
+      "type": "crowd",
+      "rect": [
+        0,
+        975,
+        1280,
+        230
+      ],
+      "mask": "crowd",
+      "cell": [
+        5,
+        5
+      ],
+      "shimmer": 0.06,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            128,
+            1000,
+            300,
+            200
+          ],
+          [
+            850,
+            1000,
+            302,
+            200
+          ]
+        ],
+        "count": {
+          "low": 20,
+          "mid": 34,
+          "high": 48
+        },
+        "idle": 0.01,
+        "burst": 0.7,
+        "size": 5,
+        "glow": 6,
+        "intensity": 0.9
+      }
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.006,
+      "period": 15,
+      "tint": [
+        0.003,
+        0.0,
+        -0.002
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

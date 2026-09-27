@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "park": "cherry_temple",
+  "mood": "A ballpark in a Kyoto-inspired mountain temple garden: a pagoda beyond center field, drifting cherry blossom petals, stone lanterns glowing, misty hills.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "sunset",
+  "_weather": {
+    "type": "petals",
+    "intensity": 0.45
+  },
+  "_lifeIdeas": ["cherry blossom petals drift down across the whole frame (petals weather) and settle on the dirt", "the pink cherry trees sway gently in the breeze (crown mask, slow vertex wobble)", "the stone lanterns flicker like candles, warm and soft (glow mask)", "the pagoda's lit windows glow and breathe warmly, one tier dimming now and then", "the setting sun's halo pulses softly and a slow glint slides down the pagoda spire", "low mist drifts through the valleys of the purple mountains behind the pagoda", "the lilac pixel clouds drift slowly across the dusk sky", "light-tower lamp banks glow and breathe, moths drifting through their cones", "a few fireflies blink over the garden rocks beyond the wall", "the scoreboard's little diamond icon pulses, and its lamps tick over after each home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/cherry_temple.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 832],
+      "clean": [0, 0, 1088, 832],
+      "layers": [
+        {
+          "atlas": [0, 838, 1280, 381],
+          "y": 103,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 1225, 1280, 444],
+          "y": 301,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1675, 1280, 273],
+          "y": 617,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [1004, 758, 106, 70]
+        },
+        {
+          "ellipse": [947, 800, 64, 90]
+        }
+      ]
+    }
+  ]
+}

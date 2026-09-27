@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "park": "underwater_dome",
+  "mood": "A ballpark inside a glass dome at the bottom of the ocean: whales and schools of glowing fish swimming past, kelp forests, shafts of blue-green light from above.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "night",
+  "_weather": {
+    "type": "fog",
+    "intensity": 0.2
+  },
+  "_lifeIdeas": ["the whales glide slowly across the dome, their tails beating gently", "schools of glowing fish swirl and drift past the glass", "shafts of blue-green light sway down from the surface", "caustic light ripples dance softly across the field", "the kelp forest sways in the current", "strings of bubbles rise slowly past the dome", "warm windows in the sunken city flicker on and off", "the scoreboard's night-city screen twinkles and its clock hands tick", "light-tower lamp banks glow and breathe in the water haze", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "no drifting-cloud sheet: underwater: light rays, kelp, fish and the whale would drift as one strip",
+  "effects": []
+}

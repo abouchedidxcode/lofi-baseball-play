@@ -1,0 +1,33 @@
+{
+ "id": "milwaukee",
+ "name": "Milwaukee",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 100.6,
+  "lcf": 104.9,
+  "cf": 121.9,
+  "rcf": 112.2,
+  "rf": 105.2
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "fallen autumn leaves skitter slowly across the dirt and a few drift down through the light",
+  "the brewery smokestacks breathe slow soft smoke plumes into the evening sky",
+  "the yellow tube slide beyond the wall catches a slow travelling glint",
+  "the GRAIN BELT style neon on the brewery hums with a rare soft flicker",
+  "the lakefront skyline windows flicker on and off",
+  "the little sailboat drifts slowly across the lake, its mast light blinking (sprite)",
+  "the HOME RUN DERBY board's clock ticks and the board sparkles after a home run",
+  "the huge roof truss's lamp banks glow and breathe, moths drifting through the light",
+  "lilac clouds drift slowly across the blue sky",
+  "crowd shimmer under the roof, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/milwaukee.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

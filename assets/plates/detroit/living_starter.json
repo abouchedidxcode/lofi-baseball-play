@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "park": "detroit",
+  "mood": "Detroit at dusk: art deco skyscrapers, the Renaissance Center towers, big tiger statues atop the scoreboard, warm amber light.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "dusk",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the two tiger statues on the scoreboard get a slow warm rim-light glint, their eyes glowing softly", "the scoreboard screen's lamps buzz with an occasional soft flicker and its numbers update after a home run", "the glowing crown bands on the round Renaissance-style towers pulse slowly in violet and blue", "art deco skyscraper windows flicker on and off one by one", "a red aircraft-warning light blinks on the tallest spire", "amber backlit clouds drift slowly across the dusk sky", "light-tower lamp banks breathe softly, moths drifting through the cones", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/detroit.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 648],
+      "clean": [0, 0, 1088, 648],
+      "layers": [
+        {
+          "atlas": [0, 654, 1280, 243],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 903, 1280, 274],
+          "y": 300,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1183, 1280, 261],
+          "y": 483,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1
+    }
+  ]
+}

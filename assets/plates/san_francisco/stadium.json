@@ -1,0 +1,30 @@
+{
+ "id": "san_francisco",
+ "name": "San Francisco",
+ "weather": {
+  "type": "fog",
+  "intensity": 0.4
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 126.5,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the string of lights along the bridge cables twinkles and chases slowly",
+  "the fog banks roll slowly between the towers and over the hills (fog layer drift)",
+  "the kayaks bob gently on the bay beyond the right-field wall",
+  "the bay water glitters with the reflected bridge lights",
+  "the orange pennants on top of the scoreboard flutter",
+  "the scoreboard clock's hands creep forward; the ball on the board pulses",
+  "tower windows flicker; the pointed tower's tip light blinks",
+  "stars twinkle faintly in the violet sky",
+  "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/san_francisco.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

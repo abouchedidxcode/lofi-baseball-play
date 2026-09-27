@@ -1,0 +1,30 @@
+{
+ "id": "texas",
+ "name": "Arlington",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 125.0,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the big white-and-blue star on the roof truss catches a slow glint that travels across its points",
+  "the Texas flag on the right light tower ripples in the evening breeze",
+  "the flat orange horizon glows and slowly cools toward violet as the sunset fades",
+  "small sunset clouds drift slowly through the gap under the roof (sky layer drift)",
+  "the cowboy-hat video board tips its hat after a home run",
+  "the concourse ribbon lights along each deck twinkle and chase slowly",
+  "light-tower lamp banks glow and softly pulse, dust and moths drifting through the cones",
+  "downtown windows flicker on one by one under the roof's shadow",
+  "crowd shimmer across the tiered stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/texas.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

@@ -1,0 +1,30 @@
+{
+ "id": "washington",
+ "name": "Washington, D.C.",
+ "weather": {
+  "type": "petals",
+  "intensity": 0.4
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 122.5,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "pink cherry petals drift down slowly across the whole scene (weather: petals)",
+  "the cherry blossom trees sway softly and shed a few petals",
+  "the white obelisk catches a slow fading sunset glint on its tip, with a red warning light blinking",
+  "the Capitol dome glows warm and its lights brighten as dusk deepens",
+  "the river beyond the outfield ripples with city light reflections",
+  "the HR scoreboard's digits glow and update after each home run",
+  "soft pink pixel clouds drift slowly while the first stars twinkle",
+  "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/washington.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

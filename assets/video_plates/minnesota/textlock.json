@@ -1,0 +1,43 @@
+{
+ "park": "minnesota",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "living_board_flash",
+   "what": "living.json board_flash: painted flicker",
+   "rect": [
+    945,
+    1125,
+    1115,
+    1270
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "teal ribbon board lettering on the left stands facade",
+   "rect": [
+    42,
+    1160,
+    160,
+    1190
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "small wall emblem left of centre",
+   "rect": [
+    169,
+    1377,
+    197,
+    1401
+   ],
+   "manual": true
+  }
+ ]
+}

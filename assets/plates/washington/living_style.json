@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "park": "washington",
+  "artPx": 5,
+  "gridOffset": [0, 0],
+  "measure": {
+    "fwhmMeanPx": 4.75,
+    "samples": 2275,
+    "histogram": [0, 56, 466, 972, 943, 751, 494, 329, 213, 136, 95, 95, 0],
+    "method": "mean half-max width of isolated details in the sky + skyline of the 9:16 frame (tools/living/style_kit.py)",
+    "override": null
+  },
+  "palette": {
+    "skyTop": "#17417a",
+    "skyMid": "#3b5e98",
+    "skyLow": "#9685ab",
+    "cloudShadow": "#0c0b0d",
+    "cloudMid": "#bc90ac",
+    "cloudLight": "#ee9997",
+    "rim": "#f5a496",
+    "deep": "#0e1218",
+    "silhouette": "#2e2930",
+    "warm": "#f3d5bc",
+    "lamp": "#f7f8f6",
+    "birdNear": "#1e1e24",
+    "birdMid": "#303140",
+    "birdFar": "#333e5a",
+    "birdLight": "#5b4a53",
+    "birdNearLight": "#49393b",
+    "birdShade": "#21232e",
+    "birdLit": "#887b78",
+    "birdLitLight": "#ccb4a3",
+    "pale": "#eeadac",
+    "accent": "#0e1218"
+  },
+  "roles": {
+    "bird": {
+      "body": "$birdMid",
+      "light": "$birdLight",
+      "shade": "$birdShade",
+      "accent": "$birdShade"
+    },
+    "birdFar": {
+      "body": "$birdFar",
+      "light": "$birdFar",
+      "shade": "$birdFar",
+      "accent": "$birdFar"
+    },
+    "birdNear": {
+      "body": "$birdNear",
+      "light": "$birdNearLight",
+      "shade": "$deep",
+      "accent": "$deep"
+    },
+    "birdLit": {
+      "body": "$birdLit",
+      "light": "$birdLitLight",
+      "shade": "$birdMid",
+      "accent": "$birdShade"
+    },
+    "gull": {
+      "body": "$pale",
+      "light": "$cloudLight",
+      "shade": "$cloudShadow",
+      "accent": "$deep"
+    },
+    "leaf": {
+      "body": "$warm",
+      "light": "$rim",
+      "shade": "$deep",
+      "accent": "$deep"
+    }
+  },
+  "depthPxPerMeter": {
+    "15m": 74.68,
+    "30m": 37.34,
+    "60m": 18.67,
+    "120m": 9.34,
+    "250m": 4.48
+  },
+  "note": "Written by tools/living/style_kit.py. artPx = one art pixel in plate 1x px: pixel sprites use it as their texel size and snap to it; palette names work as \"$name\" in living.json colours (living.json palette wins)."
+}

@@ -1,0 +1,31 @@
+{
+ "id": "kansas_city",
+ "name": "Kansas City",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 121.9,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the fountain jets beyond the wall rise and fall in a slow rhythm, their spray shimmering (sprite + mask)",
+  "the waterfalls cascade with a soft scrolling shimmer and a faint mist at their base",
+  "the gold crown on the scoreboard catches a slow travelling glint",
+  "the crown scoreboard's LONGEST / TOTAL numbers tick over after each home run",
+  "downtown skyscraper windows flicker on one by one as the sunset deepens",
+  "the teal-lit spire on the tallest tower pulses softly, a red aircraft light blinking above it",
+  "light-tower lamp banks glow and breathe, moths drifting through their cones",
+  "the orange sunset clouds drift slowly across the sky",
+  "the red-white-blue bunting on the wall ripples in the breeze",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/kansas_city.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

@@ -1,0 +1,748 @@
+{
+ "version": 3,
+ "generated_by": "tools/character (Meshy multi-view -> Blender voxel remesh + procedural rig/animation)",
+ "batter": {
+  "file": "assets/models/batter.glb",
+  "file_meshopt": "assets/models/batter.meshopt.glb",
+  "file_meshopt_note": "same content, 0.53 MB instead of 1.29 MB; needs loader.setMeshoptDecoder(MeshoptDecoder) (ctx.assets.gltf supports meshopt)",
+  "bytes": 1294184,
+  "bytes_meshopt": 532732,
+  "triangles": 18902,
+  "meshes": [
+   {
+    "name": "BatterBody",
+    "tris": 18742,
+    "skinned": true
+   },
+   {
+    "name": "Bat",
+    "tris": 160,
+    "skinned": false
+   }
+  ],
+  "textures": "none: per-face vertex colours (COLOR_0) are the pixel art; faces are flat and already split",
+  "height_m": 1.8,
+  "units": "meters, Y up (glTF)",
+  "origin": "on the ground between the feet of the stance (ready pose)",
+  "facing": "+Z (chest faces +Z = toward the plate); +X = the batter's left = toward the pitcher; right-handed",
+  "placement": {
+   "position": [
+    -0.95,
+    0.0,
+    -0.15
+   ],
+   "rotation_y_rad": 1.5707963,
+   "scale": 1.25,
+   "note": "BATTER_SPOT from docs/ARCHITECTURE.md, hero scale 1.25. With exactly this placement the bat's sweet spot passes world (0.008, 0.866, -0.304) at swing t=0.28 s (three.js, linear key interpolation). Other scales: world = BATTER_SPOT + R_y(pi/2) * (scale * local)."
+  },
+  "skeleton": {
+   "bones": [
+    "Hips",
+    "LeftUpLeg",
+    "LeftLeg",
+    "LeftFoot",
+    "LeftToeBase",
+    "RightUpLeg",
+    "RightLeg",
+    "RightFoot",
+    "RightToeBase",
+    "Spine02",
+    "Spine01",
+    "Spine",
+    "LeftShoulder",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "neck",
+    "Head",
+    "head_end",
+    "headfront",
+    "RightShoulder",
+    "RightArm",
+    "RightForeArm",
+    "RightHand",
+    "BatGrip"
+   ],
+   "root": "Hips",
+   "right_hand": "RightHand",
+   "left_hand": "LeftHand",
+   "head": "Head",
+   "bat_socket": "BatGrip",
+   "bat_socket_note": "BatGrip is a non-deforming bone parented to RightHand at the top-hand fist centre; its local +Y points from the knob to the barrel. It is animated only in 'admire' (bat toss)."
+  },
+  "bat": {
+   "in_batter_glb": "node 'Bat' (mesh, 160 tris) is already a child of the BatGrip bone and animates with every clip; hide it with getObjectByName('Bat').visible = false",
+   "file": "assets/models/bat.glb",
+   "attach": {
+    "parent_bone": "BatGrip",
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "quaternion_xyzw": [
+     0.7071068,
+     0,
+     0,
+     0.7071068
+    ],
+    "note": "bat.glb's mesh runs along -Z (knob z=+0.225, tip z=-0.645, radius 0.038); this rotation (+90 deg about X) maps it onto BatGrip +Y"
+   },
+   "length_m": 0.87,
+   "sweet_spot_in_BatGrip_local": [
+    0,
+    0.49,
+    0
+   ],
+   "sweet_spot_in_bat_glb_local": [
+    0,
+    0,
+    -0.49
+   ],
+   "knob_in_BatGrip_local": [
+    0,
+    -0.225,
+    0
+   ],
+   "tip_in_BatGrip_local": [
+    0,
+    0.645,
+    0
+   ],
+   "bat_tip_hint": "batter.js batTip(): BatGrip.localToWorld(new Vector3(0, 0.645, 0))"
+  },
+  "BatGrip_rest_local_to_RightHand": {
+   "position": [
+    0,
+    0.0685,
+    -0.004
+   ],
+   "quaternion": [
+    0,
+    0,
+    0.7071,
+    0.7071
+   ],
+   "parent": "RightHand"
+  },
+  "contact": {
+   "clip": "swing",
+   "time_s": 0.28,
+   "sweet_spot_batter_local": [
+    0.1244,
+    0.6853,
+    0.7651
+   ],
+   "barrel_dir_batter_local": [
+    0.1713,
+    -0.1732,
+    0.9699
+   ],
+   "sweet_spot_world_three_measured": [
+    0.0069,
+    0.863,
+    -0.3131
+   ],
+   "barrel_dir_world_three_measured": [
+    0.971,
+    -0.166,
+    -0.174
+   ],
+   "sweet_spot_speed_mps_unscaled": 19.76,
+   "note": "measured in three.js (verify_glb.mjs) on batter.glb with the placement above; bat square to the pitch line, barrel ~10 deg below horizontal. The Blender pose at exactly 0.28 is within 1 mm of v1/v2 (pinned); three.js interpolates between the 60 Hz keys 16 and 17, hence ~9 mm from the exact pose",
+   "sweet_spot_path_batter_local": [
+    [
+     0.1833,
+     -0.6208,
+     1.2741,
+     0.1275
+    ],
+    [
+     0.2,
+     -0.6174,
+     1.1581,
+     0.2386
+    ],
+    [
+     0.2167,
+     -0.5823,
+     1.0253,
+     0.3921
+    ],
+    [
+     0.2333,
+     -0.4932,
+     0.8922,
+     0.555
+    ],
+    [
+     0.25,
+     -0.34,
+     0.7787,
+     0.6889
+    ],
+    [
+     0.2667,
+     -0.1134,
+     0.7049,
+     0.7651
+    ],
+    [
+     0.2833,
+     0.1898,
+     0.686,
+     0.7546
+    ],
+    [
+     0.3,
+     0.5304,
+     0.7252,
+     0.6282
+    ],
+    [
+     0.3167,
+     0.8238,
+     0.8123,
+     0.3906
+    ],
+    [
+     0.3333,
+     0.9948,
+     0.9263,
+     0.094
+    ],
+    [
+     0.35,
+     1.0252,
+     1.0392,
+     -0.1912
+    ],
+    [
+     0.3667,
+     0.9519,
+     1.1326,
+     -0.4227
+    ],
+    [
+     0.3833,
+     0.8206,
+     1.2044,
+     -0.5962
+    ],
+    [
+     0.4,
+     0.6601,
+     1.2601,
+     -0.716
+    ]
+   ]
+  },
+  "clips": {
+   "idle": {
+    "loop": true,
+    "desc": "relaxed between pitches: bat leaning on the outside of the right shoulder, free left hand clear of the hip, breathing, looking around; idle@0 is the pose admire/celebrate end on and recover_idle starts from",
+    "duration": 3.0,
+    "ik_reach_error_m": {}
+   },
+   "ready": {
+    "loop": true,
+    "desc": "batting stance, bat up behind the right shoulder beside the helmet (>= 10 cm clear of every body capsule through the whole waggle, fists clear of the helmet); ready@0 is the rest pose: swing@0, whiff@0 and every recover's last frame are exactly this pose",
+    "duration": 2.0,
+    "ik_reach_error_m": {
+     "LeftHand": 0.0027
+    }
+   },
+   "swing": {
+    "loop": false,
+    "desc": "load 0-0.08 (hands back, toe-tap stride) -> launch 0.08-0.28 (hips lead, back elbow drops into the slot, bat lags then whips) -> contact 0.28 -> extension, roll-over -> two-hand finish in front of the left shoulder (0.61) -> settle (0.85)",
+    "contact_time": 0.28,
+    "beats": {
+     "load_end": 0.08,
+     "front_foot_plant": 0.1,
+     "contact": 0.28,
+     "finish": 0.61,
+     "settled": 0.85
+    },
+    "duration": 0.85,
+    "ik_reach_error_m": {
+     "LeftHand": 0.0057,
+     "LeftFoot": 0.0097
+    }
+   },
+   "whiff": {
+    "loop": false,
+    "desc": "the same swing (contact beat 0.28 = the miss) with a yaw-only over-rotation, a stumble of the front foot and a small head shake; ends on its own finish pose (recover_whiff@0)",
+    "contact_time": 0.28,
+    "beats": {
+     "miss": 0.28,
+     "over_rotation": 0.6,
+     "head_shake": [
+      0.8,
+      1.2
+     ],
+     "end": 1.2
+    },
+    "duration": 1.2,
+    "ik_reach_error_m": {
+     "LeftHand": 0.0057,
+     "LeftFoot": 0.0093
+    }
+   },
+   "admire": {
+    "loop": false,
+    "desc": "frame 0 = the swing's last frame: holds the finish watching the ball, top hand lets go and swings out in front, bottom hand carries the bat around the LEFT side, baton flip (1.5 turns about its centre of mass half a metre in front of the chest), right-hand catch, bat laid back on the shoulder, nod; ends EXACTLY on idle@0 (so its recover is recover_idle, NOT recover)",
+    "beats": {
+     "watch": [
+      0.0,
+      0.55
+     ],
+     "top_hand_off": 0.6,
+     "flick": 1.05,
+     "catch": 1.37,
+     "nod": 1.9,
+     "idle_pose": 2.6
+    },
+    "duration": 2.6,
+    "ik_reach_error_m": {
+     "LeftFoot": 0.0219,
+     "RightHand": 0.0107
+    }
+   },
+   "celebrate": {
+    "loop": false,
+    "desc": "hop with the bat raised high (outside the helmet) and fist pumps; starts and ends exactly on idle@0",
+    "beats": {
+     "jump_apex": 0.42,
+     "land": 0.62
+    },
+    "duration": 2.0,
+    "ik_reach_error_m": {
+     "RightHand": 0.009
+    }
+   },
+   "recover": {
+    "loop": false,
+    "desc": "swing@0.85 -> ready@0: the torso unwinds while the bat goes AROUND it (barrel over the left shoulder, upright in front of the face, down beside the helmet); back foot un-pivots and steps back, front foot steps back into the box, bottom-hand re-grip, one breath",
+    "from": "swing@0.85 (== admire@0)",
+    "to": "ready@0",
+    "beats": {
+     "bat_over_left_shoulder": 0.3,
+     "bat_upright_in_front": 0.46,
+     "front_foot_down": 0.64,
+     "regrip": [
+      0.5,
+      0.66
+     ],
+     "breath": 0.7,
+     "in_stance": 0.85
+    },
+    "duration": 0.85,
+    "ik_reach_error_m": {}
+   },
+   "recover_whiff": {
+    "loop": false,
+    "desc": "whiff@1.2 -> ready@0: same route as recover, a little quicker, with a sigh (head drop) at the start",
+    "from": "whiff@1.2",
+    "to": "ready@0",
+    "duration": 0.8,
+    "ik_reach_error_m": {}
+   },
+   "recover_idle": {
+    "loop": false,
+    "desc": "idle@0 -> ready@0: steps into the box, crouches, the left hand comes up in front to take the handle, the bat lifts off the shoulder into the stance; used after admire, after celebrate and for idle -> ready",
+    "from": "idle@0 (== admire@2.6 == celebrate@2.0)",
+    "to": "ready@0",
+    "duration": 0.9,
+    "ik_reach_error_m": {}
+   }
+  },
+  "runtime_contract": {
+   "version": 3,
+   "rule": "Never crossfade a finish pose (the end of swing / whiff / admire / celebrate) or the idle pose straight into 'ready'. Every way into 'ready' goes through the recover clip OF THE CLIP THAT JUST ENDED (manifest.batter.runtime_contract.recover_after): swing -> recover, whiff -> recover_whiff, admire -> recover_idle, celebrate -> recover_idle, idle -> recover_idle. Each recover's first frame IS the last frame of that clip and its last frame IS ready@0, so the hand-offs are cuts (fade 0; <= 0.05 s is also fine). admire does NOT end on the swing finish (it ends with the bat back on the shoulder = idle@0): cutting admire into 'recover' jumps ~180 deg.",
+   "recover_after": {
+    "swing": "recover",
+    "whiff": "recover_whiff",
+    "admire": "recover_idle",
+    "celebrate": "recover_idle",
+    "idle": "recover_idle"
+   },
+   "states": {
+    "idle": {
+     "clip": "idle",
+     "loop": true,
+     "note": "menus / results / between innings"
+    },
+    "ready": {
+     "clip": "ready",
+     "loop": true,
+     "note": "stance; ready@0 is the rest pose every recover lands on"
+    },
+    "swing": {
+     "clip": "swing",
+     "loop": false,
+     "duration": 0.85,
+     "contact_t": 0.28
+    },
+    "whiff": {
+     "clip": "whiff",
+     "loop": false,
+     "duration": 1.2,
+     "contact_t": 0.28
+    },
+    "admire": {
+     "clip": "admire",
+     "loop": false,
+     "duration": 2.6
+    },
+    "celebrate": {
+     "clip": "celebrate",
+     "loop": false,
+     "duration": 2.0
+    },
+    "recover": {
+     "clip": "recover",
+     "loop": false,
+     "duration": 0.85,
+     "from": "swing@end",
+     "to": "ready@0"
+    },
+    "recover_whiff": {
+     "clip": "recover_whiff",
+     "loop": false,
+     "duration": 0.8,
+     "from": "whiff@end",
+     "to": "ready@0"
+    },
+    "recover_idle": {
+     "clip": "recover_idle",
+     "loop": false,
+     "duration": 0.9,
+     "from": "idle@0 (== admire@2.6 == celebrate@2.0)",
+     "to": "ready@0"
+    }
+   },
+   "transitions": [
+    {
+     "from": "idle",
+     "to": "recover_idle",
+     "when": "game state -> playing, or pitch:windup while idle",
+     "fade": 0.2,
+     "start_t": 0.0,
+     "note": "idle is at an arbitrary breathing phase: fade 0.2 s into recover_idle@0 (the idle loop never strays more than a few degrees from idle@0)"
+    },
+    {
+     "from": "recover_idle",
+     "to": "ready",
+     "when": "recover_idle reaches its end (0.9 s)",
+     "fade": 0.0,
+     "start_t": 0.0,
+     "note": "ready must (re)start at t = 0"
+    },
+    {
+     "from": "ready",
+     "to": "swing",
+     "when": "swing:start (contact)",
+     "fade": 0.05,
+     "start_t": "engine time map (README: 'Driving the swing clip')",
+     "note": "ready is at an arbitrary waggle phase; swing@0 == ready@0, so a 0.05-0.08 s fade only absorbs the waggle (<= 8 deg of bat angle)"
+    },
+    {
+     "from": "ready",
+     "to": "whiff",
+     "when": "swing:start (miss)",
+     "fade": 0.05,
+     "start_t": "engine time map (README: 'Driving the swing clip')",
+     "note": "ready is at an arbitrary waggle phase; swing@0 == ready@0, so a 0.05-0.08 s fade only absorbs the waggle (<= 8 deg of bat angle)"
+    },
+    {
+     "from": "swing",
+     "to": "admire",
+     "when": "home run: when the swing clip reaches its end (t = 0.85)",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "swing",
+     "to": "recover",
+     "when": "no home run: when the swing clip reaches its end (t = 0.85)",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "recover",
+     "to": "ready",
+     "when": "recover reaches its end (0.85 s)",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "whiff",
+     "to": "recover_whiff",
+     "when": "whiff reaches its end (1.2 s)",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "recover_whiff",
+     "to": "ready",
+     "when": "recover_whiff reaches its end (0.8 s)",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "admire",
+     "to": "celebrate",
+     "when": "admire ends and a stadium change is due",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "admire",
+     "to": "recover_idle",
+     "when": "admire ends, playing",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "celebrate",
+     "to": "recover_idle",
+     "when": "celebrate ends, playing",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "admire",
+     "to": "idle",
+     "when": "admire ends, not playing",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "celebrate",
+     "to": "idle",
+     "when": "celebrate ends, not playing",
+     "fade": 0.0,
+     "start_t": 0.0
+    },
+    {
+     "from": "ready",
+     "to": "idle",
+     "when": "game state -> title / intro / results",
+     "fade": 0.4,
+     "start_t": 0.0,
+     "note": "verified clean as a 0.4 s crossfade (both poses keep the bat on the right side)"
+    }
+   ],
+   "interruptions": [
+    "pitch:windup during recover / recover_whiff / recover_idle: do NOT fade to ready; let the clip finish (<= 0.9 s).",
+    "pitch:windup during admire / celebrate: let it run into recover_idle (play the rest at timeScale 1.5 if needed); never crossfade.",
+    "swing:start during a recover clip (an early tap): fade 0.1 s from the current recover pose into the swing (QA chain 'interrupt': taps at recover_whiff@0.5, recover@0.55, recover_idle@0.6).",
+    "Read durations from action.getClip().duration; do not hard-code them (whiff is 1.2 s)."
+   ],
+   "swing_time_map": {
+    "recommended": "C1: start = max(0, 0.28 - 2.2 D); S = 0.28 - start; clipT(tau) = start + a tau + b tau^2 for tau < D with a = 2S/D - 1, b = (1 - S/D)/D; clipT = 0.28 + (tau - D) after. Rate 1 at contact: no speed jump at impact.",
+    "current_batter_js": "piecewise linear: start + S tau / D, then real time. Plays the whip ~2x and halves the speed in the frame after contact.",
+    "D": "impactTime - tapTime (contactTime - tapTime on a whiff); 0.14 s for almost every swing"
+   }
+  },
+  "motion_qa": {
+   "tool": "blender -b -P tools/character/motion_qa.py  (every 60 Hz frame; bat axis vs bone capsules (verifier definition, knob included), bat surface vs skinned mesh, fists vs body, world/local pops, seams; chains task/contract/warp_engine/warp_c1/interrupt/control through a three.js-style mixer)",
+   "three_check": "node tools/character/verify_glb.mjs assets/models/batter.glb  (seams and the contract chain on the real THREE.AnimationMixer)",
+   "pass": false,
+   "fails": [
+    "clip admire: hands 0.87 cm (L->upperarm_L @admire@0.200)",
+    "clip admire: 3 pop frames, worst {'frame': 79, 'at': 'admire@1.317', 'space': 'l', 'bone': 'BatGrip', 'pop_deg': 4.43, 'step_deg': 12.62}",
+    "clip celebrate: hands 0.9 cm (R->upperarm_R @celebrate@1.617)",
+    "clip celebrate: 1 pop frames, worst {'frame': 60, 'at': 'celebrate@1.000', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 4.1, 'step_deg': 4.2}",
+    "clip recover: hands 0.63 cm (L->upperarm_R @recover@0.333)",
+    "clip recover_whiff: hands 0.91 cm (L->upperarm_R @recover_whiff@0.000)",
+    "clip swing: hands 2.08 cm (L->upperarm_R @swing@0.367)",
+    "clip swing: 9 pop frames, worst {'frame': 16, 'at': 'swing@0.267', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 8.73, 'step_deg': 18.17}",
+    "clip whiff: hands 2.63 cm (L->upperarm_R @whiff@0.333)",
+    "clip whiff: 9 pop frames, worst {'frame': 16, 'at': 'whiff@0.267', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 8.73, 'step_deg': 18.13}",
+    "chain task: hands 2.63 cm (L->upperarm_R @whiff@0.333)",
+    "chain task: 30 pop frames, worst {'frame': 190, 'at': 'swing@0.267', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 8.73, 'step_deg': 18.17}",
+    "chain contract: hands 2.63 cm (L->upperarm_R @whiff@0.333)",
+    "chain contract: 43 pop frames, worst {'frame': 205, 'at': 'swing@0.267', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 8.73, 'step_deg': 18.17}",
+    "chain interrupt: hands 2.63 cm (L->upperarm_R @whiff@0.333)",
+    "chain interrupt: 47 pop frames, worst {'frame': 46, 'at': 'whiff@0.267', 'space': 'l', 'bone': 'LeftForeArm', 'pop_deg': 8.73, 'step_deg': 18.13}",
+    "chain warp_c1: hands 2.92 cm (L->upperarm_R @whiff@0.337)",
+    "chain warp_c1: 54 pop frames, worst {'frame': 648, 'at': 'whiff@0.194', 'space': 'l', 'bone': 'RightHand', 'pop_deg': 17.94, 'step_deg': 29.67}"
+   ],
+   "per_clip": {
+    "admire": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 2.21,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.87,
+     "max_world_step_deg": 58.43,
+     "max_world_pop_deg": 5.13,
+     "max_local_pop_deg": 5.51,
+     "pop_frames": 3
+    },
+    "celebrate": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 2.21,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.9,
+     "max_world_step_deg": 12.53,
+     "max_world_pop_deg": 2.13,
+     "max_local_pop_deg": 4.1,
+     "pop_frames": 1
+    },
+    "idle": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 1.94,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.0,
+     "max_world_step_deg": 0.41,
+     "max_world_pop_deg": 0.01,
+     "max_local_pop_deg": 0.01,
+     "pop_frames": 0
+    },
+    "ready": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 10.42,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.0,
+     "max_world_step_deg": 0.78,
+     "max_world_pop_deg": 0.05,
+     "max_local_pop_deg": 0.06,
+     "pop_frames": 0
+    },
+    "recover": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 2.28,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.63,
+     "max_world_step_deg": 11.42,
+     "max_world_pop_deg": 1.55,
+     "max_local_pop_deg": 2.43,
+     "pop_frames": 0
+    },
+    "recover_idle": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 2.21,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.42,
+     "max_world_step_deg": 7.39,
+     "max_world_pop_deg": 1.11,
+     "max_local_pop_deg": 2.01,
+     "pop_frames": 0
+    },
+    "recover_whiff": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 2.22,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 0.91,
+     "max_world_step_deg": 11.84,
+     "max_world_pop_deg": 1.79,
+     "max_local_pop_deg": 2.84,
+     "pop_frames": 0
+    },
+    "swing": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 1.63,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.08,
+     "max_world_step_deg": 31.24,
+     "max_world_pop_deg": 6.74,
+     "max_local_pop_deg": 8.73,
+     "pop_frames": 9
+    },
+    "whiff": {
+     "capsule_max_cm": 0.0,
+     "capsule_min_clearance_cm": 1.63,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.63,
+     "max_world_step_deg": 31.32,
+     "max_world_pop_deg": 6.77,
+     "max_local_pop_deg": 8.73,
+     "pop_frames": 9
+    }
+   },
+   "chains": {
+    "task": {
+     "frames": 814,
+     "capsule_max_cm": 0.0,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.63,
+     "max_world_step_deg": 58.43,
+     "max_world_pop_deg": 6.77,
+     "max_local_pop_deg": 8.73,
+     "max_bat_tip_cm_per_frame": 45.6,
+     "pop_frames": 30
+    },
+    "contract": {
+     "frames": 1360,
+     "capsule_max_cm": 0.0,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.63,
+     "max_world_step_deg": 58.43,
+     "max_world_pop_deg": 6.77,
+     "max_local_pop_deg": 8.73,
+     "max_bat_tip_cm_per_frame": 45.6,
+     "pop_frames": 43
+    },
+    "interrupt": {
+     "frames": 592,
+     "capsule_max_cm": 0.0,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.63,
+     "max_world_step_deg": 58.43,
+     "max_world_pop_deg": 6.77,
+     "max_local_pop_deg": 8.73,
+     "max_bat_tip_cm_per_frame": 45.6,
+     "pop_frames": 47
+    },
+    "warp_engine": {
+     "frames": 1326,
+     "capsule_max_cm": 0.0,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.92,
+     "max_world_step_deg": 59.96,
+     "max_world_pop_deg": 19.85,
+     "max_local_pop_deg": 21.84,
+     "max_bat_tip_cm_per_frame": 65.2,
+     "pop_frames": 57
+    },
+    "warp_c1": {
+     "frames": 1326,
+     "capsule_max_cm": 0.0,
+     "mesh_max_cm": 0.0,
+     "fists_in_body_max_cm": 2.92,
+     "max_world_step_deg": 57.98,
+     "max_world_pop_deg": 13.67,
+     "max_local_pop_deg": 17.94,
+     "max_bat_tip_cm_per_frame": 45.1,
+     "pop_frames": 54
+    },
+    "control": {
+     "frames": 535,
+     "capsule_max_cm": 2.53,
+     "mesh_max_cm": 6.5,
+     "fists_in_body_max_cm": 2.63,
+     "max_world_step_deg": 58.43,
+     "max_world_pop_deg": 7.62,
+     "max_local_pop_deg": 8.73,
+     "max_bat_tip_cm_per_frame": 45.6,
+     "pop_frames": 34
+    }
+   },
+   "negative_control_fails_as_it_must": true,
+   "seams_three_js_max_deg": 0.266
+  },
+  "material": {
+   "recommended": "MeshStandardMaterial({ vertexColors: true, roughness: 0.85, metalness: 0, flatShading: true }) - GLTFLoader's default material already has vertexColors on",
+   "toon_option": "MeshToonMaterial({ vertexColors: true, gradientMap: 3-4 step DataTexture with magFilter = minFilter = NearestFilter })",
+   "shadows": "castShadow = true on BatterBody and Bat; the pixel look comes from the low-res render target + nearest upscale (render module)"
+  },
+  "previews": {
+   "turnaround": "assets/models/preview/turnaround.png",
+   "swing_strip": "assets/models/preview/swing_strip.png",
+   "clips_sheet": "assets/models/preview/clips_sheet.png",
+   "game_camera": "assets/models/preview/game_camera.png",
+   "viewer": "tools/character/viewer.html (http://localhost:5173/tools/character/viewer.html?demo=full)"
+  }
+ }
+}

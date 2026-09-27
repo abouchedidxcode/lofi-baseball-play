@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "park": "desert_oasis",
+  "artPx": 4,
+  "gridOffset": [0, 0],
+  "measure": {
+    "fwhmMeanPx": 3.52,
+    "samples": 4568,
+    "histogram": [0, 679, 3163, 1991, 1164, 702, 455, 305, 227, 213, 152, 85, 0],
+    "method": "mean half-max width of isolated details in the sky + skyline of the 9:16 frame (tools/living/style_kit.py)",
+    "override": null
+  },
+  "palette": {
+    "skyTop": "#051535",
+    "skyMid": "#142355",
+    "skyLow": "#4b3c75",
+    "cloudShadow": "#7c517c",
+    "cloudMid": "#d4a78a",
+    "cloudLight": "#f8ddb8",
+    "rim": "#fbe9c8",
+    "deep": "#050914",
+    "silhouette": "#131419",
+    "warm": "#f5bf7a",
+    "lamp": "#faf8ef",
+    "birdNear": "#0c0e16",
+    "birdMid": "#131622",
+    "birdFar": "#131a31",
+    "birdLight": "#464447",
+    "birdNearLight": "#3c3a3a",
+    "birdShade": "#0d101c",
+    "birdLit": "#79624a",
+    "birdLitLight": "#c89d68",
+    "pale": "#f5e0c5",
+    "accent": "#050914"
+  },
+  "roles": {
+    "bird": {
+      "body": "$birdMid",
+      "light": "$birdLight",
+      "shade": "$birdShade",
+      "accent": "$birdShade"
+    },
+    "birdFar": {
+      "body": "$birdFar",
+      "light": "$birdFar",
+      "shade": "$birdFar",
+      "accent": "$birdFar"
+    },
+    "birdNear": {
+      "body": "$birdNear",
+      "light": "$birdNearLight",
+      "shade": "$deep",
+      "accent": "$deep"
+    },
+    "birdLit": {
+      "body": "$birdLit",
+      "light": "$birdLitLight",
+      "shade": "$birdMid",
+      "accent": "$birdShade"
+    },
+    "gull": {
+      "body": "$pale",
+      "light": "$cloudLight",
+      "shade": "$cloudShadow",
+      "accent": "$deep"
+    },
+    "leaf": {
+      "body": "$warm",
+      "light": "$rim",
+      "shade": "$deep",
+      "accent": "$deep"
+    }
+  },
+  "depthPxPerMeter": {
+    "15m": 76.52,
+    "30m": 38.26,
+    "60m": 19.13,
+    "120m": 9.56,
+    "250m": 4.59
+  },
+  "note": "Written by tools/living/style_kit.py. artPx = one art pixel in plate 1x px: pixel sprites use it as their texel size and snap to it; palette names work as \"$name\" in living.json colours (living.json palette wins)."
+}

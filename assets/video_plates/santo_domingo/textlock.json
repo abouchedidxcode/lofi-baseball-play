@@ -1,0 +1,41 @@
+{
+ "park": "santo_domingo",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: DURO! / ¡DALE",
+   "rect": [
+    193,
+    1040,
+    295,
+    1102
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: 402",
+   "rect": [
+    622,
+    1221,
+    685,
+    1250
+   ]
+  },
+  {
+   "name": "living_dale_duro",
+   "what": "living.json dale_duro: painted sign",
+   "rect": [
+    152,
+    1022,
+    328,
+    1108
+   ]
+  }
+ ]
+}

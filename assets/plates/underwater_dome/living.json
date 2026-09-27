@@ -1,0 +1,769 @@
+{
+  "version": 1,
+  "park": "underwater_dome",
+  "mood": "a ballpark under the sea at night: the surface rippling far above, shafts of light swaying, schools of glowing fish and a far whale gliding past the glass, kelp swaying, bubbles rising, the sunken city's windows flickering",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 6,
+  "palette": {
+    "ray": "#a2f1f8",
+    "bubble": "#bee0f3",
+    "plankton": "#d8fbff"
+  },
+  "masks": {
+    "windows": "living_masks_1x.png:r",
+    "kelpzone": {
+      "file": "living_masks_1x.png",
+      "channel": "g",
+      "filter": "linear"
+    },
+    "tail": {
+      "file": "living_masks_1x.png",
+      "channel": "g",
+      "filter": "linear"
+    },
+    "water": {
+      "file": "living_masks_1x.png",
+      "channel": "b",
+      "filter": "linear"
+    }
+  },
+  "effects": [
+    {
+      "id": "surface_ripples",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "water",
+      "rect": [
+        300,
+        96,
+        700,
+        290
+      ],
+      "amp": [
+        3,
+        0
+      ],
+      "wavelength": 10,
+      "speed": 0.3,
+      "sparkle": 0.008,
+      "color": "$ray",
+      "intensity": 0.5
+    },
+    {
+      "id": "ray_left",
+      "type": "cone",
+      "apex": [
+        610,
+        96
+      ],
+      "target": [
+        540,
+        720
+      ],
+      "width": [
+        50,
+        150
+      ],
+      "color": "$ray",
+      "intensity": 0.045,
+      "falloff": 1.1,
+      "shafts": 0.7,
+      "pulse": [
+        0.3,
+        0.07
+      ],
+      "levels": 5
+    },
+    {
+      "id": "ray_right",
+      "type": "cone",
+      "apex": [
+        700,
+        96
+      ],
+      "target": [
+        780,
+        680
+      ],
+      "width": [
+        40,
+        120
+      ],
+      "color": "$ray",
+      "intensity": 0.04,
+      "falloff": 1.1,
+      "shafts": 0.7,
+      "pulse": [
+        0.3,
+        0.05
+      ],
+      "levels": 5
+    },
+    {
+      "id": "plankton",
+      "type": "particles",
+      "region": {
+        "coneOf": "ray_left",
+        "falloff": 0.5
+      },
+      "count": {
+        "low": 0,
+        "mid": 14,
+        "high": 20
+      },
+      "size": 3,
+      "color": [
+        "$plankton",
+        "$ray"
+      ],
+      "vel": [
+        0.8,
+        -1.2
+      ],
+      "wander": [
+        6,
+        4
+      ],
+      "wanderFreq": 0.1,
+      "life": [
+        7,
+        12
+      ],
+      "twinkle": 0.6,
+      "intensity": 0.45,
+      "minQuality": "mid"
+    },
+    {
+      "id": "kelp_sway",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "kelpzone",
+      "rect": [
+        0,
+        0,
+        1280,
+        800
+      ],
+      "amp": [
+        3,
+        0
+      ],
+      "wavelength": 70,
+      "speed": 0.16,
+      "sparkle": 0
+    },
+    {
+      "id": "whale_tail",
+      "type": "flag",
+      "rect": [
+        434,
+        466,
+        134,
+        102
+      ],
+      "mask": "tail",
+      "anchor": "bottom",
+      "amp": 8,
+      "wavelength": 4000,
+      "speed": 0.3,
+      "dir": [
+        0.45,
+        1
+      ],
+      "stiffness": 1.3,
+      "gust": 0.2,
+      "feather": 2
+    },
+    {
+      "id": "whale_far",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_whale_far.png",
+        "frames": 2,
+        "fps": 1.2,
+        "px": 4
+      },
+      "snap": "art",
+      "paths": [
+        [
+          [
+            10,
+            230
+          ],
+          [
+            300,
+            205
+          ],
+          [
+            700,
+            215
+          ],
+          [
+            1100,
+            190
+          ],
+          [
+            1400,
+            200
+          ]
+        ],
+        [
+          [
+            1230,
+            170
+          ],
+          [
+            1000,
+            190
+          ],
+          [
+            600,
+            175
+          ],
+          [
+            200,
+            200
+          ],
+          [
+            -120,
+            185
+          ]
+        ]
+      ],
+      "speed": 34,
+      "mode": "interval",
+      "interval": [
+        20,
+        40
+      ],
+      "start": -1.5,
+      "alpha": 0.8,
+      "bob": [
+        3,
+        0.12
+      ],
+      "occlude": "water"
+    },
+    {
+      "id": "fish_cyan",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_fish_cyan.png",
+        "frames": 2,
+        "fps": 4,
+        "px": 4
+      },
+      "snap": "art",
+      "paths": [
+        [
+          [
+            1190,
+            640
+          ],
+          [
+            1060,
+            610
+          ],
+          [
+            800,
+            640
+          ],
+          [
+            520,
+            600
+          ],
+          [
+            -60,
+            630
+          ]
+        ],
+        [
+          [
+            1190,
+            560
+          ],
+          [
+            900,
+            600
+          ],
+          [
+            560,
+            560
+          ],
+          [
+            260,
+            590
+          ],
+          [
+            -60,
+            560
+          ]
+        ]
+      ],
+      "speed": 52,
+      "speedJitter": 0.2,
+      "mode": "interval",
+      "interval": [
+        6,
+        12
+      ],
+      "start": -0.4,
+      "reverse": false,
+      "flock": {
+        "count": 12,
+        "sizes": [
+          8,
+          10,
+          12
+        ],
+        "formation": "loose",
+        "spread": [
+          34,
+          16
+        ],
+        "lag": 0.25,
+        "wander": [
+          8,
+          5
+        ]
+      },
+      "bob": [
+        2,
+        0.4
+      ],
+      "occlude": "water"
+    },
+    {
+      "id": "fish_pink",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_fish_pink.png",
+        "frames": 2,
+        "fps": 4,
+        "px": 4
+      },
+      "snap": "art",
+      "paths": [
+        [
+          [
+            -60,
+            820
+          ],
+          [
+            200,
+            790
+          ],
+          [
+            420,
+            760
+          ],
+          [
+            700,
+            740
+          ],
+          [
+            1000,
+            720
+          ],
+          [
+            1340,
+            700
+          ]
+        ],
+        [
+          [
+            1340,
+            740
+          ],
+          [
+            1000,
+            760
+          ],
+          [
+            700,
+            740
+          ],
+          [
+            400,
+            790
+          ],
+          [
+            -60,
+            800
+          ]
+        ]
+      ],
+      "speed": 44,
+      "speedJitter": 0.2,
+      "mode": "interval",
+      "interval": [
+        8,
+        16
+      ],
+      "start": 0.5,
+      "reverse": "random",
+      "flock": {
+        "count": 14,
+        "sizes": [
+          10,
+          14
+        ],
+        "formation": "loose",
+        "spread": [
+          30,
+          14
+        ],
+        "lag": 0.3,
+        "wander": [
+          8,
+          5
+        ]
+      },
+      "bob": [
+        2,
+        0.35
+      ],
+      "occlude": "water"
+    },
+    {
+      "id": "fish_gold",
+      "type": "sprite",
+      "sprite": {
+        "file": "living_fish_gold.png",
+        "frames": 2,
+        "fps": 5,
+        "px": 4
+      },
+      "snap": "art",
+      "paths": [
+        [
+          [
+            1340,
+            930
+          ],
+          [
+            1150,
+            900
+          ],
+          [
+            960,
+            880
+          ],
+          [
+            820,
+            890
+          ]
+        ],
+        [
+          [
+            1340,
+            860
+          ],
+          [
+            1180,
+            880
+          ],
+          [
+            1000,
+            910
+          ],
+          [
+            860,
+            920
+          ]
+        ]
+      ],
+      "speed": 40,
+      "speedJitter": 0.2,
+      "mode": "interval",
+      "interval": [
+        10,
+        18
+      ],
+      "start": 6,
+      "reverse": "random",
+      "flock": {
+        "count": 6,
+        "sizes": [
+          4,
+          6
+        ],
+        "formation": "loose",
+        "spread": [
+          26,
+          12
+        ],
+        "lag": 0.3,
+        "wander": [
+          6,
+          4
+        ]
+      },
+      "bob": [
+        2,
+        0.4
+      ],
+      "occlude": "water"
+    },
+    {
+      "id": "bubbles_left",
+      "type": "particles",
+      "region": {
+        "rect": [
+          150,
+          320,
+          260,
+          620
+        ]
+      },
+      "mask": "water",
+      "count": {
+        "low": 6,
+        "mid": 10,
+        "high": 14
+      },
+      "shape": "soft",
+      "size": [
+        4,
+        8
+      ],
+      "color": "$bubble",
+      "vel": [
+        0,
+        -16
+      ],
+      "wander": [
+        5,
+        0
+      ],
+      "wanderFreq": 0.4,
+      "life": [
+        6,
+        10
+      ],
+      "intensity": 0.6,
+      "levels": 3
+    },
+    {
+      "id": "bubbles_right",
+      "type": "particles",
+      "region": {
+        "rect": [
+          870,
+          320,
+          260,
+          620
+        ]
+      },
+      "mask": "water",
+      "count": {
+        "low": 6,
+        "mid": 10,
+        "high": 14
+      },
+      "shape": "soft",
+      "size": [
+        4,
+        8
+      ],
+      "color": "$bubble",
+      "vel": [
+        0,
+        -14
+      ],
+      "wander": [
+        5,
+        0
+      ],
+      "wanderFreq": 0.35,
+      "life": [
+        6,
+        10
+      ],
+      "intensity": 0.6,
+      "levels": 3
+    },
+    {
+      "id": "city_windows",
+      "type": "flicker",
+      "mode": "windows",
+      "mask": "windows",
+      "cells": "mask",
+      "rect": [
+        0,
+        780,
+        1280,
+        440
+      ],
+      "rate": 0.07,
+      "breathe": 0.015,
+      "depth": 0.5,
+      "dusk": {
+        "fraction": 0.15,
+        "start": 1.0,
+        "duration": 60
+      },
+      "off": [
+        0.8,
+        0.9,
+        1.05
+      ]
+    },
+    {
+      "id": "screen_stars",
+      "type": "flicker",
+      "mode": "twinkle",
+      "mask": "glow",
+      "cell": [
+        8,
+        8
+      ],
+      "rect": [
+        522,
+        1058,
+        240,
+        135
+      ],
+      "depth": 0.5
+    },
+    {
+      "id": "screen",
+      "type": "sign",
+      "rect": [
+        518,
+        1052,
+        250,
+        146
+      ],
+      "delay": 0.5,
+      "sweep": 0.8,
+      "blinks": 2,
+      "rate": 1.3,
+      "duty": 0.62,
+      "dip": 0,
+      "hold": 1.2,
+      "release": 1.2,
+      "lift": 0.3,
+      "tint": [
+        0.9,
+        1.0,
+        1.1
+      ],
+      "spill": 10,
+      "spillLift": 0.25,
+      "idle": {
+        "every": [
+          14,
+          24
+        ],
+        "travel": 2.0,
+        "lift": 0.1,
+        "width": 0.12,
+        "start": 5
+      }
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        212,
+        1000
+      ],
+      "radius": [
+        110,
+        90
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.18,
+      "pulse": [
+        0.06,
+        0.11
+      ],
+      "on": "homerun",
+      "boost": 0.5
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1068,
+        1000
+      ],
+      "radius": [
+        110,
+        90
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.18,
+      "pulse": [
+        0.06,
+        0.09
+      ],
+      "on": "homerun",
+      "boost": 0.5
+    },
+    {
+      "id": "crowd",
+      "type": "crowd",
+      "rect": [
+        0,
+        1200,
+        1280,
+        110
+      ],
+      "mask": "crowd",
+      "cell": [
+        3,
+        4
+      ],
+      "shimmer": 0.06,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            20,
+            1205,
+            410,
+            100
+          ],
+          [
+            860,
+            1205,
+            400,
+            100
+          ]
+        ],
+        "count": {
+          "low": 24,
+          "mid": 40,
+          "high": 56
+        },
+        "idle": 0.012,
+        "burst": 0.7,
+        "size": 3,
+        "glow": 7,
+        "color": "#f2fbff",
+        "intensity": 1.0
+      }
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.01,
+      "period": 11,
+      "tint": [
+        -0.003,
+        0.0,
+        0.004
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

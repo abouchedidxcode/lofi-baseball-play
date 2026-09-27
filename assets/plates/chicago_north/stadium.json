@@ -1,0 +1,31 @@
+{
+ "id": "chicago_north",
+ "name": "Chicago North Side",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 121.9,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "fans on the rooftop bleachers across the street shimmer and wave, cheering on a home run",
+  "the string lights over the rooftop bleachers twinkle warmly",
+  "the ivy on the outfield wall rustles in a soft breeze",
+  "golden pixel clouds drift slowly behind the skyline (sky layer drift)",
+  "a sun glint slides down the tall dark tower's windows as the light turns golden",
+  "apartment windows light up one by one as evening comes",
+  "the HOME RUN DERBY board's stars twinkle",
+  "a small flock of birds crosses the golden sky now and then",
+  "light-tower lamp banks glow and breathe, dust motes drifting in their cones",
+  "red aircraft-warning lights blink slowly on the twin antennas"
+ ],
+ "concept": "concepts/round2/chicago_north.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

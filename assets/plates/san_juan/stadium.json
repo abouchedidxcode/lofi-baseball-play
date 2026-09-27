@@ -1,0 +1,29 @@
+{
+ "id": "san_juan",
+ "name": "San Juan",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "night",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 124.4,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the moonlight path on the Atlantic glitters and ripples slowly",
+  "the full moon glows softly with a faint halo while thin night clouds drift past it",
+  "stars twinkle across the navy sky",
+  "the warm lamps along the El Morro fortress walls flicker gently like lanterns",
+  "pastel colonial house windows and street lamps flicker on and off",
+  "palm trees sway slowly in the warm sea breeze",
+  "the red-white-blue bunting on the outfield wall ripples softly",
+  "light-tower lamp banks breathe softly with moths circling the cones"
+ ],
+ "concept": "concepts/international/san_juan.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

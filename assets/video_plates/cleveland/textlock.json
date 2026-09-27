@@ -1,0 +1,42 @@
+{
+ "park": "cleveland",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: 400",
+   "rect": [
+    630,
+    1300,
+    668,
+    1320
+   ]
+  },
+  {
+   "name": "living_board_stars",
+   "what": "living.json board_stars: painted flicker",
+   "rect": [
+    1005,
+    1035,
+    1280,
+    1115
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "neon diamond + script neon sign on the right light tower",
+   "rect": [
+    1005,
+    938,
+    1150,
+    1032
+   ],
+   "manual": true
+  }
+ ]
+}

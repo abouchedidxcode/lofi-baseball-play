@@ -1,0 +1,30 @@
+{
+ "id": "cincinnati",
+ "name": "Cincinnati",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 123.1,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the riverboat's twin smokestacks puff slow soft pixel smoke that drifts off to the side",
+  "the riverboat paddle wheel turns slowly and the boat's cabin lights twinkle",
+  "the Ferris wheel by the river turns slowly with its rim lights chasing",
+  "the Ohio River shimmers with rippling sunset reflections under the blue suspension bridge",
+  "the blue suspension bridge's cable lights twinkle on one by one",
+  "city tower windows flicker on as the sun sets behind the hills",
+  "orange and pink pixel clouds drift slowly across the sunset sky",
+  "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/cincinnati.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

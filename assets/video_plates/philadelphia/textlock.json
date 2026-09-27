@@ -1,0 +1,41 @@
+{
+ "park": "philadelphia",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: **DERBY** / HOME RUN",
+   "rect": [
+    145,
+    1044,
+    347,
+    1145
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: 401",
+   "rect": [
+    560,
+    1353,
+    607,
+    1375
+   ]
+  },
+  {
+   "name": "living_board_sign",
+   "what": "living.json board_sign: painted sign",
+   "rect": [
+    104,
+    1008,
+    366,
+    1166
+   ]
+  }
+ ]
+}

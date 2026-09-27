@@ -1,0 +1,29 @@
+{
+ "id": "mexico_city",
+ "name": "Mexico City",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 114.3,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the colourful papel picado banners flutter gently in the breeze (a slow per-row wave)",
+  "the golden Angel on top of the column catches a slow moving glint of sunset light",
+  "a thin wisp of smoke rises and drifts from the hazy volcano on the horizon",
+  "purple jacaranda trees drop a few slow drifting petals",
+  "city tower windows flicker on as the sun goes down",
+  "magenta and orange pixel clouds drift slowly across the sky",
+  "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/mexico_city.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

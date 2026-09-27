@@ -1,0 +1,704 @@
+{
+  "version": 1,
+  "park": "miami",
+  "mood": "Miami synthwave sunset: coral clouds sailing, pelicans gliding in a line, palms swaying in the sea breeze, the home-run sculpture's rainbow chasing with light",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 9,
+  "palette": {
+    "lamp": "#fff0dc",
+    "beacon": "#e8261c",
+    "bulb": "#fff4d8",
+    "sun": "#ffc890"
+  },
+  "masks": {
+    "windows": "living_masks_1x.png:r",
+    "letters": "living_masks_1x.png:g",
+    "boardwater": "living_masks_1x.png:g",
+    "palms": "living_masks_1x.png:b",
+    "stands": "living_masks_1x.png:a"
+  },
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [
+        96,
+        96,
+        1088,
+        808
+      ],
+      "clean": [
+        0,
+        0,
+        1088,
+        808
+      ],
+      "layers": [
+        {
+          "atlas": [
+            0,
+            814,
+            1280,
+            319
+          ],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 11
+        },
+        {
+          "atlas": [
+            0,
+            1139,
+            1280,
+            363
+          ],
+          "y": 280,
+          "x": 0,
+          "band": 1,
+          "speed": 7
+        },
+        {
+          "atlas": [
+            0,
+            1508,
+            1280,
+            292
+          ],
+          "y": 608,
+          "x": 0,
+          "band": 2,
+          "speed": 4.5
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [
+            1043,
+            736,
+            115,
+            109
+          ]
+        },
+        {
+          "ellipse": [
+            1059,
+            850,
+            67,
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "id": "windows",
+      "type": "flicker",
+      "mode": "windows",
+      "mask": "windows",
+      "cells": "mask",
+      "rect": [
+        380,
+        760,
+        900,
+        330
+      ],
+      "rate": 0.07,
+      "breathe": 0.015,
+      "depth": 0.5,
+      "dusk": {
+        "fraction": 0.3,
+        "start": 0.6,
+        "duration": 60
+      },
+      "off": [
+        0.88,
+        0.86,
+        0.95
+      ]
+    },
+    {
+      "id": "deco_neon",
+      "type": "flicker",
+      "mode": "neon",
+      "mask": "glow",
+      "cell": [
+        16,
+        16
+      ],
+      "rect": [
+        0,
+        990,
+        420,
+        250
+      ],
+      "rate": 0.08,
+      "depth": 0.5
+    },
+    {
+      "id": "tower_beacons",
+      "type": "blink",
+      "blend": "alpha",
+      "defaults": {
+        "color": "$beacon",
+        "period": 2.5,
+        "duty": 0.42,
+        "pattern": "blink",
+        "size": 3,
+        "glow": 6,
+        "intensity": 0.95
+      },
+      "lights": [
+        {
+          "p": [
+            576,
+            770
+          ],
+          "phase": 0.0
+        },
+        {
+          "p": [
+            717,
+            836
+          ],
+          "phase": 0.5,
+          "period": 2.8
+        },
+        {
+          "p": [
+            462,
+            846
+          ],
+          "phase": 0.25,
+          "period": 2.2
+        }
+      ]
+    },
+    {
+      "id": "lamp_halo_left",
+      "type": "halo",
+      "center": [
+        250,
+        760
+      ],
+      "radius": [
+        100,
+        78
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.17,
+      "pulse": [
+        0.05,
+        0.11
+      ],
+      "on": "homerun",
+      "boost": 0.55
+    },
+    {
+      "id": "lamp_halo_right",
+      "type": "halo",
+      "center": [
+        1043,
+        736
+      ],
+      "radius": [
+        100,
+        78
+      ],
+      "hole": 0.3,
+      "color": "$lamp",
+      "intensity": 0.17,
+      "pulse": [
+        0.05,
+        0.09
+      ],
+      "on": "homerun",
+      "boost": 0.55
+    },
+    {
+      "id": "motes_left",
+      "type": "particles",
+      "minQuality": "mid",
+      "region": {
+        "rect": [
+          180,
+          720,
+          150,
+          150
+        ]
+      },
+      "count": {
+        "low": 0,
+        "mid": 8,
+        "high": 12
+      },
+      "size": 4,
+      "color": [
+        "#fff2d6",
+        "#ffe0a8"
+      ],
+      "vel": [
+        1.5,
+        2
+      ],
+      "wander": [
+        14,
+        8
+      ],
+      "wanderFreq": 0.2,
+      "life": [
+        5,
+        9
+      ],
+      "twinkle": 0.55,
+      "intensity": 0.5
+    },
+    {
+      "id": "motes_right",
+      "type": "particles",
+      "minQuality": "mid",
+      "region": {
+        "rect": [
+          970,
+          695,
+          150,
+          150
+        ]
+      },
+      "count": {
+        "low": 0,
+        "mid": 8,
+        "high": 12
+      },
+      "size": 4,
+      "color": [
+        "#fff2d6",
+        "#ffe0a8"
+      ],
+      "vel": [
+        -1.5,
+        2
+      ],
+      "wander": [
+        14,
+        8
+      ],
+      "wanderFreq": 0.2,
+      "life": [
+        5,
+        9
+      ],
+      "twinkle": 0.55,
+      "intensity": 0.5
+    },
+    {
+      "id": "rainbow_glint",
+      "type": "chase",
+      "mode": "glint",
+      "path": [
+        [
+          733,
+          1190
+        ],
+        [
+          733,
+          1173
+        ],
+        [
+          730,
+          1133
+        ],
+        [
+          724,
+          1093
+        ],
+        [
+          716,
+          1053
+        ],
+        [
+          705,
+          1015
+        ],
+        [
+          695,
+          980
+        ],
+        [
+          680,
+          955
+        ],
+        [
+          660,
+          936
+        ],
+        [
+          633,
+          922
+        ],
+        [
+          600,
+          914
+        ],
+        [
+          572,
+          916
+        ]
+      ],
+      "length": 46,
+      "width": 26,
+      "period": 6,
+      "travel": 2.4,
+      "delay": 1.0,
+      "pingpong": true,
+      "color": "#fff4e0",
+      "intensity": 0.55,
+      "core": 0.6,
+      "levels": 4,
+      "on": "homerun"
+    },
+    {
+      "id": "hr_letters",
+      "type": "sign",
+      "rect": [
+        526,
+        972,
+        168,
+        128
+      ],
+      "mask": "letters",
+      "on": "homerun",
+      "delay": 0.35,
+      "sweep": 0.7,
+      "blinks": 3,
+      "rate": 1.6,
+      "duty": 0.62,
+      "dip": 0.0,
+      "hold": 1.2,
+      "release": 1.2,
+      "lift": 0.55,
+      "tint": [
+        1.05,
+        0.96,
+        1.0
+      ],
+      "spill": 16,
+      "spillLift": 0.35,
+      "idle": {
+        "every": [
+          10,
+          18
+        ],
+        "travel": 1.8,
+        "lift": 0.14,
+        "width": 0.12,
+        "start": 2.5
+      }
+    },
+    {
+      "id": "board_water",
+      "type": "drift",
+      "mode": "shimmer",
+      "mask": "boardwater",
+      "rect": [
+        882,
+        1150,
+        226,
+        50
+      ],
+      "amp": [
+        2,
+        0
+      ],
+      "wavelength": 8,
+      "speed": 0.6,
+      "sparkle": 0.01,
+      "color": "#ffe4b0",
+      "intensity": 0.6
+    },
+    {
+      "id": "palms_high",
+      "type": "flag",
+      "rect": [
+        0,
+        850,
+        1280,
+        240
+      ],
+      "mask": "palms",
+      "anchor": "bottom",
+      "amp": 2.4,
+      "wavelength": 140,
+      "speed": 0.22,
+      "dir": [
+        1,
+        0.25
+      ],
+      "stiffness": 0.8,
+      "gust": 0.6
+    },
+    {
+      "id": "palms_low",
+      "type": "flag",
+      "rect": [
+        330,
+        1130,
+        540,
+        110
+      ],
+      "mask": "palms",
+      "anchor": "bottom",
+      "amp": 2.0,
+      "wavelength": 140,
+      "speed": 0.2,
+      "dir": [
+        1,
+        0.25
+      ],
+      "stiffness": 0.8,
+      "gust": 0.6
+    },
+    {
+      "id": "pelicans",
+      "type": "sprite",
+      "sprite": "gull_near",
+      "colors": "bird",
+      "paths": [
+        [
+          [
+            1340,
+            520
+          ],
+          [
+            1000,
+            500
+          ],
+          [
+            640,
+            470
+          ],
+          [
+            300,
+            480
+          ],
+          [
+            -60,
+            450
+          ]
+        ],
+        [
+          [
+            -60,
+            380
+          ],
+          [
+            300,
+            400
+          ],
+          [
+            640,
+            420
+          ],
+          [
+            1000,
+            390
+          ],
+          [
+            1340,
+            410
+          ]
+        ]
+      ],
+      "speed": 80,
+      "speedJitter": 0.1,
+      "mode": "interval",
+      "interval": [
+        16,
+        26
+      ],
+      "start": -1.5,
+      "flock": {
+        "count": 4,
+        "sizes": [
+          3,
+          4
+        ],
+        "formation": "line",
+        "spread": [
+          80,
+          22
+        ],
+        "lag": 0.7,
+        "wander": [
+          3,
+          2
+        ]
+      },
+      "glide": [
+        0.7,
+        3.0
+      ],
+      "bob": [
+        2,
+        0.2
+      ],
+      "occlude": "clouds:sky"
+    },
+    {
+      "id": "birds_flock",
+      "type": "sprite",
+      "sprite": [
+        "bird_mid",
+        "bird_mid",
+        "bird_near",
+        "bird_mid"
+      ],
+      "colors": "bird",
+      "paths": [
+        [
+          [
+            -60,
+            300
+          ],
+          [
+            300,
+            260
+          ],
+          [
+            700,
+            240
+          ],
+          [
+            1060,
+            200
+          ],
+          [
+            1340,
+            180
+          ]
+        ],
+        [
+          [
+            1340,
+            620
+          ],
+          [
+            1000,
+            600
+          ],
+          [
+            640,
+            640
+          ],
+          [
+            300,
+            600
+          ],
+          [
+            -60,
+            620
+          ]
+        ]
+      ],
+      "speed": 125,
+      "speedJitter": 0.15,
+      "mode": "interval",
+      "interval": [
+        10,
+        17
+      ],
+      "start": 5.5,
+      "reverse": "random",
+      "flock": {
+        "count": 4,
+        "sizes": [
+          3,
+          4
+        ],
+        "formation": "loose",
+        "spread": [
+          70,
+          30
+        ],
+        "lag": 0.35,
+        "wander": [
+          5,
+          3
+        ]
+      },
+      "glide": [
+        1.2,
+        0.9
+      ],
+      "bob": [
+        3,
+        0.3
+      ],
+      "occlude": "clouds:sky"
+    },
+    {
+      "id": "crowd",
+      "type": "crowd",
+      "rect": [
+        0,
+        1190,
+        1280,
+        112
+      ],
+      "mask": "stands",
+      "cell": [
+        4,
+        4
+      ],
+      "shimmer": 0.06,
+      "shimmerRate": 2.5,
+      "cheer": {
+        "lift": 0.14,
+        "bob": 2
+      },
+      "flashes": {
+        "rects": [
+          [
+            0,
+            1228,
+            360,
+            72
+          ],
+          [
+            850,
+            1195,
+            430,
+            105
+          ]
+        ],
+        "count": {
+          "low": 20,
+          "mid": 32,
+          "high": 44
+        },
+        "idle": 0.012,
+        "burst": 0.7,
+        "size": 4,
+        "glow": 7,
+        "intensity": 1.0
+      }
+    },
+    {
+      "id": "breathe",
+      "type": "breathe",
+      "amp": 0.008,
+      "period": 14,
+      "tint": [
+        0.004,
+        0.0,
+        -0.003
+      ],
+      "minQuality": "mid"
+    }
+  ]
+}

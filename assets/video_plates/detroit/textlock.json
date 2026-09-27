@@ -1,0 +1,83 @@
+{
+ "park": "detroit",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: 426 / LONGEST / 07 / HR",
+   "rect": [
+    164,
+    935,
+    231,
+    1062
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: OUTS",
+   "rect": [
+    474,
+    963,
+    518,
+    987
+   ]
+  },
+  {
+   "name": "ocr_2",
+   "what": "OCR: ROUND / 1",
+   "rect": [
+    470,
+    1031,
+    524,
+    1085
+   ]
+  },
+  {
+   "name": "ocr_3",
+   "what": "OCR: 412",
+   "rect": [
+    688,
+    1324,
+    724,
+    1347
+   ]
+  },
+  {
+   "name": "living_board_screen",
+   "what": "living.json board_screen: painted sign",
+   "rect": [
+    222,
+    940,
+    522,
+    1085
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "left wall sign (small purple panel with painted lettering)",
+   "rect": [
+    152,
+    1315,
+    190,
+    1349
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "right wall sign (small purple panel with painted lettering)",
+   "rect": [
+    1193,
+    1315,
+    1246,
+    1350
+   ],
+   "manual": true
+  }
+ ]
+}

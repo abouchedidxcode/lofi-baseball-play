@@ -1,0 +1,79 @@
+{
+ "park": "tokyo",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "banner_l",
+   "what": "未来を信じて banner",
+   "rect": [
+    125,
+    962,
+    372,
+    1052
+   ]
+  },
+  {
+   "name": "banner_r",
+   "what": "集中して! banner",
+   "rect": [
+    926,
+    958,
+    1164,
+    1052
+   ]
+  },
+  {
+   "name": "banner_bl",
+   "what": "ホームラン! banner",
+   "rect": [
+    158,
+    1126,
+    402,
+    1188
+   ]
+  },
+  {
+   "name": "banner_br",
+   "what": "楽しい時間 banner",
+   "rect": [
+    898,
+    1126,
+    1114,
+    1188
+   ]
+  },
+  {
+   "name": "wall_l",
+   "what": "left wall lettering",
+   "rect": [
+    90,
+    1195,
+    300,
+    1235
+   ]
+  },
+  {
+   "name": "wall_c",
+   "what": "122 wall number",
+   "rect": [
+    620,
+    1195,
+    720,
+    1235
+   ]
+  },
+  {
+   "name": "wall_r",
+   "what": "right wall lettering",
+   "rect": [
+    930,
+    1195,
+    1178,
+    1235
+   ]
+  }
+ ]
+}

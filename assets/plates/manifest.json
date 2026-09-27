@@ -1,0 +1,116 @@
+{
+ "version": 1,
+ "generator": "tools/plates/export.py",
+ "contract": "assets/plates/README.md",
+ "order": [
+  "st_louis",
+  "seattle",
+  "new_york_queens",
+  "tokyo",
+  "alpine_village",
+  "moon_base"
+ ],
+ "stadiums": {
+  "st_louis": {
+   "dir": "assets/plates/st_louis/",
+   "plateJson": "assets/plates/st_louis/plate.json",
+   "name": "St. Louis",
+   "camera": {
+    "position": [
+     -0.1178,
+     1.7303,
+     4.0081
+    ],
+    "pitchDeg": 5.137,
+    "hfovDeg": 45.981
+   },
+   "nearFieldRmsPx1x": 6.98,
+   "sprites": []
+  },
+  "seattle": {
+   "dir": "assets/plates/seattle/",
+   "plateJson": "assets/plates/seattle/plate.json",
+   "name": "Seattle",
+   "camera": {
+    "position": [
+     0.1132,
+     1.4564,
+     3.7281
+    ],
+    "pitchDeg": 4.973,
+    "hfovDeg": 45.081
+   },
+   "nearFieldRmsPx1x": 9.17,
+   "sprites": []
+  },
+  "new_york_queens": {
+   "dir": "assets/plates/new_york_queens/",
+   "plateJson": "assets/plates/new_york_queens/plate.json",
+   "name": "New York",
+   "camera": {
+    "position": [
+     -0.0878,
+     1.7868,
+     3.6768
+    ],
+    "pitchDeg": 0.486,
+    "hfovDeg": 44.122
+   },
+   "nearFieldRmsPx1x": 4.91,
+   "sprites": [
+    "jet",
+    "jet_far"
+   ]
+  },
+  "tokyo": {
+   "dir": "assets/plates/tokyo/",
+   "plateJson": "assets/plates/tokyo/plate.json",
+   "name": "Tokyo",
+   "camera": {
+    "position": [
+     0.0266,
+     2.2247,
+     4.2375
+    ],
+    "pitchDeg": -1.036,
+    "hfovDeg": 41.179
+   },
+   "nearFieldRmsPx1x": 8.78,
+   "sprites": []
+  },
+  "alpine_village": {
+   "dir": "assets/plates/alpine_village/",
+   "plateJson": "assets/plates/alpine_village/plate.json",
+   "name": "Alpine Village",
+   "camera": {
+    "position": [
+     -0.0799,
+     2.0999,
+     5.209
+    ],
+    "pitchDeg": 3.812,
+    "hfovDeg": 41.228
+   },
+   "nearFieldRmsPx1x": 7.31,
+   "sprites": [
+    "gondola"
+   ]
+  },
+  "moon_base": {
+   "dir": "assets/plates/moon_base/",
+   "plateJson": "assets/plates/moon_base/plate.json",
+   "name": "Moon Base",
+   "camera": {
+    "position": [
+     0.112,
+     1.8672,
+     4.7047
+    ],
+    "pitchDeg": 3.785,
+    "hfovDeg": 41.963
+   },
+   "nearFieldRmsPx1x": 12.2,
+   "sprites": []
+  }
+ }
+}

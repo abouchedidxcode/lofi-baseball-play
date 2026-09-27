@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "park": "anaheim",
+  "mood": "Anaheim on a bright sunny afternoon: a giant rock formation with waterfalls and palm trees beyond center field, giant red baseball hats at the gates, blue Southern California sky.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "day",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the twin waterfalls tumble down the rock formation (a slow scrolling shimmer on the painted water)", "mist sparkles softly at the base of the falls where the water meets the rocks", "palm fronds on the rockpile sway gently in a warm breeze", "the red pennant flags on the giant cap gates flutter lazily", "small white pixel clouds drift slowly across the blue sky (sky layer drift)", "a sun glint slides across the glass skyscraper windows", "light-tower lamp banks glow with a soft daytime shimmer", "a seagull or two glides across the sky now and then", "crowd shimmer, with camera flashes and a cheer pulse on a home run", "a home run sends a burst of water spray up the waterfall"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/anaheim.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 687],
+      "clean": [0, 0, 1088, 687],
+      "layers": [
+        {
+          "atlas": [0, 693, 1280, 142],
+          "y": 415,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 841, 1280, 132],
+          "y": 642,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [1080, 665, 119, 121]
+        },
+        {
+          "ellipse": [201, 666, 118, 123]
+        },
+        {
+          "ellipse": [921, 762, 77, 76]
+        }
+      ]
+    }
+  ]
+}

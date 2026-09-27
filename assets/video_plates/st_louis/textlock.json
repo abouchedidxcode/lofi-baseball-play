@@ -1,0 +1,29 @@
+{
+ "park": "st_louis",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "HR 07 scoreboard (live count drawn on top)",
+   "rect": [
+    940,
+    1180,
+    1060,
+    1295
+   ]
+  },
+  {
+   "name": "wall_400",
+   "what": "400 wall number",
+   "rect": [
+    620,
+    1314,
+    665,
+    1340
+   ]
+  }
+ ]
+}

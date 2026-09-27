@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "park": "london",
+  "mood": "London on an overcast summer evening: Big Ben and the London Eye beyond the outfield, red double-decker buses, a temporary ballpark built inside a big athletics stadium, soft grey-gold light.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "dusk",
+  "_weather": {
+    "type": "fog",
+    "intensity": 0.15
+  },
+  "_lifeIdeas": ["Big Ben's clock face glows warm and its lantern catches a slow golden glint", "the London Eye turns imperceptibly, its rim lights chasing around the wheel", "a red double-decker bus glides along the road behind the stands now and then (cut the painted bus into a sprite)", "heavy grey clouds drift slowly, golden light breathing through the gaps (sky layer drift)", "floodlight banks glow and softly pulse, fine misty motes hanging in their cones", "the flags and banners on the poles above the stands flutter", "office windows in the City towers flicker on as evening falls", "the scoreboard's pixel diamond lights up its bases on a home run", "crowd shimmer, with camera flashes and a cheer pulse on a home run"],
+  "_clouds": "clouds effect ready (sheet living_clouds*.png from tools/living/parks/london.clouds.json); tune speeds per layer, flip the sign for the other wind direction",
+  "effects": [
+    {
+      "id": "clouds",
+      "type": "clouds",
+      "texture": "living_clouds.png",
+      "region": [96, 96, 1088, 701],
+      "clean": [0, 0, 1088, 701],
+      "layers": [
+        {
+          "atlas": [0, 707, 1280, 294],
+          "y": 96,
+          "x": 0,
+          "band": 0,
+          "speed": 10
+        },
+        {
+          "atlas": [0, 1007, 1280, 262],
+          "y": 315,
+          "x": 0,
+          "band": 1,
+          "speed": 6.5
+        },
+        {
+          "atlas": [0, 1275, 1280, 258],
+          "y": 539,
+          "x": 0,
+          "band": 2,
+          "speed": 4
+        }
+      ],
+      "gap": 96,
+      "relight": 0.5,
+      "snap": 1,
+      "exclude": [
+        {
+          "ellipse": [204, 631, 104, 82]
+        },
+        {
+          "ellipse": [1091, 623, 106, 72]
+        },
+        {
+          "ellipse": [1055, 681, 72, 85]
+        }
+      ]
+    }
+  ]
+}

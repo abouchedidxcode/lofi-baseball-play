@@ -1,0 +1,67 @@
+{
+ "park": "boston",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "pixel",
+   "what": "PIXEL sign panel",
+   "rect": [
+    398,
+    868,
+    505,
+    923
+   ]
+  },
+  {
+   "name": "pixel_triangle",
+   "what": "PIXEL sign triangle",
+   "poly": [
+    [
+     451,
+     791
+    ],
+    [
+     404,
+     885
+    ],
+    [
+     498,
+     885
+    ]
+   ]
+  },
+  {
+   "name": "scoreboard",
+   "what": "manual scoreboard P 1-10 R H E / HOME / AWAY",
+   "rect": [
+    222,
+    1155,
+    580,
+    1285
+   ]
+  },
+  {
+   "name": "wall_379",
+   "what": "379 wall number",
+   "rect": [
+    165,
+    1252,
+    220,
+    1285
+   ]
+  },
+  {
+   "name": "lofi",
+   "what": "LONG LIVE LOFI board",
+   "rect": [
+    970,
+    1046,
+    1130,
+    1183
+   ]
+  }
+ ]
+}

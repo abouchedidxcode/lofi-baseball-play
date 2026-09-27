@@ -1,0 +1,301 @@
+{
+  "note": "Lead-controlled list of FACTORY parks in the game rotation. To add a park: add its id to 'parks' (one line), then run: python3 tools/plates/to_rotation.py (it rewrites src/config/stadiums_factory.js and re-makes any stale WebP twin; --check validates only). Re-run it after every factory re-run of a park listed here: the dev server console-warns '[stadiums] <id>: ... changed after ... was generated' when you forget. Order of play: St. Louis first, then 'spread' new parks after each hand-built park (st_louis, seattle, new_york_queens, tokyo, alpine_village, moon_base), in the order of 'parks' below; new parks left over go last. 'order' (optional) pins the full play order instead (ids missing from it are appended). 'overrides' (optional) deep-merges into a park's generated config, e.g. { \"boston\": { \"localTime\": \"7:51 PM\" } }.",
+  "spread": 2,
+  "parks": [
+    "las_vegas",
+    "boston",
+    "cherry_temple",
+    "venice_canals",
+    "toronto",
+    "arizona",
+    "chicago_south",
+    "minnesota",
+    "baltimore",
+    "atlanta",
+    "cincinnati",
+    "philadelphia",
+    "sydney",
+    "tampa_bay",
+    "miami",
+    "anaheim",
+    "london",
+    "chicago_north",
+    "cleveland",
+    "colorado",
+    "cyber_district",
+    "desert_oasis",
+    "detroit",
+    "houston",
+    "los_angeles",
+    "mexico_city",
+    "monterrey",
+    "new_york_bronx",
+    "pittsburgh",
+    "san_diego",
+    "san_francisco",
+    "san_juan",
+    "santo_domingo",
+    "seoul",
+    "sky_islands",
+    "texas",
+    "underwater_dome",
+    "washington",
+    "kansas_city",
+    "milwaukee"
+  ],
+  "order_note": "Rotation 44 (2026-09-27): the pinned full play order. Chosen for variety: the 28 MLB cities (concepts/round2) and the 16 international and made-up parks (concepts/international) run MLB, MLB, world; no two neighbours share a time of day; rain, fog, petals, neon, snow, space and underwater parks and same-city or same-region pairs sit far apart, including across the wrap back to St. Louis. Rotation 46 (lead, 04:58): kansas_city (sunset) sits between underwater_dome (night) and baltimore (dusk), milwaukee (dusk) between san_juan (night) and miami (sunset). Both fill a slot that had one MLB city between world parks, so the MLB, MLB, world rhythm holds. los_angeles and new_york_queens swapped after the pop-up check: from Chicago North Side's painted batter spot, an 11-character NEXT STOP name (LOS ANGELES) starts on #23's back; NEW YORK is short enough (qa/rotation44/check_order.log).",
+  "order": [
+    "tokyo",
+    "new_york_bronx",
+    "los_angeles",
+    "boston",
+    "underwater_dome",
+    "santo_domingo",
+    "tampa_bay",
+    "london",
+    "mexico_city",
+    "kansas_city",
+    "cherry_temple",
+    "desert_oasis",
+    "cyber_district",
+    "chicago_north",
+    "seattle",
+    "moon_base",
+    "san_juan",
+    "alpine_village",
+    "pittsburgh",
+    "toronto",
+    "st_louis",
+    "san_diego",
+    "atlanta",
+    "sky_islands",
+    "detroit",
+    "chicago_south",
+    "sydney",
+    "las_vegas",
+    "monterrey",
+    "minnesota",
+    "arizona",
+    "washington",
+    "milwaukee",
+    "miami",
+    "colorado",
+    "cincinnati",
+    "seoul",
+    "anaheim",
+    "texas",
+    "baltimore",
+    "cleveland",
+    "houston",
+    "san_francisco",
+    "philadelphia",
+    "venice_canals",
+    "new_york_queens"
+  ],
+  "order_default": [
+    "st_louis",
+    "tampa_bay",
+    "tokyo",
+    "pittsburgh",
+    "toronto",
+    "london",
+    "san_diego",
+    "atlanta",
+    "sky_islands",
+    "detroit",
+    "chicago_south",
+    "sydney",
+    "seattle",
+    "las_vegas",
+    "alpine_village",
+    "boston",
+    "los_angeles",
+    "monterrey",
+    "minnesota",
+    "cyber_district",
+    "arizona",
+    "washington",
+    "san_juan",
+    "milwaukee",
+    "miami",
+    "moon_base",
+    "colorado",
+    "cincinnati",
+    "seoul",
+    "anaheim",
+    "texas",
+    "underwater_dome",
+    "kansas_city",
+    "baltimore",
+    "santo_domingo",
+    "cleveland",
+    "new_york_bronx",
+    "mexico_city",
+    "houston",
+    "san_francisco",
+    "cherry_temple",
+    "philadelphia",
+    "venice_canals",
+    "chicago_north",
+    "new_york_queens",
+    "desert_oasis"
+  ],
+  "overrides": {
+    "london": {
+      "weather": {
+        "intensity": 0.35
+      }
+    },
+    "san_francisco": {
+      "weather": {
+        "intensity": 0.45
+      },
+      "visual": {
+        "machine": {
+          "model": "v2_tripod",
+          "body": "#25262c",
+          "panelGain": 1.15,
+          "ring": "#464850",
+          "crate": "#6a3c20",
+          "crateSide": "#b87844"
+        }
+      }
+    },
+    "underwater_dome": {
+      "weather": {
+        "intensity": 0
+      }
+    },
+    "chicago_south": {
+      "ui": {
+        "shortName": "Chicago South"
+      },
+      "visual": {
+        "machine": {
+          "body": "#1f2432",
+          "retint": 1,
+          "panelGain": 1.3,
+          "ring": "#4c4f57"
+        }
+      }
+    },
+    "chicago_north": {
+      "ui": {
+        "shortName": "Chicago North"
+      },
+      "visual": {
+        "machine": {
+          "model": "v2_tripod"
+        }
+      }
+    },
+    "new_york_bronx": {
+      "ui": {
+        "shortName": "The Bronx"
+      }
+    },
+    "mexico_city": {
+      "visual": {
+        "machine": {
+          "body": "#38383a",
+          "accent": "#18181a",
+          "wheel": "#131315"
+        }
+      }
+    },
+    "monterrey": {
+      "visual": {
+        "machine": {
+          "body": "#36422c",
+          "accent": "#161a12",
+          "wheel": "#111410",
+          "retint": 1
+        }
+      }
+    },
+    "san_juan": {
+      "visual": {
+        "machine": {
+          "body": "#1d2b45",
+          "accent": "#0c1526",
+          "wheel": "#0a111e",
+          "model": "v2_tripod"
+        }
+      }
+    },
+    "washington": {
+      "visual": {
+        "machine": {
+          "body": "#1f2e4c",
+          "accent": "#0b1629",
+          "wheel": "#081220"
+        }
+      }
+    },
+    "kansas_city": {
+      "visual": {
+        "machine": {
+          "body": "#2a4a98",
+          "accent": "#10204a",
+          "wheel": "#0b1630",
+          "retint": 1,
+          "crate": "#1b2440"
+        }
+      }
+    },
+    "milwaukee": {
+      "visual": {
+        "machine": {
+          "body": "#2a4a98",
+          "accent": "#10204a",
+          "wheel": "#0b1630",
+          "retint": 1,
+          "crate": "#1b2440"
+        }
+      }
+    },
+    "cherry_temple": {
+      "weather": {
+        "intensity": 0.3
+      }
+    },
+    "pittsburgh": {
+      "visual": {
+        "machine": {
+          "model": "v2_tripod",
+          "body": "#232429",
+          "panelGain": 1.05,
+          "ring": "#e0a820",
+          "crate": "#1e1f23"
+        }
+      }
+    },
+    "boston": {
+      "visual": {
+        "machine": {
+          "model": "v2_tripod"
+        }
+      }
+    },
+    "cincinnati": {
+      "visual": {
+        "machine": {
+          "body": "#1a2838",
+          "retint": 1,
+          "panelGain": 1.5,
+          "ring": "#b83a26",
+          "crate": "#a8321f"
+        }
+      }
+    },
+    "cyber_district": {
+      "weather": {
+        "look": {
+          "mirrorFloor": -0.3,
+          "mirrorKnee": 0.6
+        }
+      }
+    }
+  },
+  "overrides_note": "Fog (lead, 05:50): fog v2 (src/weather/fogbanks.js, qa/fog_v2/) draws soft undithered mist banks per art pixel. san_francisco 0.45 and london 0.35 (the fix:fog agent's recommendation); underwater_dome stays 0 (the teal haze barely shows over the night city). Rotation 44 had all three at 0 because fog v1 laid a screen-door dot grid over the painting (qa/rotation44/fog/). NEXT STOP names (ui.shortName): both Chicago parks are in the rotation now, so 'Chicago South' / 'Chicago North' instead of two 'CHICAGO's; new_york_bronx is 'The Bronx' (the generator's first-word rule gave 'NEW'). Machine colours (visual.machine, deep-merged over the sampled ones), checked in qa/rotation44/machines_concept_vs_game_after.jpg: mexico_city was sampled tan (#7f6732) but the painted machine is charcoal; monterrey's is olive green, san_juan's navy (sampled a teal), washington's navy (not grey). Rotation 46: kansas_city and milwaukee paint a bright ROYAL blue machine; the GLB's navy read as a dark navy-purple silhouette (sampled #162954 / #1c3464 keep the navy), so both get body #2a4a98 with retint 1 (the panels re-materialed to royal blue). (milwaukee's hand-set machine anchor was removed at 05:40: tools/plates/machine_fit.py now fits every park's machine to the painted body, qa/machine_fit/.) Cherry Temple petals (lead, 06:15): weather intensity 0.45 -> 0.3; the living sweep found the petals filling the whole night sky, busier than the concept, where they stay near the trees. Tripod machines (2026-09-27, qa/machine_tripod/): the five parks whose concept paints the machine on a three-leg stand (pittsburgh, boston, san_juan, san_francisco, chicago_north; all 46 checked in qa/machine_tripod/concepts_*.jpg) get visual.machine.model 'v2_tripod' (assets/upgrade/props/pitching_machine_v2_tripod.glb, same head and fit box as v2); every other park keeps the default v2 cart. ?machine=v1|v2|v2_tripod still overrides every park. visual.machine colour knobs (src/game/pitcher.js applyTint, 2026-09-27 polish): body/retint (panel colour), panelGain (retinted panel brightness, default 2.3; ~1.1 = near-black charcoal), ring (muzzle ring colour, default steel), crate (ball-crate frame colour, default body); tuned against the concepts in qa/polish/machine_colours_after.jpg. Crates (2026-09-27 weather+colours fix): kansas_city / milwaukee crate '#1b2440' (dark navy, not the bright royal body blue, like tokyo / seattle / alpine); san_francisco crateSide (the baked balls on the crate's sides take the slat brown, cream balls stay on top) so it reads as the concept's brown wooden crate. Wet mirror (weather.look, src/weather/puddles.js): cyber_district mirrorFloor -0.3 deg (reflections never sample below the painted wall base, which fed last frame's puddle back into a blown-out hot spot under the restored 498 FT sign) and mirrorKnee 0.6 (the sign reflects as a soft pink streak, not near-white)."
+}

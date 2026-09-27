@@ -1,0 +1,464 @@
+{
+ "version": 1,
+ "id": "alpine_village",
+ "name": "Alpine Village",
+ "concept": "concepts/international/alpine_village.png",
+ "weather": "snow",
+ "time": "dusk",
+ "files": {
+  "plate": "plate.png",
+  "plate1x": "plate_1x.png",
+  "masks": {
+   "sky": "sky.png",
+   "crowd": "crowd.png",
+   "glow": "glow.png",
+   "field": "field.png",
+   "dirt": "dirt.png"
+  },
+  "masksPacked1x": {
+   "file": "masks_1x.png",
+   "channels": {
+    "r": "glow",
+    "g": "crowd",
+    "b": "field",
+    "a": "sky"
+   }
+  },
+  "dirt1x": "dirt_1x.png",
+  "skyLayer1x": "sky_layer_1x.png"
+ },
+ "size": {
+  "w": 2560,
+  "h": 4800,
+  "scale": 2,
+  "w1x": 1280,
+  "h1x": 2400
+ },
+ "frame": {
+  "conceptRectPx": [
+   256,
+   640,
+   2048,
+   3648
+  ],
+  "axisPx": [
+   1280,
+   2464
+  ],
+  "pxPerTan": 2722.288,
+  "tanRect": {
+   "left": -0.470193,
+   "right": 0.470193,
+   "top": 0.905121,
+   "bottom": -0.858102
+  },
+  "coversAspectDown": 0.4384,
+  "note": "Camera-aligned full-screen quad: for a screen point at NDC (nx, ny) with the live camera, tx = nx * tan(hfov/2), ty = ny * tan(vfov/2) (hfov/vfov = camera's current fovs), then plate px = (axisPx.x + tx * pxPerTan, axisPx.y - ty * pxPerTan) and uv = (px.x / w, 1 - px.y / h) for a flipY texture. The concept's 9:16 frame is exactly the reference view (hfov spans conceptRectPx width)."
+ },
+ "camera": {
+  "position": [
+   -0.0799,
+   2.0999,
+   5.209
+  ],
+  "rotation": [
+   0.066532,
+   -0.008709,
+   0.005114
+  ],
+  "order": "YXZ",
+  "pitchDeg": 3.812,
+  "yawDeg": -0.499,
+  "rollDeg": 0.293,
+  "hfovDeg": 41.228,
+  "vfovDegAt9x16": 67.646,
+  "refAspect": 0.5625,
+  "near": 0.1,
+  "far": 5000,
+  "fitRule": "aspect <= 9:16: hold hfovDeg (vfov = 2 atan(tan(hfov/2) / aspect)); aspect > 9:16 never happens (9:16 column)",
+  "note": "THREE.PerspectiveCamera: camera.position.set(...position); camera.rotation.set(...rotation) with rotation.order 'YXZ'; camera.fov = vfov for the live aspect. Solved from the painted landmarks with a real-scale field."
+ },
+ "fit": {
+  "residualPx1x": {
+   "plate.FL": 8.15,
+   "plate.FR": 14.0,
+   "plate.SL": 0.66,
+   "plate.SR": 10.71,
+   "plate.tip": 3.59,
+   "boxL.front": 1.88,
+   "boxL.back": 1.53,
+   "boxL.inner": 5.78,
+   "boxL.outer": 1.83,
+   "boxR.front": 1.01,
+   "boxR.back": 0.74,
+   "boxR.inner": 15.15,
+   "boxR.outer": 10.32,
+   "foulL": 4.79,
+   "foulR": 2.98,
+   "moundC": 34.24,
+   "moundSize": 21.9,
+   "rubber": 31.39,
+   "wall": 1.67
+  },
+  "nearFieldRmsPx1x": 7.31,
+  "nearFieldRmsPxAt390w": 2.79,
+  "note": "px at the concept's 1x scale (1024 wide); at 390 CSS px wide divide by 2.63. The mound is painted closer and deeper than regulation, see anchors.machine."
+ },
+ "anchors": {
+  "machine": {
+   "position": [
+    0.371,
+    0.0,
+    -13.028
+   ],
+   "pitchDistanceM": 13.03,
+   "conceptHeightM": 1.55,
+   "conceptWidthM": 0.88,
+   "baseUv": [
+    0.5168,
+    0.61875
+   ],
+   "topUv": [
+    0.5168,
+    0.56792
+   ],
+   "bodyConceptPx": [
+    500,
+    1043,
+    567,
+    1165
+   ],
+   "fit": "machine_fit.py (hand body box)",
+   "uv": [
+    0.51289,
+    0.62104
+   ],
+   "regulationSpotUv": [
+    0.49354,
+    0.59638
+   ],
+   "note": "position = where the 3D machine stands: the ground centre of the GLB box whose front bottom edge sits on the painted machine's base (wheels / feet) and whose top edge projects onto the painted top, under this camera (tools/plates/machine_fit.py). The concepts paint the machine on the FRONT of the mound, often metres closer than the mound centre (uv) or regulation (regulationSpotUv, z = -18.14). conceptHeightM = the height the 3D machine is scaled to; conceptWidthM = the painted body width at that depth (the GLB is narrower)."
+  },
+  "paintedMound": {
+   "center": [
+    0.294,
+    0.0,
+    -12.046
+   ],
+   "radiusX": 2.17,
+   "radiusZ": 2.88,
+   "note": "the painted mound as an ellipse on the ground (y = 0) under this camera"
+  },
+  "batter": {
+   "conceptFeet": [
+    -0.879,
+    0.0,
+    0.601
+   ],
+   "conceptFeetUv": [
+    0.29663,
+    0.81875
+   ],
+   "conceptStanceHeightM": 2.35,
+   "conceptHeadUv": [
+    0.29663,
+    0.51917
+   ],
+   "boxCenter": [
+    -0.977,
+    0.0,
+    -0.216
+   ],
+   "note": "conceptFeet = where the concept's batter stands under this camera (feet midpoint, approximate); conceptStanceHeightM = ground to helmet top of the painted stance at that depth (hero scale)."
+  },
+  "batterConcept": {
+   "feetMidX": 266,
+   "feetBottomY": 1622,
+   "helmetTopY": 1026,
+   "space": "concept px (1024x1824); map via frame.conceptRectPx",
+   "note": "Hand-measured painted batter; more accurate than anchors.batter (whose 'head' is the top of the painted bat). Fit #23's idle stance to this screen span. Reference implementation: preview_plates/src/game/batter.js fitToPlate()."
+  }
+ },
+ "lines": {
+  "wallBaseUv": [
+   [
+    0.0,
+    0.56078
+   ],
+   [
+    0.05,
+    0.56078
+   ],
+   [
+    0.1,
+    0.56078
+   ],
+   [
+    0.15,
+    0.5603
+   ],
+   [
+    0.2,
+    0.55989
+   ],
+   [
+    0.25,
+    0.55954
+   ],
+   [
+    0.3,
+    0.55924
+   ],
+   [
+    0.35,
+    0.55901
+   ],
+   [
+    0.4,
+    0.55884
+   ],
+   [
+    0.45,
+    0.55873
+   ],
+   [
+    0.5,
+    0.55868
+   ],
+   [
+    0.55,
+    0.55869
+   ],
+   [
+    0.6,
+    0.55876
+   ],
+   [
+    0.65,
+    0.55889
+   ],
+   [
+    0.7,
+    0.55908
+   ],
+   [
+    0.75,
+    0.55933
+   ],
+   [
+    0.8,
+    0.55964
+   ],
+   [
+    0.85,
+    0.56002
+   ],
+   [
+    0.9,
+    0.56044
+   ],
+   [
+    0.95,
+    0.56044
+   ],
+   [
+    1.0,
+    0.56044
+   ]
+  ],
+  "wallTopUv": [
+   [
+    0.01597,
+    0.54516
+   ],
+   [
+    0.0582,
+    0.54539
+   ],
+   [
+    0.09931,
+    0.5456
+   ],
+   [
+    0.13941,
+    0.54581
+   ],
+   [
+    0.17862,
+    0.54601
+   ],
+   [
+    0.21708,
+    0.54619
+   ],
+   [
+    0.25487,
+    0.54637
+   ],
+   [
+    0.29212,
+    0.54653
+   ],
+   [
+    0.32891,
+    0.54669
+   ],
+   [
+    0.36532,
+    0.54683
+   ],
+   [
+    0.40145,
+    0.54697
+   ],
+   [
+    0.43737,
+    0.54709
+   ],
+   [
+    0.47317,
+    0.5472
+   ],
+   [
+    0.5089,
+    0.5473
+   ],
+   [
+    0.54466,
+    0.54738
+   ],
+   [
+    0.5805,
+    0.54746
+   ],
+   [
+    0.61651,
+    0.54753
+   ],
+   [
+    0.65278,
+    0.54758
+   ],
+   [
+    0.68937,
+    0.54763
+   ],
+   [
+    0.72637,
+    0.54767
+   ],
+   [
+    0.76388,
+    0.5477
+   ],
+   [
+    0.802,
+    0.54773
+   ],
+   [
+    0.84082,
+    0.54775
+   ],
+   [
+    0.88047,
+    0.54776
+   ],
+   [
+    0.92107,
+    0.54777
+   ],
+   [
+    0.96271,
+    0.54778
+   ]
+  ],
+  "horizonUv": [
+   [
+    0.0,
+    0.54976
+   ],
+   [
+    1.0,
+    0.55249
+   ]
+  ],
+  "note": "wallBase = painted wall base (fit); wallTop = projected 3D fence top (wallHeight m) under the solved camera"
+ },
+ "lighting": {
+  "mood": "snowy dusk with alpenglow: warm lamp key, lilac fill, pink rim from the peaks",
+  "key": {
+   "color": "#ffe0bc",
+   "intensity": 1.9,
+   "dir": [
+    0.6423,
+    0.6959,
+    0.3212
+   ]
+  },
+  "hemi": {
+   "sky": "#7478b8",
+   "ground": "#8a5a4a",
+   "intensity": 0.9
+  },
+  "rim": {
+   "color": "#ff9fc8",
+   "intensity": 1.0,
+   "dir": [
+    0.2724,
+    0.3179,
+    -0.9082
+   ]
+  },
+  "shadow": {
+   "opacity": 0.5,
+   "softnessM": 0.8
+  },
+  "exposure": 1.0,
+  "note": "dir points from the scene TOWARD the light. Shadows fall on the invisible ground (y = 0). Intensities assume physically-based THREE lights with ACES-ish tonemapping."
+ },
+ "fog": {
+  "color": "#736993",
+  "near": 60,
+  "far": 420,
+  "note": "for 3D things far out (the batted ball near the wall): fade toward the painting's far-field colour"
+ },
+ "paintedPixelSize1x": 6.93,
+ "palette": {
+  "skyTop": "#303f66",
+  "field": "#5d3f29"
+ },
+ "sprites": [
+  {
+   "name": "gondola",
+   "file": "gondola.png",
+   "sizePx": [
+    214,
+    332
+   ],
+   "homeRectUv": [
+    0.68203,
+    0.2575,
+    0.08359,
+    0.06917
+   ],
+   "anchorInSprite01": [
+    0.6168,
+    0.0181
+   ],
+   "pathUv": {
+    "from": [
+     0.44984,
+     0.34667
+    ],
+    "to": [
+     0.90922,
+     0.20433
+    ],
+    "homeT": 0.6177
+   },
+   "speedUvPerS": 0.004687,
+   "pingpong": true,
+   "note": "slides along the cable (the path passes through the grip). Draw it between the plate and the weather."
+  }
+ ]
+}

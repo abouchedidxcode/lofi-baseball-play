@@ -1,0 +1,152 @@
+{
+ "park": "miami",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: HOME / RUNE",
+   "rect": [
+    511,
+    969,
+    721,
+    1107
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: 404",
+   "rect": [
+    612,
+    1318,
+    658,
+    1343
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "sign on the pink art deco building",
+   "rect": [
+    303,
+    1138,
+    347,
+    1164
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "small blue sign above the video board",
+   "rect": [
+    835,
+    1068,
+    872,
+    1092
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_sculpture",
+   "what": "the whole HOME RUN! sculpture (arch, dolphins, flamingos): r3 takes restyle it into smooth neon, so the letters-only box showed as a blocky patch",
+   "poly": [
+    [
+     546,
+     878
+    ],
+    [
+     582,
+     878
+    ],
+    [
+     588,
+     902
+    ],
+    [
+     640,
+     912
+    ],
+    [
+     674,
+     930
+    ],
+    [
+     702,
+     984
+    ],
+    [
+     724,
+     1044
+    ],
+    [
+     737,
+     1108
+    ],
+    [
+     766,
+     1144
+    ],
+    [
+     792,
+     1160
+    ],
+    [
+     796,
+     1206
+    ],
+    [
+     790,
+     1258
+    ],
+    [
+     414,
+     1258
+    ],
+    [
+     412,
+     1204
+    ],
+    [
+     418,
+     1162
+    ],
+    [
+     438,
+     1118
+    ],
+    [
+     452,
+     1068
+    ],
+    [
+     466,
+     1018
+    ],
+    [
+     456,
+     992
+    ],
+    [
+     466,
+     964
+    ],
+    [
+     494,
+     912
+    ],
+    [
+     520,
+     902
+    ],
+    [
+     546,
+     902
+    ]
+   ],
+   "manual": true
+  }
+ ]
+}

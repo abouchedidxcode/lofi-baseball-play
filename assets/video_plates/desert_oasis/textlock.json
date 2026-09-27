@@ -1,0 +1,51 @@
+{
+ "park": "desert_oasis",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: HÓME RUN / DERBY / B*.A**",
+   "rect": [
+    933,
+    1174,
+    1109,
+    1279
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: 400",
+   "rect": [
+    611,
+    1341,
+    667,
+    1370
+   ]
+  },
+  {
+   "name": "ocr_2",
+   "what": "OCR: 380",
+   "rect": [
+    182,
+    1341,
+    241,
+    1373
+   ]
+  },
+  {
+   "name": "ocr_3",
+   "what": "OCR: 380",
+   "rect": [
+    1021,
+    1343,
+    1080,
+    1375
+   ]
+  }
+ ]
+}

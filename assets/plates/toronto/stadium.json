@@ -1,0 +1,31 @@
+{
+ "id": "toronto",
+ "name": "Toronto",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "night",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 100.0,
+  "cf": 123.1,
+  "rf": 100.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the CN-style tower's pink and blue light shafts slowly cycle colours, its pod ring twinkling",
+  "a red aircraft-warning light blinks slowly at the tower's tip and on the twin-antenna skyscraper",
+  "the dome's arch of blue-white light breathes softly",
+  "the lake shimmers with rippling reflections of the city lights",
+  "skyscraper windows flicker on and off across downtown",
+  "stars twinkle in the clear night sky, and now and then a plane crosses with blinking lights",
+  "the video board's skyline graphic pulses and the scoreboard updates after a home run",
+  "light-tower lamp banks glow and breathe, moths drifting through their cones",
+  "the red-white-blue bunting on the stands ripples in the lake breeze",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/toronto.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

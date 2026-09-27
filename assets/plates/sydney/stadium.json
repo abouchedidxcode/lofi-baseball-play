@@ -1,0 +1,30 @@
+{
+ "id": "sydney",
+ "name": "Sydney",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 122.0,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "rainbow lorikeets flap across the sky now and then",
+  "the harbour water glitters in the low sun; the little sailboat drifts slowly",
+  "the Opera House sails catch a slow moving warm glint",
+  "the needle tower's turret lights glow and blink",
+  "city windows switch on one by one as the evening deepens",
+  "the golden clouds drift slowly across the teal sky (sky layer drift)",
+  "the light-tower lamp banks breathe gently",
+  "the scoreboard's diamond pulses softly",
+  "crowd shimmer in the stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/international/sydney.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

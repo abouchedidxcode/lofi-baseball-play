@@ -1,0 +1,63 @@
+{
+ "park": "pittsburgh",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: 399",
+   "rect": [
+    620,
+    1237,
+    660,
+    1259
+   ]
+  },
+  {
+   "name": "living_ballboard_left",
+   "what": "living.json ballboard_left: painted sign",
+   "rect": [
+    118,
+    1010,
+    216,
+    1110
+   ]
+  },
+  {
+   "name": "living_ballboard_right",
+   "what": "living.json ballboard_right: painted sign",
+   "rect": [
+    1048,
+    1020,
+    1146,
+    1120
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "left wall plaques (painted pseudo-text)",
+   "rect": [
+    362,
+    1234,
+    462,
+    1268
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "right wall plaque (painted pseudo-text)",
+   "rect": [
+    950,
+    1234,
+    998,
+    1268
+   ],
+   "manual": true
+  }
+ ]
+}

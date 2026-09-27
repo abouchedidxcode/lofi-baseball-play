@@ -1,0 +1,605 @@
+{
+ "version": 1,
+ "park": "san_juan",
+ "mood": "a warm tropical night under a full moon: the Atlantic glittering, a fishing boat crossing the moonlight, El Morro's lanterns, bats and fireflies",
+ "grid": "art",
+ "style": "living_style.json",
+ "seed": 11,
+ "palette": {},
+ "masks": {
+  "windows": "living_masks_1x.png:r",
+  "stars": {
+   "file": "living_masks_1x.png",
+   "channel": "g",
+   "filter": "nearest"
+  },
+  "sea": "living_masks_1x.png:g",
+  "bunting": "living_masks_1x.png:b"
+ },
+ "effects": [
+  {
+   "id": "clouds",
+   "type": "clouds",
+   "texture": "living_clouds.png",
+   "region": [
+    96,
+    96,
+    1088,
+    760
+   ],
+   "clean": [
+    0,
+    0,
+    1088,
+    760
+   ],
+   "layers": [
+    {
+     "atlas": [
+      0,
+      766,
+      1280,
+      229
+     ],
+     "y": 96,
+     "x": 0,
+     "band": 0,
+     "speed": -10
+    },
+    {
+     "atlas": [
+      0,
+      1001,
+      1280,
+      378
+     ],
+     "y": 271,
+     "x": 0,
+     "band": 1,
+     "speed": -6.5
+    },
+    {
+     "atlas": [
+      0,
+      1385,
+      1280,
+      272
+     ],
+     "y": 584,
+     "x": 0,
+     "band": 2,
+     "speed": -4
+    }
+   ],
+   "gap": 96,
+   "relight": 0.5,
+   "snap": 1,
+   "exclude": [
+    {
+     "ellipse": [
+      954,
+      656,
+      80,
+      80
+     ]
+    },
+    {
+     "ellipse": [
+      184,
+      741,
+      75,
+      101
+     ]
+    }
+   ]
+  },
+  {
+   "id": "stars",
+   "type": "flicker",
+   "mode": "twinkle",
+   "mask": "stars",
+   "cells": "mask",
+   "rect": [
+    0,
+    0,
+    1280,
+    700
+   ],
+   "depth": 0.7,
+   "breathe": 0.02
+  },
+  {
+   "id": "moon_glow",
+   "type": "halo",
+   "center": [
+    954,
+    656
+   ],
+   "radius": [
+    80,
+    80
+   ],
+   "color": "#dfe6ff",
+   "intensity": 0.1,
+   "pulse": [
+    0.15,
+    0.05
+   ]
+  },
+  {
+   "id": "moon_path",
+   "type": "drift",
+   "mode": "shimmer",
+   "mask": "sea",
+   "rect": [
+    725,
+    884,
+    555,
+    124
+   ],
+   "amp": [
+    3,
+    0
+   ],
+   "wavelength": 6,
+   "speed": 0.35,
+   "sparkle": 0.05,
+   "color": "#f2f4ff",
+   "intensity": 0.8,
+   "on": "homerun"
+  },
+  {
+   "id": "boat",
+   "type": "sprite",
+   "sprite": {
+    "file": "living_boat.png",
+    "frames": 1,
+    "fps": 0,
+    "px": 4
+   },
+   "snap": "art",
+   "anchor": [
+    0.5,
+    1.0
+   ],
+   "path": [
+    [
+     730,
+     950
+    ],
+    [
+     1180,
+     946
+    ]
+   ],
+   "speed": 14,
+   "mode": "interval",
+   "interval": [
+    8,
+    16
+   ],
+   "start": -10,
+   "reverse": false,
+   "occlude": "sea",
+   "bob": [
+    1,
+    0.35
+   ]
+  },
+  {
+   "id": "town_windows",
+   "type": "flicker",
+   "mode": "windows",
+   "mask": "windows",
+   "cells": "mask",
+   "rect": [
+    0,
+    915,
+    1280,
+    255
+   ],
+   "rate": 0.06,
+   "breathe": 0.015,
+   "depth": 0.5,
+   "dusk": {
+    "fraction": 0.15,
+    "start": 1.0,
+    "duration": 80
+   },
+   "off": [
+    0.8,
+    0.8,
+    0.9
+   ]
+  },
+  {
+   "id": "fort_lamps",
+   "type": "flicker",
+   "mode": "fire",
+   "mask": "windows",
+   "cells": "mask",
+   "rect": [
+    160,
+    740,
+    570,
+    180
+   ],
+   "depth": 0.35
+  },
+  {
+   "id": "lamp_halo_left",
+   "type": "halo",
+   "center": [
+    170,
+    740
+   ],
+   "radius": [
+    95,
+    95
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.17,
+   "pulse": [
+    0.06,
+    0.1
+   ],
+   "on": "homerun",
+   "boost": 0.5
+  },
+  {
+   "id": "lamp_halo_right",
+   "type": "halo",
+   "center": [
+    1130,
+    768
+   ],
+   "radius": [
+    95,
+    95
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.17,
+   "pulse": [
+    0.06,
+    0.085
+   ],
+   "on": "homerun",
+   "boost": 0.5
+  },
+  {
+   "id": "moths_left",
+   "type": "particles",
+   "region": {
+    "rect": [
+     100,
+     680,
+     150,
+     120
+    ]
+   },
+   "count": {
+    "low": 4,
+    "mid": 6,
+    "high": 7
+   },
+   "shape": "moth",
+   "color": "#fff3dc",
+   "highlight": "#ffffff",
+   "shade": "#8a96b0",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    28,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0,
+   "intensity": 0.9
+  },
+  {
+   "id": "moths_right",
+   "type": "particles",
+   "region": {
+    "rect": [
+     1060,
+     710,
+     150,
+     120
+    ]
+   },
+   "count": {
+    "low": 4,
+    "mid": 6,
+    "high": 7
+   },
+   "shape": "moth",
+   "color": "#fff3dc",
+   "highlight": "#ffffff",
+   "shade": "#8a96b0",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    28,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0,
+   "intensity": 0.9
+  },
+  {
+   "id": "bats",
+   "type": "sprite",
+   "sprite": "bat",
+   "colors": "birdLit",
+   "paths": [
+    [
+     [
+      -40,
+      660
+     ],
+     [
+      80,
+      690
+     ],
+     [
+      190,
+      660
+     ],
+     [
+      270,
+      730
+     ],
+     [
+      200,
+      810
+     ],
+     [
+      80,
+      790
+     ],
+     [
+      -40,
+      820
+     ]
+    ],
+    [
+     [
+      1320,
+      690
+     ],
+     [
+      1200,
+      720
+     ],
+     [
+      1090,
+      690
+     ],
+     [
+      1010,
+      760
+     ],
+     [
+      1080,
+      840
+     ],
+     [
+      1210,
+      820
+     ],
+     [
+      1320,
+      850
+     ]
+    ]
+   ],
+   "speed": 105,
+   "speedJitter": 0.15,
+   "mode": "interval",
+   "interval": [
+    8,
+    14
+   ],
+   "start": 0.6,
+   "reverse": "random",
+   "flock": {
+    "count": 2,
+    "sizes": [
+     1,
+     2
+    ],
+    "formation": "loose",
+    "spread": [
+     40,
+     24
+    ],
+    "lag": 0.4,
+    "wander": [
+     8,
+     6
+    ]
+   },
+   "bob": [
+    4,
+    0.9
+   ]
+  },
+  {
+   "id": "fireflies",
+   "type": "particles",
+   "region": {
+    "rect": [
+     140,
+     1090,
+     1000,
+     70
+    ]
+   },
+   "count": {
+    "low": 8,
+    "mid": 12,
+    "high": 16
+   },
+   "shape": "glow",
+   "size": 4,
+   "glow": 5,
+   "color": [
+    "#d8ff9a",
+    "#fff1a0"
+   ],
+   "vel": [
+    0,
+    -1
+   ],
+   "wander": [
+    14,
+    6
+   ],
+   "wanderFreq": 0.2,
+   "life": [
+    3,
+    6
+   ],
+   "twinkle": 0.85,
+   "twinkleFreq": 0.7,
+   "intensity": 0.65,
+   "levels": 4
+  },
+  {
+   "id": "bunting",
+   "type": "flag",
+   "rect": [
+    0,
+    1172,
+    1280,
+    52
+   ],
+   "mask": "bunting",
+   "anchor": "top",
+   "amp": 2.2,
+   "wavelength": 90,
+   "speed": 0.22,
+   "dir": [
+    0.35,
+    1
+   ],
+   "stiffness": 1.0,
+   "gust": 0.5
+  },
+  {
+   "id": "shooting_star",
+   "type": "chase",
+   "mode": "comet",
+   "mask": "clouds:sky",
+   "paths": [
+    [
+     [
+      200,
+      160
+     ],
+     [
+      440,
+      270
+     ]
+    ],
+    [
+     [
+      1150,
+      150
+     ],
+     [
+      900,
+      260
+     ]
+    ]
+   ],
+   "length": 110,
+   "width": 3,
+   "interval": [
+    14,
+    26
+   ],
+   "travel": 0.8,
+   "color": "#f4f6ff",
+   "intensity": 0.75,
+   "delay": 5.0
+  },
+  {
+   "id": "fireworks",
+   "type": "fireworks",
+   "on": "homerun",
+   "bursts": [
+    {
+     "p": [
+      330,
+      610
+     ],
+     "at": 0.7,
+     "color": [
+      "#ffd27a",
+      "#ff7a5c"
+     ]
+    },
+    {
+     "p": [
+      1010,
+      560
+     ],
+     "at": 1.2,
+     "color": [
+      "#bfe4ff",
+      "#ffffff"
+     ],
+     "radius": 46
+    },
+    {
+     "p": [
+      230,
+      470
+     ],
+     "at": 1.8,
+     "color": [
+      "#ffb3d9",
+      "#ff6fa8"
+     ],
+     "radius": 40
+    }
+   ],
+   "radius": 52,
+   "count": 24,
+   "life": 1.7,
+   "gravity": 26,
+   "rise": 150,
+   "riseTime": 0.7,
+   "trail": 0.45,
+   "intensity": 0.85,
+   "mask": "clouds:sky"
+  },
+  {
+   "id": "breathe",
+   "type": "breathe",
+   "amp": 0.007,
+   "period": 16,
+   "tint": [
+    0.0,
+    0.0,
+    0.004
+   ],
+   "minQuality": "mid"
+  }
+ ]
+}

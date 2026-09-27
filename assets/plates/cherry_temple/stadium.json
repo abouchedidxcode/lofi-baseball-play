@@ -1,0 +1,31 @@
+{
+ "id": "cherry_temple",
+ "name": "Cherry Temple",
+ "weather": {
+  "type": "petals",
+  "intensity": 0.45
+ },
+ "time": "sunset",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 121.9,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "cherry blossom petals drift down across the whole frame (petals weather) and settle on the dirt",
+  "the pink cherry trees sway gently in the breeze (crown mask, slow vertex wobble)",
+  "the stone lanterns flicker like candles, warm and soft (glow mask)",
+  "the pagoda's lit windows glow and breathe warmly, one tier dimming now and then",
+  "the setting sun's halo pulses softly and a slow glint slides down the pagoda spire",
+  "low mist drifts through the valleys of the purple mountains behind the pagoda",
+  "the lilac pixel clouds drift slowly across the dusk sky",
+  "light-tower lamp banks glow and breathe, moths drifting through their cones",
+  "a few fireflies blink over the garden rocks beyond the wall",
+  "the scoreboard's little diamond icon pulses, and its lamps tick over after each home run"
+ ],
+ "concept": "concepts/international/cherry_temple.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

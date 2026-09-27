@@ -1,0 +1,842 @@
+{
+ "version": 1,
+ "park": "las_vegas",
+ "mood": "The Strip at night: marquee bulbs chasing round the welcome sign, the observation wheel turning its lights, the gold tower sparkling, the pyramid beam breathing into a starry desert sky",
+ "grid": "art",
+ "style": "living_style.json",
+ "seed": 7,
+ "palette": {
+  "beacon": "#ff3a2c",
+  "bulb": "#ffc860",
+  "wheel": "#c9a4ff",
+  "beamGlint": "#d6ecff",
+  "pyramid": "#bfe0ff",
+  "star": "#ff8a6a",
+  "gold": "#ffd89a"
+ },
+ "masks": {
+  "windows": "living_masks_1x.png:r",
+  "beam": "living_masks_1x.png:g",
+  "eiffel": "living_masks_1x.png:g",
+  "stars": "living_masks_1x.png:b"
+ },
+ "effects": [
+  {
+   "id": "stars",
+   "type": "flicker",
+   "mode": "twinkle",
+   "mask": "stars",
+   "rect": [
+    96,
+    96,
+    1088,
+    560
+   ],
+   "depth": 0.65,
+   "breathe": 0.02
+  },
+  {
+   "id": "shooting_star",
+   "type": "chase",
+   "mode": "comet",
+   "paths": [
+    [
+     [
+      180,
+      200
+     ],
+     [
+      440,
+      300
+     ]
+    ],
+    [
+     [
+      1120,
+      160
+     ],
+     [
+      870,
+      250
+     ]
+    ]
+   ],
+   "length": 100,
+   "width": 3,
+   "travel": 0.8,
+   "interval": [
+    9,
+    16
+   ],
+   "delay": 2.2,
+   "color": "#fff4dc",
+   "intensity": 0.8
+  },
+  {
+   "id": "beam_glint",
+   "type": "chase",
+   "mode": "glint",
+   "mask": "beam",
+   "path": [
+    [
+     752,
+     780
+    ],
+    [
+     752,
+     600
+    ],
+    [
+     752,
+     400
+    ],
+    [
+     752,
+     200
+    ],
+    [
+     752,
+     0
+    ]
+   ],
+   "length": 90,
+   "width": 40,
+   "period": 7,
+   "travel": 3.5,
+   "delay": 0.6,
+   "color": "$beamGlint",
+   "intensity": 0.35,
+   "levels": 5,
+   "on": "homerun"
+  },
+  {
+   "id": "beam_base",
+   "type": "halo",
+   "center": [
+    753,
+    772
+   ],
+   "radius": [
+    40,
+    34
+   ],
+   "hole": 0.2,
+   "color": "$beamGlint",
+   "intensity": 0.18,
+   "pulse": [
+    0.35,
+    0.14
+   ],
+   "on": "homerun",
+   "boost": 1.5
+  },
+  {
+   "id": "pyramid_edges",
+   "type": "chase",
+   "mode": "bulbs",
+   "path": [
+    [
+     618,
+     935
+    ],
+    [
+     660,
+     885
+    ],
+    [
+     705,
+     830
+    ],
+    [
+     753,
+     776
+    ],
+    [
+     780,
+     843
+    ],
+    [
+     805,
+     905
+    ],
+    [
+     832,
+     970
+    ]
+   ],
+   "spacing": 9,
+   "pattern": "wave",
+   "speed": 0.35,
+   "waves": 2,
+   "base": 0.15,
+   "size": 2,
+   "glow": 4,
+   "color": "$pyramid",
+   "intensity": 0.55,
+   "on": "homerun"
+  },
+  {
+   "id": "eiffel_sparkle",
+   "type": "flicker",
+   "mode": "twinkle",
+   "mask": "eiffel",
+   "rect": [
+    350,
+    438,
+    165,
+    470
+   ],
+   "depth": 0.55,
+   "breathe": 0.03
+  },
+  {
+   "id": "casino_windows",
+   "type": "flicker",
+   "mode": "windows",
+   "mask": "windows",
+   "cells": "mask",
+   "rect": [
+    0,
+    640,
+    1280,
+    450
+   ],
+   "rate": 0.07,
+   "breathe": 0.02,
+   "depth": 0.5,
+   "off": [
+    0.8,
+    0.8,
+    0.9
+   ]
+  },
+  {
+   "id": "star_neon",
+   "type": "flicker",
+   "mode": "neon",
+   "mask": "glow",
+   "rect": [
+    898,
+    818,
+    92,
+    88
+   ],
+   "cell": [
+    92,
+    88
+   ],
+   "rate": 0.1,
+   "depth": 0.35
+  },
+  {
+   "id": "balloon",
+   "type": "flicker",
+   "mode": "neon",
+   "mask": "glow",
+   "rect": [
+    495,
+    820,
+    110,
+    120
+   ],
+   "cell": [
+    110,
+    120
+   ],
+   "rate": 0.12,
+   "depth": 0.35,
+   "breathe": 0.05
+  },
+  {
+   "id": "wheel",
+   "type": "chase",
+   "mode": "bulbs",
+   "closed": true,
+   "path": [
+    [
+     923.0,
+     675.0
+    ],
+    [
+     928.6,
+     676.5
+    ],
+    [
+     933.8,
+     681.0
+    ],
+    [
+     938.6,
+     688.3
+    ],
+    [
+     942.5,
+     698.0
+    ],
+    [
+     945.5,
+     709.5
+    ],
+    [
+     947.4,
+     722.4
+    ],
+    [
+     948.0,
+     736.0
+    ],
+    [
+     947.4,
+     749.6
+    ],
+    [
+     945.5,
+     762.5
+    ],
+    [
+     942.5,
+     774.0
+    ],
+    [
+     938.6,
+     783.7
+    ],
+    [
+     933.8,
+     791.0
+    ],
+    [
+     928.6,
+     795.5
+    ],
+    [
+     923.0,
+     797.0
+    ],
+    [
+     917.4,
+     795.5
+    ],
+    [
+     912.2,
+     791.0
+    ],
+    [
+     907.4,
+     783.7
+    ],
+    [
+     903.5,
+     774.0
+    ],
+    [
+     900.5,
+     762.5
+    ],
+    [
+     898.6,
+     749.6
+    ],
+    [
+     898.0,
+     736.0
+    ],
+    [
+     898.6,
+     722.4
+    ],
+    [
+     900.5,
+     709.5
+    ],
+    [
+     903.5,
+     698.0
+    ],
+    [
+     907.4,
+     688.3
+    ],
+    [
+     912.2,
+     681.0
+    ],
+    [
+     917.4,
+     676.5
+    ]
+   ],
+   "count": 24,
+   "pattern": "wave",
+   "speed": 0.16,
+   "waves": 3,
+   "base": 0.2,
+   "size": 3,
+   "glow": 5,
+   "color": "$wheel",
+   "intensity": 0.75
+  },
+  {
+   "id": "marquee",
+   "type": "chase",
+   "mode": "bulbs",
+   "closed": true,
+   "path": [
+    [
+     906.7,
+     898.3
+    ],
+    [
+     930,
+     893.3
+    ],
+    [
+     963.3,
+     893.3
+    ],
+    [
+     986.7,
+     895
+    ],
+    [
+     1016.7,
+     898.3
+    ],
+    [
+     1043.3,
+     900
+    ],
+    [
+     1063.3,
+     913.3
+    ],
+    [
+     1076.7,
+     931.7
+    ],
+    [
+     1093.3,
+     940
+    ],
+    [
+     1101.7,
+     960
+    ],
+    [
+     1098.3,
+     980
+    ],
+    [
+     1083.3,
+     990
+    ],
+    [
+     1063.3,
+     1006.7
+    ],
+    [
+     1030,
+     1023.3
+    ],
+    [
+     996.7,
+     1040
+    ],
+    [
+     966.7,
+     1050
+    ],
+    [
+     936.7,
+     1040
+    ],
+    [
+     903.3,
+     1023.3
+    ],
+    [
+     870,
+     1003.3
+    ],
+    [
+     850,
+     993.3
+    ],
+    [
+     843.3,
+     973.3
+    ],
+    [
+     853.3,
+     953.3
+    ],
+    [
+     873.3,
+     933.3
+    ],
+    [
+     890,
+     913.3
+    ]
+   ],
+   "spacing": 8.5,
+   "pattern": "marquee",
+   "every": 3,
+   "speed": 2.2,
+   "base": 0.0,
+   "size": 3,
+   "glow": 5,
+   "color": "$bulb",
+   "intensity": 0.8,
+   "on": "homerun"
+  },
+  {
+   "id": "starburst",
+   "type": "halo",
+   "center": [
+    943,
+    862
+   ],
+   "radius": [
+    42,
+    38
+   ],
+   "hole": 0.15,
+   "color": "$star",
+   "intensity": 0.16,
+   "pulse": [
+    0.4,
+    0.35
+   ],
+   "on": "homerun",
+   "boost": 1.2
+  },
+  {
+   "id": "welcome_sign",
+   "type": "sign",
+   "rect": [
+    840,
+    885,
+    265,
+    170
+   ],
+   "delay": 0.35,
+   "sweep": 0.7,
+   "blinks": 3,
+   "rate": 1.6,
+   "duty": 0.62,
+   "dip": 0,
+   "hold": 1.2,
+   "release": 1.2,
+   "lift": 0.3,
+   "spill": 10,
+   "idle": {
+    "every": [
+     12,
+     20
+    ],
+    "travel": 1.8,
+    "lift": 0.12,
+    "width": 0.1,
+    "start": 4
+   }
+  },
+  {
+   "id": "beacons",
+   "type": "blink",
+   "blend": "alpha",
+   "defaults": {
+    "color": "$beacon",
+    "period": 2.4,
+    "duty": 0.42,
+    "pattern": "blink",
+    "size": 4,
+    "glow": 7,
+    "intensity": 0.95
+   },
+   "lights": [
+    {
+     "p": [
+      486,
+      617
+     ],
+     "phase": 0
+    },
+    {
+     "p": [
+      435,
+      444
+     ],
+     "phase": 0.5,
+     "size": 4
+    }
+   ]
+  },
+  {
+   "id": "lamp_halo_left",
+   "type": "halo",
+   "center": [
+    160,
+    705
+   ],
+   "radius": [
+    100,
+    85
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.18,
+   "pulse": [
+    0.05,
+    0.11
+   ],
+   "on": "homerun",
+   "boost": 0.6
+  },
+  {
+   "id": "lamp_halo_right",
+   "type": "halo",
+   "center": [
+    1107,
+    710
+   ],
+   "radius": [
+    95,
+    85
+   ],
+   "hole": 0.3,
+   "color": "$lamp",
+   "intensity": 0.18,
+   "pulse": [
+    0.05,
+    0.09
+   ],
+   "on": "homerun",
+   "boost": 0.6
+  },
+  {
+   "id": "bats",
+   "type": "sprite",
+   "sprite": "bat",
+   "colors": "birdLit",
+   "paths": [
+    [
+     [
+      -40,
+      640
+     ],
+     [
+      90,
+      680
+     ],
+     [
+      200,
+      650
+     ],
+     [
+      270,
+      720
+     ],
+     [
+      190,
+      790
+     ],
+     [
+      70,
+      760
+     ],
+     [
+      -40,
+      800
+     ]
+    ],
+    [
+     [
+      1320,
+      650
+     ],
+     [
+      1200,
+      680
+     ],
+     [
+      1090,
+      650
+     ],
+     [
+      1020,
+      720
+     ],
+     [
+      1100,
+      800
+     ],
+     [
+      1220,
+      770
+     ],
+     [
+      1320,
+      810
+     ]
+    ]
+   ],
+   "speed": 105,
+   "speedJitter": 0.15,
+   "mode": "interval",
+   "interval": [
+    8,
+    14
+   ],
+   "start": 1.2,
+   "reverse": "random",
+   "flock": {
+    "count": 2,
+    "sizes": [
+     1,
+     2
+    ],
+    "formation": "loose",
+    "spread": [
+     40,
+     24
+    ],
+    "lag": 0.4,
+    "wander": [
+     8,
+     6
+    ]
+   },
+   "bob": [
+    4,
+    0.9
+   ]
+  },
+  {
+   "id": "moths_left",
+   "type": "particles",
+   "region": {
+    "rect": [
+     90,
+     650,
+     150,
+     130
+    ]
+   },
+   "count": {
+    "low": 0,
+    "mid": 5,
+    "high": 7
+   },
+   "size": 4,
+   "color": "#fff6e6",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    26,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0.3,
+   "intensity": 0.55,
+   "minQuality": "mid"
+  },
+  {
+   "id": "moths_right",
+   "type": "particles",
+   "region": {
+    "rect": [
+     1040,
+     655,
+     140,
+     130
+    ]
+   },
+   "count": {
+    "low": 0,
+    "mid": 5,
+    "high": 7
+   },
+   "size": 4,
+   "color": "#fff6e6",
+   "vel": [
+    0,
+    0
+   ],
+   "wander": [
+    26,
+    18
+   ],
+   "wanderFreq": 0.45,
+   "life": [
+    4,
+    7
+   ],
+   "twinkle": 0.3,
+   "intensity": 0.55,
+   "minQuality": "mid"
+  },
+  {
+   "id": "beam_left",
+   "type": "cone",
+   "minQuality": "mid",
+   "apex": [
+    160,
+    745
+   ],
+   "target": [
+    560,
+    1480
+   ],
+   "width": [
+    40,
+    220
+   ],
+   "color": "$lamp",
+   "intensity": 0.05,
+   "falloff": 1.3,
+   "shafts": 0.45,
+   "levels": 6
+  },
+  {
+   "id": "beam_right",
+   "type": "cone",
+   "minQuality": "mid",
+   "apex": [
+    1107,
+    750
+   ],
+   "target": [
+    720,
+    1480
+   ],
+   "width": [
+    40,
+    220
+   ],
+   "color": "$lamp",
+   "intensity": 0.05,
+   "falloff": 1.3,
+   "shafts": 0.45,
+   "levels": 6
+  },
+  {
+   "id": "breathe",
+   "type": "breathe",
+   "amp": 0.008,
+   "period": 12,
+   "tint": [
+    0.002,
+    0,
+    0.004
+   ],
+   "minQuality": "mid"
+  }
+ ]
+}

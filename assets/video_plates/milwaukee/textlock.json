@@ -1,0 +1,169 @@
+{
+ "park": "milwaukee",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "auto": true,
+ "source": "tools/videoplates/r3.py textlock: macOS Vision OCR of the painting above the wall + the live board; hand-add a missed sign as a region with \"manual\": true (kept by --merge)",
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "ocr_0",
+   "what": "OCR: HOME RUN / DERBY / HOF / D",
+   "rect": [
+    91,
+    1034,
+    306,
+    1106
+   ]
+  },
+  {
+   "name": "ocr_1",
+   "what": "OCR: GRAIN / BELT",
+   "rect": [
+    741,
+    1066,
+    805,
+    1110
+   ]
+  },
+  {
+   "name": "ocr_2",
+   "what": "OCR: 344",
+   "rect": [
+    127,
+    1259,
+    176,
+    1286
+   ]
+  },
+  {
+   "name": "ocr_3",
+   "what": "OCR: 344",
+   "rect": [
+    40,
+    1259,
+    91,
+    1284
+   ]
+  },
+  {
+   "name": "ocr_4",
+   "what": "OCR: 368",
+   "rect": [
+    1064,
+    1260,
+    1109,
+    1284
+   ]
+  },
+  {
+   "name": "ocr_5",
+   "what": "OCR: 400",
+   "rect": [
+    625,
+    1265,
+    662,
+    1286
+   ]
+  },
+  {
+   "name": "living_derby_board",
+   "what": "living.json derby_board: painted sign",
+   "rect": [
+    150,
+    1015,
+    320,
+    1135
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "roof-ring light-up signs (pseudo lettering)",
+   "rect": [
+    1098,
+    916,
+    1280,
+    956
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "blue facade banner strip on the right stands (pseudo lettering)",
+   "rect": [
+    1052,
+    1058,
+    1280,
+    1084
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_2",
+   "what": "orange/blue concourse sign strip, right stands",
+   "rect": [
+    858,
+    1166,
+    1258,
+    1196
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_3",
+   "what": "two small wall ad panels right of centre",
+   "rect": [
+    853,
+    1261,
+    928,
+    1289
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_4",
+   "what": "small wall ad panel left of 400",
+   "rect": [
+    411,
+    1260,
+    452,
+    1278
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_5",
+   "what": "left scoreboard side panels",
+   "rect": [
+    26,
+    1000,
+    58,
+    1130
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_6",
+   "what": "HOME RUN DERBY board right side panels",
+   "rect": [
+    316,
+    1028,
+    346,
+    1140
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_7",
+   "what": "left small scoreboard face (whole board, not just its letters)",
+   "rect": [
+    56,
+    1014,
+    152,
+    1140
+   ],
+   "manual": true
+  }
+ ]
+}

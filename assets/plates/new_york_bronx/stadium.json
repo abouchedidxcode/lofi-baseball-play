@@ -1,0 +1,29 @@
+{
+ "id": "new_york_bronx",
+ "name": "New York, the Bronx",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 124.4,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "an elevated subway train glides slowly across the tracks behind the outfield, its windows glowing",
+  "the red aircraft-warning light on the tall spire blinks slowly and its crown lights glow",
+  "Manhattan skyline windows flicker on one by one in the pastel dusk",
+  "the heart BRONX sign glows with a soft neon buzz and a rare flicker",
+  "the small flags on the light towers wave gently",
+  "pink and lavender pixel clouds drift slowly across the sky",
+  "light-tower lamp banks breathe softly, dust motes drifting through the cones",
+  "crowd shimmer, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/new_york_bronx.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

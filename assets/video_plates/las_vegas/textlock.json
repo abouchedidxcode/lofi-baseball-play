@@ -1,0 +1,59 @@
+{
+ "park": "las_vegas",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "welcome",
+   "what": "WELCOME TO VEGAS sign",
+   "rect": [
+    832,
+    888,
+    1110,
+    1058
+   ]
+  },
+  {
+   "name": "screens",
+   "what": "twin screens under the balloon",
+   "rect": [
+    500,
+    950,
+    595,
+    1025
+   ]
+  },
+  {
+   "name": "wall_380l",
+   "what": "380 wall number",
+   "rect": [
+    145,
+    1176,
+    205,
+    1220
+   ]
+  },
+  {
+   "name": "wall_420",
+   "what": "420 wall number",
+   "rect": [
+    612,
+    1163,
+    680,
+    1206
+   ]
+  },
+  {
+   "name": "wall_380r",
+   "what": "380 wall number",
+   "rect": [
+    1080,
+    1176,
+    1145,
+    1220
+   ]
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "houston",
+ "name": "Houston",
+ "weather": {
+  "type": "storm",
+  "intensity": 0.5
+ },
+ "time": "night",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 101.0,
+  "cf": 132.9,
+  "rf": 101.0
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "distant lightning flickers inside the thunderclouds every so often, briefly lighting the glass towers (storm flash)",
+  "the vintage steam locomotive puffs soft white smoke that curls and drifts left along the trestle",
+  "the train's carriage windows glow warm and its headlamp flickers",
+  "the little signal light on the trestle blinks slowly from red to amber",
+  "heavy storm clouds roll slowly across the sky (sky layer drift)",
+  "glass-tower windows flicker and a red aircraft light blinks atop the tallest tower",
+  "the video board's pixel baseball streaks across the screen after a home run",
+  "floodlight banks glow and softly pulse, fine mist drifting through the cones",
+  "crowd shimmer in the right-field stands, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/houston.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}

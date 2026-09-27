@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "park": "las_vegas",
+  "mood": "Las Vegas at night: a glittering neon Strip beyond the outfield, casino towers, a pyramid beam of light into the sky, desert mountains faint in the distance.",
+  "grid": "art",
+  "style": "living_style.json",
+  "seed": 1,
+  "palette": {},
+  "masks": {},
+  "_v2": "STARTER from tools/living/prep_v2.py: copy to living.json once it has its first handful of effects. Read src/world/living/AUTHORING_V2.md. Keys starting with _ are notes for the author (the engine ignores them).",
+  "_time": "night_neon",
+  "_weather": {
+    "type": "none",
+    "intensity": 0.0
+  },
+  "_lifeIdeas": ["the pyramid's sky beam pulses gently and its light slowly breathes", "the WELCOME TO VEGAS sign's marquee bulbs chase around its border", "the starburst atop the sign twinkles and the sign's neon buzzes with a rare soft flicker", "the Eiffel-style tower's gold lights sparkle in slow waves", "the neon hot-air-balloon sign glows and its stripes shimmer", "the observation wheel's rim lights slowly rotate", "casino tower windows and billboard screens flicker and change colour", "stars twinkle in the black desert sky", "an airliner with blinking lights crosses the sky now and then", "palm trees beyond the wall sway gently in the warm desert night air"],
+  "_clouds": "no drifting-cloud sheet: clear black desert sky: stars only (twinkle them instead)",
+  "effects": []
+}

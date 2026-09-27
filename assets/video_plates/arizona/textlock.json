@@ -1,0 +1,72 @@
+{
+ "park": "arizona",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "wall_413l",
+   "what": "413 wall number",
+   "rect": [
+    225,
+    1296,
+    278,
+    1325
+   ]
+  },
+  {
+   "name": "wall_407",
+   "what": "407 wall number",
+   "rect": [
+    619,
+    1285,
+    661,
+    1311
+   ]
+  },
+  {
+   "name": "wall_413r",
+   "what": "413 wall number",
+   "rect": [
+    1022,
+    1296,
+    1070,
+    1325
+   ]
+  },
+  {
+   "name": "manual_0",
+   "what": "left stands video screen (painted skyline picture)",
+   "rect": [
+    0,
+    922,
+    108,
+    1026
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_1",
+   "what": "right stands video screen (painted skyline picture)",
+   "rect": [
+    999,
+    953,
+    1123,
+    1091
+   ],
+   "manual": true
+  },
+  {
+   "name": "manual_2",
+   "what": "far-right stands video screen (painted skyline picture)",
+   "rect": [
+    1175,
+    926,
+    1280,
+    1028
+   ],
+   "manual": true
+  }
+ ]
+}

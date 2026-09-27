@@ -1,0 +1,29 @@
+{
+ "park": "moon_base",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "HR DERBY board",
+   "rect": [
+    850,
+    943,
+    1073,
+    1108
+   ]
+  },
+  {
+   "name": "wall_500",
+   "what": "500 marker",
+   "rect": [
+    596,
+    1236,
+    684,
+    1293
+   ]
+  }
+ ]
+}

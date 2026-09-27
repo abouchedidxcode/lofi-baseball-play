@@ -1,0 +1,401 @@
+{
+  "version": 2,
+  "sampleRate": 44100,
+  "loopPad": 0.25,
+  "notes": "Every loop:true file must be played from 0 with AudioBufferSourceNode.loop = true and loopStart/loopEnd (seconds) from here. Main music tracks are intro + loop region (the intro plays once); bonus tracks and ambience are pure loops with LOOP_PAD s of wrapped audio on both ends. gain = suggested linear playback gain before master/user volume. Pick a random entry of 'variants' per play when present.",
+  "tracks": [
+    {
+      "id": "rain_delay",
+      "file": "music/rain_delay.mp3",
+      "type": "music",
+      "title": "Rain Delay",
+      "artist": "umbrella club",
+      "mood": "rainy night",
+      "bonus": false,
+      "loop": true,
+      "duration": 130.003719,
+      "loopStart": 12.996984,
+      "loopEnd": 129.753719,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "golden_hour",
+      "file": "music/golden_hour.mp3",
+      "type": "music",
+      "title": "Seventh Inning Sunset",
+      "artist": "Honey Dugout",
+      "mood": "golden sunset",
+      "bonus": false,
+      "loop": true,
+      "duration": 129.05449,
+      "loopStart": 11.731315,
+      "loopEnd": 128.80449,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "neon_bleachers",
+      "file": "music/neon_bleachers.mp3",
+      "type": "music",
+      "title": "Neon Bleachers",
+      "artist": "Midnight Batboy",
+      "mood": "city night",
+      "bonus": false,
+      "loop": true,
+      "duration": 135.803401,
+      "loopStart": 11.318118,
+      "loopEnd": 135.553401,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "snow_globe",
+      "file": "music/snow_globe.mp3",
+      "type": "music",
+      "title": "Snow Globe Stadium",
+      "artist": "Mittens & Chalk",
+      "mood": "snowy",
+      "bonus": false,
+      "loop": true,
+      "duration": 127.135147,
+      "loopStart": 17.170862,
+      "loopEnd": 126.885147,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "moonshot",
+      "file": "music/moonshot.mp3",
+      "type": "music",
+      "title": "Moonshot",
+      "artist": "Astro Turf Tapes",
+      "mood": "spacey",
+      "bonus": false,
+      "loop": true,
+      "duration": 136.063469,
+      "loopStart": 9.497687,
+      "loopEnd": 135.813469,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "sunflower_seeds",
+      "file": "music/sunflower_seeds.mp3",
+      "type": "music",
+      "title": "Sunflower Seeds",
+      "artist": "Honey Dugout",
+      "mood": "golden sunset",
+      "bonus": true,
+      "loop": true,
+      "duration": 176.42,
+      "loopStart": 0.25,
+      "loopEnd": 176.17,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "last_train_home",
+      "file": "music/last_train_home.mp3",
+      "type": "music",
+      "title": "Last Train Home",
+      "artist": "Midnight Batboy",
+      "mood": "city night",
+      "bonus": true,
+      "loop": true,
+      "duration": 176.42,
+      "loopStart": 0.25,
+      "loopEnd": 176.17,
+      "lufs": -16.0,
+      "gain": 0.7
+    },
+    {
+      "id": "hot_cocoa_innings",
+      "file": "music/hot_cocoa_innings.mp3",
+      "type": "music",
+      "title": "Hot Cocoa Innings",
+      "artist": "Mittens & Chalk",
+      "mood": "snowy",
+      "bonus": true,
+      "loop": true,
+      "duration": 176.42,
+      "loopStart": 0.25,
+      "loopEnd": 176.17,
+      "lufs": -15.9,
+      "gain": 0.7
+    },
+    {
+      "id": "zero_g_changeup",
+      "file": "music/zero_g_changeup.mp3",
+      "type": "music",
+      "title": "Zero-G Changeup",
+      "artist": "Astro Turf Tapes",
+      "mood": "spacey",
+      "bonus": true,
+      "loop": true,
+      "duration": 176.42,
+      "loopStart": 0.25,
+      "loopEnd": 176.17,
+      "lufs": -16.0,
+      "gain": 0.7
+    }
+  ],
+  "sfx": [
+    {
+      "id": "bat_crack_perfect",
+      "type": "sfx",
+      "desc": "wooden perfect-contact crack: the owner's pick, ROUND 1 finalists (sfx_candidates/crack_perfect_1-4, ElevenLabs; the DEV menu's BAT CRACK > ROUND 1). ROUND 2 (the earlier install) is sfx/bat_crack_perfect_1-3",
+      "loop": false,
+      "file": "sfx/bat_crack_r1_perfect_1.mp3",
+      "duration": 0.35,
+      "gain": 1.0,
+      "variants": [
+        "sfx/bat_crack_r1_perfect_1.mp3",
+        "sfx/bat_crack_r1_perfect_2.mp3",
+        "sfx/bat_crack_r1_perfect_3.mp3",
+        "sfx/bat_crack_r1_perfect_4.mp3"
+      ]
+    },
+    {
+      "id": "bat_crack_weak",
+      "type": "sfx",
+      "desc": "weak / foul contact: the owner's pick, ROUND 1 finalists (sfx_candidates/crack_weak_foul_1-4). ROUND 2 is sfx/bat_crack_weak_1-2",
+      "loop": false,
+      "file": "sfx/bat_crack_r1_weak_1.mp3",
+      "duration": 0.2,
+      "gain": 0.75,
+      "variants": [
+        "sfx/bat_crack_r1_weak_1.mp3",
+        "sfx/bat_crack_r1_weak_2.mp3",
+        "sfx/bat_crack_r1_weak_3.mp3",
+        "sfx/bat_crack_r1_weak_4.mp3"
+      ]
+    },
+    {
+      "id": "whiff",
+      "type": "sfx",
+      "desc": "bat swing miss swoosh",
+      "loop": false,
+      "file": "sfx/whiff_1.mp3",
+      "duration": 0.304921,
+      "gain": 0.6,
+      "variants": [
+        "sfx/whiff_1.mp3",
+        "sfx/whiff_2.mp3"
+      ]
+    },
+    {
+      "id": "glove_pop",
+      "type": "sfx",
+      "desc": "ball pops into catcher's mitt / net",
+      "loop": false,
+      "file": "sfx/glove_pop_1.mp3",
+      "duration": 0.193039,
+      "gain": 0.7,
+      "variants": [
+        "sfx/glove_pop_1.mp3",
+        "sfx/glove_pop_2.mp3"
+      ]
+    },
+    {
+      "id": "machine_pitch",
+      "type": "sfx",
+      "desc": "soft low motor hum then a gentle launch thump (owner: the old squeaky whine was 'super annoying'; original in sfx/_previous/)",
+      "loop": false,
+      "file": "sfx/machine_pitch.mp3",
+      "duration": 1.91,
+      "gain": 0.55,
+      "launchOffset": 1.33
+    },
+    {
+      "id": "ball_whoosh",
+      "type": "sfx",
+      "desc": "ball whooshes past",
+      "loop": false,
+      "file": "sfx/ball_whoosh_1.mp3",
+      "duration": 0.646508,
+      "gain": 0.4,
+      "variants": [
+        "sfx/ball_whoosh_1.mp3",
+        "sfx/ball_whoosh_2.mp3"
+      ]
+    },
+    {
+      "id": "crowd_cheer",
+      "type": "sfx",
+      "desc": "crowd cheer swell for a home run",
+      "loop": false,
+      "file": "sfx/crowd_cheer_1.mp3",
+      "duration": 7.0,
+      "gain": 0.6,
+      "variants": [
+        "sfx/crowd_cheer_1.mp3",
+        "sfx/crowd_cheer_2.mp3"
+      ]
+    },
+    {
+      "id": "crowd_ooh",
+      "type": "sfx",
+      "desc": "crowd 'ooh' for a near miss",
+      "loop": false,
+      "file": "sfx/crowd_ooh_1.mp3",
+      "duration": 3.0,
+      "gain": 0.22,
+      "variants": [
+        "sfx/crowd_ooh_1.mp3",
+        "sfx/crowd_ooh_2.mp3"
+      ]
+    },
+    {
+      "id": "thunder",
+      "type": "sfx",
+      "desc": "distant rolling thunder",
+      "loop": false,
+      "file": "sfx/thunder_1.mp3",
+      "duration": 7.0,
+      "gain": 0.45,
+      "variants": [
+        "sfx/thunder_1.mp3",
+        "sfx/thunder_2.mp3"
+      ]
+    },
+    {
+      "id": "ui_tap",
+      "type": "sfx",
+      "desc": "soft UI tap blip",
+      "loop": false,
+      "file": "sfx/ui_tap.mp3",
+      "duration": 0.32,
+      "gain": 0.5
+    },
+    {
+      "id": "transition_whoosh",
+      "type": "sfx",
+      "desc": "stadium transition swoosh (pans right to left)",
+      "loop": false,
+      "file": "sfx/transition_whoosh.mp3",
+      "duration": 1.071088,
+      "gain": 0.5
+    },
+    {
+      "id": "hr_chime",
+      "type": "sfx",
+      "desc": "home run sparkle chime",
+      "loop": false,
+      "file": "sfx/hr_chime_1.mp3",
+      "duration": 2.48,
+      "gain": 0.55,
+      "variants": [
+        "sfx/hr_chime_1.mp3",
+        "sfx/hr_chime_2.mp3"
+      ]
+    },
+    {
+      "id": "results_jingle",
+      "type": "sfx",
+      "desc": "cozy results jingle",
+      "loop": false,
+      "file": "sfx/results_jingle.mp3",
+      "duration": 3.957347,
+      "gain": 0.5
+    },
+    {
+      "id": "hr_stinger_rhodes",
+      "type": "sfx",
+      "desc": "soft home-run stinger alternative (rhodes); try with ?stinger=rhodes",
+      "loop": false,
+      "file": "sfx/hr_stinger_rhodes.mp3",
+      "duration": 2.48,
+      "gain": 0.5
+    },
+    {
+      "id": "hr_stinger_marimba",
+      "type": "sfx",
+      "desc": "soft home-run stinger alternative (marimba); try with ?stinger=marimba",
+      "loop": false,
+      "file": "sfx/hr_stinger_marimba.mp3",
+      "duration": 1.6,
+      "gain": 0.5
+    },
+    {
+      "id": "hr_stinger_vinyl",
+      "type": "sfx",
+      "desc": "soft home-run stinger alternative (vinyl); try with ?stinger=vinyl",
+      "loop": false,
+      "file": "sfx/hr_stinger_vinyl.mp3",
+      "duration": 2.0,
+      "gain": 0.5
+    },
+    {
+      "id": "hr_stinger_crowd",
+      "type": "sfx",
+      "desc": "soft home-run stinger alternative (crowd); try with ?stinger=crowd",
+      "loop": false,
+      "file": "sfx/hr_stinger_crowd.mp3",
+      "duration": 3.0,
+      "gain": 0.5
+    }
+  ],
+  "ambience": [
+    {
+      "id": "crowd",
+      "aliases": [
+        "amb_crowd"
+      ],
+      "file": "ambience/amb_crowd.mp3",
+      "type": "ambience",
+      "desc": "calm stadium crowd murmur",
+      "loop": true,
+      "duration": 41.5,
+      "loopStart": 0.25,
+      "loopEnd": 41.25,
+      "lufs": -22.0,
+      "gain": 0.55
+    },
+    {
+      "id": "rain",
+      "aliases": [
+        "amb_rain"
+      ],
+      "file": "ambience/amb_rain.mp3",
+      "type": "ambience",
+      "desc": "steady rain",
+      "loop": true,
+      "duration": 41.5,
+      "loopStart": 0.25,
+      "loopEnd": 41.25,
+      "lufs": -22.0,
+      "gain": 0.7
+    },
+    {
+      "id": "snow",
+      "aliases": [
+        "amb_snow"
+      ],
+      "file": "ambience/amb_snow.mp3",
+      "type": "ambience",
+      "desc": "soft winter wind",
+      "loop": true,
+      "duration": 22.25,
+      "loopStart": 0.25,
+      "loopEnd": 22.0,
+      "lufs": -22.0,
+      "gain": 0.6
+    },
+    {
+      "id": "space",
+      "aliases": [
+        "amb_space"
+      ],
+      "file": "ambience/amb_space.mp3",
+      "type": "ambience",
+      "desc": "warm spaceship hum",
+      "loop": true,
+      "duration": 22.25,
+      "loopStart": 0.25,
+      "loopEnd": 22.0,
+      "lufs": -22.0,
+      "gain": 0.45
+    }
+  ]
+}

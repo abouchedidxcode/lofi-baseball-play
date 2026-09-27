@@ -1,0 +1,898 @@
+{
+  "version": 1,
+  "generator": "tools/textures/build_all.py",
+  "defaults": {
+    "colorSpace": "srgb",
+    "magFilter": "nearest",
+    "minFilter": "nearest-mipmap-linear",
+    "note": "Pixel textures: NearestFilter for mag. Entries with filter=linear are soft gradients meant for LinearFilter."
+  },
+  "textures": [
+    {
+      "file": "crowd/crowd_dense.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "purpose": "Dense distant stands, tileable, team shirts baked navy blue.",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat (tile each 256x128 half on its own)",
+      "frames": {
+        "cols": 1,
+        "rows": 2,
+        "frameW": 256,
+        "frameH": 128,
+        "layout": "frame 0 = top half (v 0.5-1.0 in GL), frame 1 = bottom half (cheer); swap every ~0.4 s when excited",
+        "fps": 2.5
+      },
+      "worldScale": "one 256x128 frame = 16 m wide x 8 m tall (8 seat rows, 32 fans per row)"
+    },
+    {
+      "file": "crowd/crowd_dense_grey.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "purpose": "Dense stands with ~45% 'team' shirts in grey; tint via crowd_dense_mask.r.",
+      "tintable": true,
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat (tile each 256x128 half on its own)",
+      "frames": {
+        "cols": 1,
+        "rows": 2,
+        "frameW": 256,
+        "frameH": 128,
+        "layout": "frame 0 = top half (v 0.5-1.0 in GL), frame 1 = bottom half (cheer); swap every ~0.4 s when excited",
+        "fps": 2.5
+      },
+      "worldScale": "one 256x128 frame = 16 m wide x 8 m tall (8 seat rows, 32 fans per row)"
+    },
+    {
+      "file": "crowd/crowd_dense_mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "purpose": "Team-shirt mask for crowd_dense_grey (R channel).",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat (tile each 256x128 half on its own)",
+      "frames": {
+        "cols": 1,
+        "rows": 2,
+        "frameW": 256,
+        "frameH": 128,
+        "layout": "frame 0 = top half (v 0.5-1.0 in GL), frame 1 = bottom half (cheer); swap every ~0.4 s when excited",
+        "fps": 2.5
+      },
+      "worldScale": "one 256x128 frame = 16 m wide x 8 m tall (8 seat rows, 32 fans per row)",
+      "colorSpace": "linear"
+    },
+    {
+      "file": "crowd/crowd_fans.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "purpose": "Crowd billboard atlas, baked shirt colours per variant.",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "none",
+      "alphaMode": "alphaTest 0.5",
+      "frames": {
+        "cols": 8,
+        "rows": 8,
+        "frameW": 32,
+        "frameH": 32,
+        "layout": "row = fan variant (8); column = pose*2 + frame; poses: idle(0-1), clap(2-3), cheer(4-5), wave(6-7)",
+        "fps": 3,
+        "pivot": "bottom-centre (x=16,y=32); torso runs off the bottom edge so hide it behind a seat row"
+      },
+      "worldScale": "one 32px cell ~ 0.9 m (fan's head ~0.22 m)"
+    },
+    {
+      "file": "crowd/crowd_fans_grey.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": true,
+      "purpose": "Same atlas with shirts/hats in neutral grey for per-instance tint.",
+      "tintable": true,
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "none",
+      "alphaMode": "alphaTest 0.5",
+      "frames": {
+        "cols": 8,
+        "rows": 8,
+        "frameW": 32,
+        "frameH": 32,
+        "layout": "row = fan variant (8); column = pose*2 + frame; poses: idle(0-1), clap(2-3), cheer(4-5), wave(6-7)",
+        "fps": 3,
+        "pivot": "bottom-centre (x=16,y=32); torso runs off the bottom edge so hide it behind a seat row"
+      },
+      "worldScale": "one 32px cell ~ 0.9 m (fan's head ~0.22 m)"
+    },
+    {
+      "file": "crowd/crowd_fans_mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "purpose": "Tint mask for crowd_fans_grey: R = shirt, G = hat.",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "none",
+      "alphaMode": "none",
+      "frames": {
+        "cols": 8,
+        "rows": 8,
+        "frameW": 32,
+        "frameH": 32,
+        "layout": "row = fan variant (8); column = pose*2 + frame; poses: idle(0-1), clap(2-3), cheer(4-5), wave(6-7)",
+        "fps": 3,
+        "pivot": "bottom-centre (x=16,y=32); torso runs off the bottom edge so hide it behind a seat row"
+      },
+      "worldScale": "one 32px cell ~ 0.9 m (fan's head ~0.22 m)",
+      "colorSpace": "linear"
+    },
+    {
+      "file": "crowd/stadium_seats.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "purpose": "Empty stadium seat rows (navy plastic seats, concrete risers).",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat",
+      "worldScale": "1 tile = 8 m wide x 8 m tall (8 rows, 16 seats of 0.5 m)"
+    },
+    {
+      "file": "crowd/stadium_seats_mask.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "purpose": "R = seat plastic in stadium_seats.png, for recolouring seats (mix toward tint by mask.r).",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat",
+      "worldScale": "1 tile = 8 m wide x 8 m tall (8 rows, 16 seats of 0.5 m)",
+      "colorSpace": "linear"
+    },
+    {
+      "file": "crowd/stadium_seats_sparse.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "purpose": "Same rows with ~12% of seats occupied by tiny fans.",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat",
+      "worldScale": "1 tile = 8 m wide x 8 m tall (8 rows, 16 seats of 0.5 m)"
+    },
+    {
+      "file": "crowd/stadium_seats_sparse_mask.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "purpose": "R = seat plastic in stadium_seats_sparse.png (fans excluded).",
+      "category": "crowd",
+      "filter": "nearest",
+      "tiling": "repeat",
+      "worldScale": "1 tile = 8 m wide x 8 m tall (8 rows, 16 seats of 0.5 m)",
+      "colorSpace": "linear"
+    },
+    {
+      "file": "fx/ball_trail.png",
+      "size": [
+        128,
+        16
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "clamp",
+      "blending": "additive",
+      "purpose": "Ball flight trail ribbon: U=0 tail (transparent) -> U=1 head (opaque); V soft across with a hot core.",
+      "worldScale": "ribbon ~0.12 m wide, length = last 0.15-0.25 s of flight",
+      "category": "fx"
+    },
+    {
+      "file": "fx/baseball_equirect.png",
+      "size": [
+        128,
+        64
+      ],
+      "alpha": false,
+      "filter": "nearest",
+      "tiling": "none",
+      "purpose": "Baseball texture (128x64) for THREE.SphereGeometry UVs: cream leather, red figure-eight seam and stitches.",
+      "worldScale": "ball radius 0.0366 m (scale it up ~1.5-2x in game for readability)",
+      "category": "fx"
+    },
+    {
+      "file": "fx/baseball_sprite.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "purpose": "Tiny 16x16 pixel baseball sprite (outlined) for billboards, UI or far-away ball LOD.",
+      "worldScale": "0.08-0.12 m billboard",
+      "category": "fx"
+    },
+    {
+      "file": "fx/blob_shadow.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "none",
+      "purpose": "Soft round contact shadow (black RGB, falloff in alpha). Under the ball, batter, pitching machine.",
+      "worldScale": "ball: 0.25 m, batter: 1.2 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/blob_shadow_px.png",
+      "size": [
+        32,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "purpose": "Stepped pixel-art version of the blob shadow (4 alpha rings, deep purple-black).",
+      "worldScale": "ball: 0.3 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/cherry_petal.png",
+      "size": [
+        64,
+        16
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 16,
+        "frameH": 16,
+        "fps": 8,
+        "loop": true,
+        "layout": "tumble cycle: face, tilt, edge, back side"
+      },
+      "purpose": "Cherry blossom petal tumble (D.C., cherry temple, Tokyo spring).",
+      "worldScale": "0.06-0.1 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/dust_puff.png",
+      "size": [
+        256,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "frames": {
+        "cols": 8,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 14,
+        "loop": false,
+        "layout": "left to right, anchored bottom-centre; rises and fades"
+      },
+      "purpose": "Dirt puff: ball landing on the infield, batter's feet on swing.",
+      "worldScale": "one frame = 0.8 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/hit_ring.png",
+      "size": [
+        128,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "blending": "additive",
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 24,
+        "loop": false,
+        "layout": "left to right"
+      },
+      "purpose": "Bat-ball contact shock ring (billboard at contact point).",
+      "worldScale": "0.8 m billboard",
+      "category": "fx"
+    },
+    {
+      "file": "fx/lightning.png",
+      "size": [
+        128,
+        256
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "blending": "additive",
+      "frames": {
+        "cols": 2,
+        "rows": 1,
+        "frameW": 64,
+        "frameH": 256,
+        "layout": "2 bolt variants side by side"
+      },
+      "purpose": "Lightning bolt billboard for storms (flash the sky/fog at the same time).",
+      "worldScale": "one bolt = 40 m x 160 m, far behind the skyline",
+      "category": "fx"
+    },
+    {
+      "file": "fx/rain_ripple.png",
+      "size": [
+        128,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 10,
+        "loop": false,
+        "layout": "left to right"
+      },
+      "purpose": "Puddle ripple rings as flat ground decals (the rainy-Tokyo wet field).",
+      "worldScale": "one frame = 0.6 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/rain_splash.png",
+      "size": [
+        128,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 16,
+        "loop": false,
+        "layout": "left to right; ground contact at pixel row 26 (billboard, anchor bottom-centre)"
+      },
+      "purpose": "Rain splash crown on the ground, billboarded.",
+      "worldScale": "one frame = 0.35 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/rain_streak.png",
+      "size": [
+        8,
+        64
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "blending": "normal or additive",
+      "purpose": "Falling rain streak: 1-2 px wide, alpha ramps up toward the bottom (head). Stretch to motion blur length.",
+      "worldScale": "0.02 m x 0.6-1.0 m per streak (instanced quads or LineSegments with this map)",
+      "category": "fx"
+    },
+    {
+      "file": "fx/snowflake.png",
+      "size": [
+        64,
+        16
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 16,
+        "frameH": 16,
+        "layout": "4 variants (soft, crystal, plus, clump), pick per particle"
+      },
+      "purpose": "Snowflake variants for Points/instanced sprites.",
+      "worldScale": "0.05-0.12 m",
+      "category": "fx"
+    },
+    {
+      "file": "fx/sparkle.png",
+      "size": [
+        256,
+        32
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "none",
+      "blending": "additive",
+      "frames": {
+        "cols": 8,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 18,
+        "loop": false,
+        "layout": "left to right"
+      },
+      "purpose": "Star burst: home-run celebration, perfect-contact flash, UI juice.",
+      "worldScale": "0.5-3 m billboard",
+      "category": "fx"
+    },
+    {
+      "file": "lights/flare_ghost.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "none",
+      "blending": "additive",
+      "purpose": "Hexagonal ghost ring for a screen-space flare chain (optional, use sparingly: 0.05-0.15 opacity).",
+      "worldScale": "screen space, 3-10% of screen width",
+      "category": "light"
+    },
+    {
+      "file": "lights/flare_star.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "none",
+      "blending": "additive",
+      "purpose": "Four-point star flare with faint diagonals, warm-white. Put one per light tower, scale up with camera distance.",
+      "worldScale": "10-16 m billboard at the tower",
+      "category": "light"
+    },
+    {
+      "file": "lights/flare_streak.png",
+      "size": [
+        256,
+        32
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "none",
+      "blending": "additive",
+      "purpose": "Anamorphic horizontal streak (cool blue-white). Night/rain stadiums, stacked on flare_star.",
+      "worldScale": "30 m x 3.75 m billboard",
+      "category": "light"
+    },
+    {
+      "file": "lights/glow.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "none",
+      "blending": "additive",
+      "purpose": "Soft round glow sprite (white RGB, falloff in alpha). Billboard over each lamp head / ball / sign; tint via material.color.",
+      "worldScale": "lamp halo: 14-20 m sprite; ball glow: 0.6 m",
+      "category": "light"
+    },
+    {
+      "file": "lights/lamp_panel.png",
+      "size": [
+        128,
+        64
+      ],
+      "alpha": false,
+      "filter": "nearest",
+      "tiling": "none",
+      "purpose": "Light-tower lamp head: 8x4 bulb grid in a dark housing. Use as map + emissiveMap (emissiveIntensity 2-4) so bloom catches each bulb.",
+      "worldScale": "whole texture = 8 m x 4 m lamp head (face the plate)",
+      "category": "light"
+    },
+    {
+      "file": "lights/light_cone.png",
+      "size": [
+        64,
+        256
+      ],
+      "alpha": true,
+      "filter": "linear",
+      "tiling": "clamp",
+      "blending": "additive",
+      "purpose": "Volumetric beam card/cone. Top row = lamp end (alpha high), fades to 0 at the bottom; soft across U. depthWrite=false, opacity 0.08-0.2 (more in fog/rain).",
+      "worldScale": "map onto an open cone or two crossed quads ~60 m long",
+      "category": "light"
+    },
+    {
+      "file": "lights/tower_truss.png",
+      "size": [
+        32,
+        128
+      ],
+      "alpha": true,
+      "filter": "nearest",
+      "tiling": "repeat-v",
+      "alphaMode": "alphaTest 0.5, double-sided",
+      "purpose": "Steel lattice for light-tower legs: two rails + X bracing, transparent gaps.",
+      "worldScale": "32 px = 1.2 m wide, one 128 px tile = 4.8 m tall",
+      "category": "light"
+    },
+    {
+      "file": "signage/ads_atlas.png",
+      "size": [
+        256,
+        512
+      ],
+      "alpha": false,
+      "tiling": "none",
+      "purpose": "Eight fake lofi ads (no real brands), backlit look. Use as map + emissiveMap (0.6-1.2).",
+      "frames": {
+        "cols": 1,
+        "rows": 8,
+        "frameW": 256,
+        "frameH": 64,
+        "names": [
+          "CHILL BEATS FM",
+          "SLOW COFFEE CO.",
+          "VINYL & SONS",
+          "RAINY DAY RAMEN",
+          "NAP TIME BEDS",
+          "CASSETTE CLUB",
+          "SOFT SERVE",
+          "NEKO BAKERY"
+        ],
+        "layout": "row i = PNG pixel rows i*64..i*64+63 from the top (in GL UVs: v from 1-(i+1)/8 to 1-i/8)"
+      },
+      "worldScale": "one panel = 12 m x 3 m (outfield wall / upper deck fascia) or 4 m x 1 m (dugout rail)",
+      "category": "signage",
+      "filter": "nearest"
+    },
+    {
+      "file": "signage/led_mask.png",
+      "size": [
+        4,
+        4
+      ],
+      "alpha": false,
+      "tiling": "repeat",
+      "colorSpace": "linear",
+      "purpose": "4x4 tileable LED dot mask. In the screen shader: color = canvasColor * mask * 1.6, repeat so 1 tile = 1 canvas texel.",
+      "worldScale": "1 tile = 1 LED (~6 cm on a 16 m board)",
+      "category": "signage",
+      "filter": "nearest"
+    },
+    {
+      "file": "signage/scoreboard_frame.png",
+      "size": [
+        256,
+        128
+      ],
+      "alpha": false,
+      "tiling": "none",
+      "purpose": "Generic pixel scoreboard: steel bevel frame, 'LOFI BALLPARK' header plate, unlit LED screen. Draw live text into the screen rect with a CanvasTexture and multiply by led_mask.",
+      "screenRectPx": {
+        "x": 10,
+        "y": 26,
+        "w": 236,
+        "h": 92,
+        "note": "pixels from top-left of the PNG"
+      },
+      "worldScale": "whole board = 16 m x 8 m",
+      "category": "signage",
+      "filter": "nearest"
+    },
+    {
+      "file": "signage/wall_digits.png",
+      "size": [
+        128,
+        16
+      ],
+      "alpha": true,
+      "tiling": "none",
+      "alphaMode": "alphaTest 0.5",
+      "purpose": "Outfield distance digits 0-9 in 12x16 px cells from x=0 (cells 10 = unused). White: tint via material colour.",
+      "frames": {
+        "cols": 10,
+        "rows": 1,
+        "frameW": 12,
+        "frameH": 16,
+        "names": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "layout": "digit d at pixel x = d*12 .. d*12+11; remaining 8 px on the right are empty"
+      },
+      "worldScale": "one digit ~0.6 m wide x 0.8 m tall on the wall",
+      "category": "signage",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/chalk_line.png",
+      "size": [
+        64,
+        4
+      ],
+      "alpha": true,
+      "category": "surface",
+      "purpose": "Foul lines and batter's box chalk: chunky 4-texel-wide band of grey-white cells with worn (transparent) cells.",
+      "tiling": "repeat-u",
+      "filter": "nearest",
+      "alphaMode": "alphaTest 0.5 over the dirt",
+      "worldScale": "draw the line 0.12 m wide (4 rows = 3 cm texels); 64 px = 1.92 m along the line"
+    },
+    {
+      "file": "surfaces/dirt_infield.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Infield skin dirt, base paths, batter's box area (red-brown cell mosaic).",
+      "worldScale": "1 tile = 8 m (~6 cm per texel)",
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/grass.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Outfield/infield grass, no mowing stripes (stripe it in the shader). Mosaic of flat cells with short horizontal runs.",
+      "worldScale": "1 tile = 8 m (~6 cm per texel); go up to 10 m for chunkier cells like the concepts",
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/grass_striped.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Grass with baked mowing stripes: two bands (light, dark) running along V.",
+      "worldScale": "1 tile = 16 m, so each stripe is 8 m wide",
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/macro_variation.png",
+      "size": [
+        256,
+        256
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Anti-tiling macro noise (R = main drift, G/B = extra independent octaves). Multiply ground albedo by mix(0.85, 1.12, r) sampled in world XZ.",
+      "tiling": "repeat",
+      "filter": "linear",
+      "colorSpace": "linear",
+      "worldScale": "1 tile = 90 m (roughly the whole outfield); use G at 37 m for a second, uncorrelated layer"
+    },
+    {
+      "file": "surfaces/mound_clay.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Pitcher's mound and home plate clay (redder, packed, smoother).",
+      "worldScale": "1 tile = 5 m",
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/wall_padding.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Outfield wall padding, neutral grey: multiply by a team/stadium colour. Two 1.2 m panels per tile, cap seam at the top row.",
+      "worldScale": "1 tile = 2.4 m wide x 2.4 m tall",
+      "tintable": true,
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "surfaces/warning_track.png",
+      "size": [
+        128,
+        128
+      ],
+      "alpha": false,
+      "category": "surface",
+      "purpose": "Warning track crushed brick/gravel along the outfield wall.",
+      "worldScale": "1 tile = 6 m",
+      "tiling": "repeat",
+      "filter": "nearest"
+    },
+    {
+      "file": "ui/ball_pip.png",
+      "size": [
+        32,
+        16
+      ],
+      "alpha": true,
+      "frames": {
+        "cols": 2,
+        "rows": 1,
+        "frameW": 16,
+        "frameH": 16,
+        "names": [
+          "filled",
+          "empty"
+        ],
+        "layout": "left = filled baseball, right = empty slot"
+      },
+      "purpose": "Outs / swings-left pips. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/cassette.png",
+      "size": [
+        128,
+        32
+      ],
+      "alpha": true,
+      "frames": {
+        "cols": 4,
+        "rows": 1,
+        "frameW": 32,
+        "frameH": 32,
+        "fps": 6,
+        "loop": true,
+        "layout": "reel-spin cycle; cassette body occupies x 2..30, y 7..26 of each frame"
+      },
+      "purpose": "Lavender cassette for the NOW PLAYING chip; loop the 4 frames while music plays, hold frame 0 when paused. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/cassette_static.png",
+      "size": [
+        32,
+        32
+      ],
+      "alpha": true,
+      "purpose": "Single cassette frame (same as frame 0). CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/diamond.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Gold diamond ornament (e.g. '<> TAP TO SWING <>'). CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/diamond_white.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Cream diamond ornament, tintable via CSS filter or canvas. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/divider.png",
+      "size": [
+        128,
+        8
+      ],
+      "alpha": true,
+      "purpose": "HUD divider: dot-line-diamond-line-dot. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/icon_mute.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Muted (speaker with pink X). CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/icon_pause.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Pause. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/icon_play.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Play / resume. CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    },
+    {
+      "file": "ui/icon_sound_on.png",
+      "size": [
+        16,
+        16
+      ],
+      "alpha": true,
+      "purpose": "Sound on (speaker with waves). CSS: image-rendering: pixelated; scale by an integer (x2..x4).",
+      "category": "ui",
+      "filter": "nearest",
+      "tiling": "none"
+    }
+  ]
+}

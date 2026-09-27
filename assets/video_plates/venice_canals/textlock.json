@@ -1,0 +1,29 @@
+{
+ "park": "venice_canals",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "board",
+   "what": "diamond scoreboard",
+   "rect": [
+    870,
+    995,
+    1072,
+    1098
+   ]
+  },
+  {
+   "name": "wall_420",
+   "what": "420 wall number",
+   "rect": [
+    603,
+    1150,
+    668,
+    1182
+   ]
+  }
+ ]
+}

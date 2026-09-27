@@ -1,0 +1,29 @@
+{
+ "park": "baltimore",
+ "space": "plate 1x px (1280 x 2400), top-left origin",
+ "pad": 5,
+ "feather": 3,
+ "note": "TEXT LOCK (preview_video/src/render/videoplate.js): inside these regions the plate shader always shows the still painting, so a take's garbled text never shows. rect = [x0, y0, x1, y1]; poly = [[x, y], ...]. pad grows each region (px), feather softens its edge (px).",
+ "regions": [
+  {
+   "name": "wall_410",
+   "what": "410 wall number",
+   "rect": [
+    613,
+    1265,
+    654,
+    1293
+   ]
+  },
+  {
+   "name": "signs_r",
+   "what": "right wall signs",
+   "rect": [
+    1053,
+    1263,
+    1190,
+    1285
+   ]
+  }
+ ]
+}

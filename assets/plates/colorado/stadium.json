@@ -1,0 +1,31 @@
+{
+ "id": "colorado",
+ "name": "Denver",
+ "weather": {
+  "type": "none",
+  "intensity": 0.0
+ },
+ "time": "dusk",
+ "gravity": 9.81,
+ "fences": {
+  "lf": 106.7,
+  "cf": 126.5,
+  "rf": 106.1
+ },
+ "wallHeight": 3.0,
+ "living": [
+  "the alpenglow on the snow-capped peaks slowly fades from pink to lavender over the session",
+  "a thin wisp of snow blows off the highest summit (slow sprite drift)",
+  "downtown tower windows flicker on one by one as dusk deepens",
+  "the video boards' pixel graphics pulse softly and flash after a home run",
+  "the peach pixel clouds drift slowly across the sky",
+  "light-tower lamp banks glow and breathe, moths drifting through their cones",
+  "a red aircraft-warning light blinks slowly on the tallest tower",
+  "the purple pennant on the left tower flutters in the thin mountain air",
+  "the evergreen trees in the batter's eye sway very slightly",
+  "a thin crowd shimmer in the purple seats, with camera flashes and a cheer pulse on a home run"
+ ],
+ "concept": "concepts/round2/colorado.png",
+ "plate": "plate.json",
+ "note": "fences in m at spray -45 (lf) / 0 (cf) / +45 (rf) deg, optional lcf / rcf at -22.5 / +22.5; wallHeight = the painted wall's height (m) at the fence (qa.py --wall-height); wallProfile (optional) = spray ranges where the painted wall is much taller/shorter; living = suggested living-painting details for this park (masks, sprites, shaders)"
+}
